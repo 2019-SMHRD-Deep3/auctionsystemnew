@@ -47,8 +47,8 @@ public class ASlogin {
 		SpringLayout springLayout = new SpringLayout();
 		frame.getContentPane().setLayout(springLayout);
 		
-		ImageIcon icon = new ImageIcon("C:\\Users\\SM020\\Documents\\카카오톡 받은 파일\\dddd.PNG");
-		
+		ImageIcon icon = new ImageIcon("C:\\Users\\User\\git\\gitRepository\\auctionnew\\auctionnew\\dddd.PNG");
+	
 		panel = new JPanel(){
 			protected void paintComponent(Graphics g) {
 				g.drawImage(icon.getImage(), 0, 0, panel.getWidth(), panel.getHeight(), null);
