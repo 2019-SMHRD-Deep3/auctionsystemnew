@@ -9,23 +9,17 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.SpringLayout;
-
-import model.MemberManagementService;
-import model.Member;
-
 import javax.swing.JLabel;
-import javax.swing.JOptionPane;
-
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-import model.MemberDAO;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class ASHOME {
-	private MemberManagementService service = new MemberManagementService();
+
 	private JFrame frame;
 	private JPanel panel;
 	private ImageIcon icon;
-	
 
 	/**
 	 * Launch the application.
@@ -59,7 +53,7 @@ public class ASHOME {
 		frame.setBounds(100, 100, 1179, 766);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
-		ImageIcon icon = new ImageIcon("C:\\Users\\User\\git\\gitRepository\\auctionnew\\auctionnew\\ddddd.JPG");
+		ImageIcon icon = new ImageIcon("C:\\Users\\SM020\\Documents\\카카오톡 받은 파일\\ddddd.JPG");
 		frame.getContentPane().setLayout(null);
 		
 		JPanel panel_1 = new JPanel();
@@ -75,25 +69,23 @@ public class ASHOME {
 			public void mouseClicked(MouseEvent e) {
 			}
 		});
-		join.setIcon(new ImageIcon("D:\\\uC870\uC7781.png"));
-		join.setBounds(1017, 10, 85, 38);
+		join.setIcon(new ImageIcon("C:\\Users\\SM020\\git\\auctionsystemnew1\\auctionnew\\123.JPG"));
+		join.setBounds(1066, 10, 85, 38);
 		panel_1.add(join);
 		
 		JLabel login = new JLabel("New label");
 		login.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
-				ASlogin login = new ASlogin();
 			}
 		});
-
-		login.setIcon(new ImageIcon("D:\\\uB85C\uADF8\uC7781.png"));
-		login.setBounds(920, 10, 85, 38);
+		login.setIcon(new ImageIcon("C:\\Users\\SM020\\git\\auctionsystemnew1\\auctionnew\\\uCEA1\uCC9812.JPG"));
+		login.setBounds(952, 10, 85, 38);
 		panel_1.add(login);
 		
-		
-		JLabel lblNewLabel_2 = new JLabel("New label");
-		lblNewLabel_2.setBounds(12, 10, 57, 15);
+		JLabel lblNewLabel_2 = new JLabel("");
+		lblNewLabel_2.setIcon(new ImageIcon("C:\\Users\\SM020\\git\\auctionsystemnew1\\auctionnew\\1.png"));
+		lblNewLabel_2.setBounds(0, 0, 180, 70);
 		panel_1.add(lblNewLabel_2);
 		
 		panel = new JPanel(){
@@ -115,31 +107,32 @@ public class ASHOME {
 		panel_2.setBackground(new Color(255, 255, 255));
 		panel_2.setLayout(null);
 		
-
 		JButton act = new JButton("");
 		act.setBounds(630, 336, 90, 90);
 		frame.getContentPane().add(act);
-		act.setIcon(new ImageIcon("C:\\Users\\User\\git\\gitRepository\\auctionnew\\auctionnew\\act.JPG"));
-		act.setSelectedIcon(new ImageIcon("C:\\Users\\User\\git\\gitRepository\\auctionnew\\auctionnew\\act.JPG"));
+		act.setIcon(new ImageIcon("C:\\Users\\SM020\\git\\auctionsystemnew1\\auctionnew\\act.JPG"));
+		act.setSelectedIcon(new ImageIcon("C:\\Users\\SM020\\git\\auctionsystemnew1\\auctionnew\\act.JPG"));
 		
 		JButton hotel = new JButton();
 		hotel.setBounds(400, 336, 90, 90);
 		frame.getContentPane().add(hotel);
-		hotel.setSelectedIcon(new ImageIcon("D:\\\uCEA1\uCC981.JPG"));
-		hotel.setIcon(new ImageIcon("D:\\\uCEA1\uCC981.JPG"));
+		hotel.setSelectedIcon(new ImageIcon("C:\\Users\\SM020\\git\\auctionsystemnew1\\auctionnew\\\uCEA1\uCC981.JPG"));
+		hotel.setIcon(new ImageIcon("C:\\Users\\SM020\\git\\auctionsystemnew1\\auctionnew\\\uCEA1\uCC981.JPG"));
 		
-
 		JButton flight = new JButton("");
+		flight.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
 		flight.setForeground(new Color(255, 255, 255));
 		flight.setBounds(180, 336, 90, 90);
 		frame.getContentPane().add(flight);
-		flight.setIcon(new ImageIcon("C:\\Users\\User\\git\\gitRepository\\auctionnew\\auctionnew\\flight1.JPG"));
-		flight.setSelectedIcon(new ImageIcon("C:\\Users\\User\\git\\gitRepository\\auctionnew\\auctionnew\\flight1.JPG"));
+		flight.setIcon(new ImageIcon("C:\\Users\\SM020\\git\\auctionsystemnew1\\auctionnew\\flight1.JPG"));
+		flight.setSelectedIcon(new ImageIcon("D:\\flight1.JPG"));
 		
-
 		JButton ticket = new JButton("");
-		ticket.setIcon(new ImageIcon("C:\\Users\\User\\git\\gitRepository\\auctionnew\\auctionnew\\ticket1.JPG"));
-		ticket.setSelectedIcon(new ImageIcon("C:\\Users\\User\\git\\gitRepository\\auctionnew\\auctionnew\\ticket1.JPG"));
+		ticket.setIcon(new ImageIcon("C:\\Users\\SM020\\git\\auctionsystemnew1\\auctionnew\\ticket1.JPG"));
+		ticket.setSelectedIcon(new ImageIcon("C:\\Users\\SM020\\git\\auctionsystemnew1\\auctionnew\\ticket1.JPG"));
 		ticket.setBounds(872, 336, 90, 90);
 		frame.getContentPane().add(ticket);
 		
