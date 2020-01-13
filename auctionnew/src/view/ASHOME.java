@@ -73,7 +73,7 @@ public class ASHOME {
 		join.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-			}
+			}////½Ã¹ßÁ¿°°³×
 		});
 		join.setIcon(new ImageIcon("D:\\\uC870\uC7781.png"));
 		join.setBounds(1017, 10, 85, 38);
