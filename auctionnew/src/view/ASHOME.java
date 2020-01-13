@@ -51,7 +51,7 @@ public class ASHOME {
 		frame.setBounds(100, 100, 1179, 766);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
-		ImageIcon icon = new ImageIcon("C:\\Users\\SM020\\Documents\\카카오톡 받은 파일\\ddddd.JPG");
+		ImageIcon icon = new ImageIcon("C:\\Users\\User\\git\\gitRepository\\auctionnew\\auctionnew\\ddddd.JPG");
 		frame.getContentPane().setLayout(null);
 		
 		JPanel panel_1 = new JPanel();
@@ -103,8 +103,8 @@ public class ASHOME {
 		JButton btnNewButton_2 = new JButton("");
 		btnNewButton_2.setBounds(630, 336, 90, 90);
 		frame.getContentPane().add(btnNewButton_2);
-		btnNewButton_2.setIcon(new ImageIcon("D:\\act.JPG"));
-		btnNewButton_2.setSelectedIcon(new ImageIcon("D:\\act.JPG"));
+		btnNewButton_2.setIcon(new ImageIcon("C:\\Users\\User\\git\\gitRepository\\auctionnew\\auctionnew\\act.JPG"));
+		btnNewButton_2.setSelectedIcon(new ImageIcon("C:\\Users\\User\\git\\gitRepository\\auctionnew\\auctionnew\\act.JPG"));
 		
 		JButton btnNewButton_1 = new JButton();
 		btnNewButton_1.setBounds(400, 336, 90, 90);
@@ -116,12 +116,12 @@ public class ASHOME {
 		btnNewButton.setForeground(new Color(255, 255, 255));
 		btnNewButton.setBounds(180, 336, 90, 90);
 		frame.getContentPane().add(btnNewButton);
-		btnNewButton.setIcon(new ImageIcon("D:\\flight1.JPG"));
-		btnNewButton.setSelectedIcon(new ImageIcon("D:\\flight1.JPG"));
+		btnNewButton.setIcon(new ImageIcon("C:\\Users\\User\\git\\gitRepository\\auctionnew\\auctionnew\\flight1.JPG"));
+		btnNewButton.setSelectedIcon(new ImageIcon("C:\\Users\\User\\git\\gitRepository\\auctionnew\\auctionnew\\flight1.JPG"));
 		
 		JButton btnNewButton_3 = new JButton("");
-		btnNewButton_3.setIcon(new ImageIcon("D:\\ticket1.JPG"));
-		btnNewButton_3.setSelectedIcon(new ImageIcon("D:\\ticket1.JPG"));
+		btnNewButton_3.setIcon(new ImageIcon("C:\\Users\\User\\git\\gitRepository\\auctionnew\\auctionnew\\ticket1.JPG"));
+		btnNewButton_3.setSelectedIcon(new ImageIcon("C:\\Users\\User\\git\\gitRepository\\auctionnew\\auctionnew\\ticket1.JPG"));
 		btnNewButton_3.setBounds(872, 336, 90, 90);
 		frame.getContentPane().add(btnNewButton_3);
 		
