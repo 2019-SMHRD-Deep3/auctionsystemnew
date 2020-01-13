@@ -61,7 +61,13 @@ public class ASHOME {
 		frame.getContentPane().add(panel_1);
 		panel_1.setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("New label");
+		JLabel lblNewLabel = new JLabel("");
+		lblNewLabel.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+			}
+		});
+		lblNewLabel.setIcon(new ImageIcon("D:\\\uC870\uC7781.png"));
 		lblNewLabel.setBounds(1017, 10, 85, 38);
 		panel_1.add(lblNewLabel);
 		
@@ -71,7 +77,7 @@ public class ASHOME {
 			public void mouseClicked(MouseEvent arg0) {
 			}
 		});
-		lblNewLabel_1.setIcon(new ImageIcon("D:\\\uADF8\uB9BC.png"));
+		lblNewLabel_1.setIcon(new ImageIcon("D:\\\uB85C\uADF8\uC7781.png"));
 		lblNewLabel_1.setBounds(902, 10, 85, 38);
 		panel_1.add(lblNewLabel_1);
 		
