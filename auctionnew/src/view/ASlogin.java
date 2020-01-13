@@ -7,34 +7,39 @@ import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.SpringLayout;
+import java.awt.Color;
+import java.awt.GridLayout;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+import javax.swing.SwingConstants;
+import java.awt.Font;
+import javax.swing.JPasswordField;
+import javax.swing.JButton;
 
 public class ASlogin {
 
 	private JFrame frame;
-	private JPanel panel;
 	private ImageIcon icon;
+	JPanel panel;
+	JPanel panel_1 ;
+	private JLabel id;
+	private JTextField ID_FIELD;
+	private JPanel pw_pannel;
+	private JLabel pw;
+	private JPasswordField passwordField;
+	private JButton confirm;
+	private JButton cancel;
 
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					ASlogin window = new ASlogin();
-					window.frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
 
 	/**
 	 * Create the application.
 	 */
 	public ASlogin() {
 		initialize();
+		frame.setVisible(true);
 	}
 
 	/**
@@ -42,30 +47,72 @@ public class ASlogin {
 	 */
 	private void initialize() {
 		frame = new JFrame();
-		frame.setBounds(100, 100, 1179, 766);
+		frame.getContentPane().setBackground(Color.WHITE);
+		frame.setBackground(Color.WHITE);
+		frame.setBounds(100, 100, 618, 650);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		SpringLayout springLayout = new SpringLayout();
-		frame.getContentPane().setLayout(springLayout);
 		
-		ImageIcon icon = new ImageIcon("C:\\Users\\User\\git\\gitRepository\\auctionnew\\auctionnew\\dddd.PNG");
-	
-		panel = new JPanel(){
-			protected void paintComponent(Graphics g) {
-				g.drawImage(icon.getImage(), 0, 0, panel.getWidth(), panel.getHeight(), null);
-	            setOpaque(false);
-	            super.paintComponent(g);
+		
+
+		frame.getContentPane().setLayout(null);
+		ImageIcon icon = new ImageIcon("C:\\Users\\User\\git\\gitRepository\\auctionnew\\auctionnew\\INTERBBAKK.PNG");
+		panel_1 = new JPanel() {
 			
-			}
-			
-			};
-		springLayout.putConstraint(SpringLayout.NORTH, panel, 100, SpringLayout.NORTH, frame.getContentPane());
-		springLayout.putConstraint(SpringLayout.WEST, panel, 10, SpringLayout.WEST, frame.getContentPane());
-		springLayout.putConstraint(SpringLayout.SOUTH, panel, 367, SpringLayout.NORTH, frame.getContentPane());
-		springLayout.putConstraint(SpringLayout.EAST, panel, 1151, SpringLayout.WEST, frame.getContentPane());
-		frame.getContentPane().add(panel);
+				protected void paintComponent(Graphics g) {
+					// TODO Auto-generated method stub
+					g.drawImage(icon.getImage(),0,0,panel_1.getWidth(),panel_1.getHeight(),null);
+					setOpaque(false);
+					super.paintComponent(g);
+				}
+		};
+		panel_1.setBounds(29, 38, 538, 169);
+
+		frame.getContentPane().add(panel_1);
+		
+		JPanel id_panel = new JPanel();
+		id_panel.setBounds(97, 270, 408, 50);
+		frame.getContentPane().add(id_panel);
+		id_panel.setLayout(new GridLayout(0, 2, -50, 0));
+		
+		id = new JLabel("             ID");
+		id.setFont(new Font("Bookman Old Style", Font.PLAIN, 20));
+		id.setHorizontalAlignment(SwingConstants.LEFT);
+		id_panel.add(id);
+		
+		ID_FIELD = new JTextField();
+		id_panel.add(ID_FIELD);
+		ID_FIELD.setColumns(10);
+		
+		pw_pannel = new JPanel();
+		pw_pannel.setBounds(97, 364, 408, 50);
+		frame.getContentPane().add(pw_pannel);
+		pw_pannel.setLayout(new GridLayout(0, 2, -50, 0));
+		
+		pw = new JLabel("    PASSWORDS");
+		pw.setHorizontalAlignment(SwingConstants.LEFT);
+		pw.setFont(new Font("Bookman Old Style", Font.PLAIN, 20));
+		pw_pannel.add(pw);
+		
+		passwordField = new JPasswordField();
+		pw_pannel.add(passwordField);
+		
+		JPanel panel_2 = new JPanel();
+		panel_2.setBounds(159, 469, 259, 50);
+		frame.getContentPane().add(panel_2);
+		panel_2.setLayout(new GridLayout(0, 2, 0, 0));
+		
+		confirm = new JButton("\uD655\uC778");
+		panel_2.add(confirm);
+		
+		cancel = new JButton("\uCDE8\uC18C");
+		panel_2.add(cancel);
+		
+		
+		
 		
 		
 		
 		
 		}
-}
+	}
+
