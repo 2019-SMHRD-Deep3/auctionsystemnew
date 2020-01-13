@@ -61,25 +61,29 @@ public class ASHOME {
 		frame.getContentPane().add(panel_1);
 		panel_1.setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.addMouseListener(new MouseAdapter() {
+		JLabel join = new JLabel("");
+		join.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 			}
 		});
-		lblNewLabel.setIcon(new ImageIcon("D:\\\uC870\uC7781.png"));
-		lblNewLabel.setBounds(1017, 10, 85, 38);
-		panel_1.add(lblNewLabel);
+		join.setIcon(new ImageIcon("D:\\\uC870\uC7781.png"));
+		join.setBounds(1017, 10, 85, 38);
+		panel_1.add(join);
 		
-		JLabel lblNewLabel_1 = new JLabel("New label");
-		lblNewLabel_1.addMouseListener(new MouseAdapter() {
+		JLabel login = new JLabel("New label");
+		login.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
 			}
 		});
-		lblNewLabel_1.setIcon(new ImageIcon("D:\\\uB85C\uADF8\uC7781.png"));
-		lblNewLabel_1.setBounds(902, 10, 85, 38);
-		panel_1.add(lblNewLabel_1);
+		login.setIcon(new ImageIcon("D:\\\uB85C\uADF8\uC7781.png"));
+		login.setBounds(920, 10, 85, 38);
+		panel_1.add(login);
+		
+		JLabel lblNewLabel_2 = new JLabel("New label");
+		lblNewLabel_2.setBounds(12, 10, 57, 15);
+		panel_1.add(lblNewLabel_2);
 		
 		panel = new JPanel(){
 			protected void paintComponent(Graphics g) {
@@ -100,32 +104,32 @@ public class ASHOME {
 		panel_2.setBackground(new Color(255, 255, 255));
 		panel_2.setLayout(null);
 		
-		JButton btnNewButton_2 = new JButton("");
-		btnNewButton_2.setBounds(630, 336, 90, 90);
-		frame.getContentPane().add(btnNewButton_2);
-		btnNewButton_2.setIcon(new ImageIcon("D:\\act.JPG"));
-		btnNewButton_2.setSelectedIcon(new ImageIcon("D:\\act.JPG"));
+		JButton act = new JButton("");
+		act.setBounds(630, 336, 90, 90);
+		frame.getContentPane().add(act);
+		act.setIcon(new ImageIcon("D:\\act.JPG"));
+		act.setSelectedIcon(new ImageIcon("D:\\act.JPG"));
 		
-		JButton btnNewButton_1 = new JButton();
-		btnNewButton_1.setBounds(400, 336, 90, 90);
-		frame.getContentPane().add(btnNewButton_1);
-		btnNewButton_1.setSelectedIcon(new ImageIcon("D:\\\uCEA1\uCC981.JPG"));
-		btnNewButton_1.setIcon(new ImageIcon("D:\\\uCEA1\uCC981.JPG"));
+		JButton hotel = new JButton();
+		hotel.setBounds(400, 336, 90, 90);
+		frame.getContentPane().add(hotel);
+		hotel.setSelectedIcon(new ImageIcon("D:\\\uCEA1\uCC981.JPG"));
+		hotel.setIcon(new ImageIcon("D:\\\uCEA1\uCC981.JPG"));
 		
-		JButton btnNewButton = new JButton("");
-		btnNewButton.setForeground(new Color(255, 255, 255));
-		btnNewButton.setBounds(180, 336, 90, 90);
-		frame.getContentPane().add(btnNewButton);
-		btnNewButton.setIcon(new ImageIcon("D:\\flight1.JPG"));
-		btnNewButton.setSelectedIcon(new ImageIcon("D:\\flight1.JPG"));
+		JButton flight = new JButton("");
+		flight.setForeground(new Color(255, 255, 255));
+		flight.setBounds(180, 336, 90, 90);
+		frame.getContentPane().add(flight);
+		flight.setIcon(new ImageIcon("D:\\flight1.JPG"));
+		flight.setSelectedIcon(new ImageIcon("D:\\flight1.JPG"));
 		
-		JButton btnNewButton_3 = new JButton("");
-		btnNewButton_3.setIcon(new ImageIcon("D:\\ticket1.JPG"));
-		btnNewButton_3.setSelectedIcon(new ImageIcon("D:\\ticket1.JPG"));
-		btnNewButton_3.setBounds(872, 336, 90, 90);
-		frame.getContentPane().add(btnNewButton_3);
+		JButton ticket = new JButton("");
+		ticket.setIcon(new ImageIcon("D:\\ticket1.JPG"));
+		ticket.setSelectedIcon(new ImageIcon("D:\\ticket1.JPG"));
+		ticket.setBounds(872, 336, 90, 90);
+		frame.getContentPane().add(ticket);
 		
-		
+		//
 		
 		
 		}
