@@ -16,6 +16,9 @@ import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import java.awt.CardLayout;
+import java.awt.Color;
+import java.awt.FlowLayout;
+import java.awt.BorderLayout;
 
 public class ASJoin최종 {
 
@@ -71,15 +74,17 @@ public class ASJoin최종 {
 		textField.setColumns(10);
 		
 		JPanel panel = new JPanel(); 
+		panel.setBackground(Color.WHITE);
 		
 		
 		panel.setBounds(35, 10, 387, 82);
 		frame.getContentPane().add(panel);
-		panel.setLayout(new CardLayout(0, 0));
+		panel.setLayout(null);
 		
-		JLabel 화면 = new JLabel("New label");
+		JLabel 화면 = new JLabel("");
+		화면.setBounds(63, 5, 270, 72);
 		화면.setIcon(new ImageIcon("C:\\Users\\SM022\\Desktop\\\uC5FC\uB530 \uB85C\uACE01.png"));
-		panel.add(화면, "name_2334454420982300");
+		panel.add(화면);
 		
 		JPanel panel_2 = new JPanel();
 		panel_2.setBounds(35, 159, 387, 38);
