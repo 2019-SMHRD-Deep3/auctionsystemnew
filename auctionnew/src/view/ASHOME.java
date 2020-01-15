@@ -15,14 +15,6 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-import org.jdatepicker.impl.JDatePanelImpl;
-import org.jdatepicker.impl.JDatePickerImpl;
-import org.jdatepicker.impl.UtilDateModel;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
-import model.MemberDAO;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
 
 public class ASHOME {
 
@@ -131,7 +123,6 @@ public class ASHOME {
 
 			}
 		});
-		flight.setForeground(new Color(255, 255, 255));
 		flight.setBounds(180, 336, 90, 90);
 		frame.getContentPane().add(flight);
 
@@ -148,7 +139,7 @@ public class ASHOME {
 		frame.getContentPane().add(ticket);
 		
 		 String imgPath3 = this.getClass().getResource(".").getPath()+"..//..//img//ф╪до.jpg";
-		   ticket.setSelectedIcon(new ImageIcon(imgPath3));
+		   ticket.setIcon(new ImageIcon(imgPath3));
 		
 		JPanel panel_3 = new JPanel();
 		panel_3.setBackground(Color.WHITE);
