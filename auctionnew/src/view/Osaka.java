@@ -25,8 +25,8 @@ public class Osaka {
 		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("New label");
-		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\SM020\\Desktop\\\uC624\uC0AC\uCE74.JPG"));
+		JLabel lblNewLabel = new JLabel("");
+		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\SM020\\git\\auctionsystemnew1\\auctionnew\\img\\\uC624\uC0AC\uCE74.JPG"));
 		lblNewLabel.setBounds(12, 10, 463, 324);
 		frame.getContentPane().add(lblNewLabel);
 	}

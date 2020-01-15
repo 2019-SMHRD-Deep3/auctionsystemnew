@@ -40,7 +40,7 @@ public class Rome {
 		frame.getContentPane().setLayout(null);
 		
 		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\SM020\\Desktop\\\uB610\uCE58.JPG"));
+		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\SM020\\git\\auctionsystemnew1\\auctionnew\\img\\\uB610\uCE58.JPG"));
 		lblNewLabel.setBounds(12, 10, 478, 290);
 		frame.getContentPane().add(lblNewLabel);
 		

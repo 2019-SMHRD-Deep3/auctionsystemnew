@@ -57,7 +57,10 @@ public class ASHOME {
 		frame.setBounds(100, 100, 1179, 766);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
+
 		ImageIcon icon = new ImageIcon("C:\\Users\\SM020\\Documents\\카카오톡 받은 파일\\ddddd.JPG");
+
+		
 		frame.getContentPane().setLayout(null);
 		
 		JPanel panel_1 = new JPanel();
@@ -71,7 +74,7 @@ public class ASHOME {
 		join.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-			}////시발좆같네
+			}
 		});
 		join.setIcon(new ImageIcon("C:\\Users\\SM020\\git\\auctionsystemnew1\\auctionnew\\123.JPG"));
 		join.setBounds(1066, 10, 85, 38);
@@ -87,12 +90,18 @@ public class ASHOME {
 			
 			
 		});
+
 		login.setIcon(new ImageIcon("C:\\Users\\SM020\\git\\auctionsystemnew1\\auctionnew"));
 		login.setBounds(952, 10, 85, 38);
+
+
+		login.setIcon(new ImageIcon("C:\\Users\\SM022\\git\\auctionsystemnew2\\auctionnew\\img"));
+		login.setBounds(920, 10, 85, 38);
+
 		panel_1.add(login);
 		
 		JLabel lblNewLabel_2 = new JLabel("");
-		lblNewLabel_2.setIcon(new ImageIcon("C:\\Users\\SM020\\git\\auctionsystemnew1\\auctionnew\\1.png"));
+		lblNewLabel_2.setIcon(new ImageIcon("C:\\Users\\SM020\\git\\auctionsystemnew1\\auctionnew\\img\\23.png"));
 		lblNewLabel_2.setBounds(0, 0, 180, 70);
 		panel_1.add(lblNewLabel_2);
 		
@@ -116,10 +125,13 @@ public class ASHOME {
 		panel_2.setLayout(null);
 		
 		JButton act = new JButton("");
+		act.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
 		act.setBounds(630, 336, 90, 90);
 		frame.getContentPane().add(act);
-		act.setIcon(new ImageIcon("C:\\Users\\SM020\\git\\auctionsystemnew1\\auctionnew\\act.JPG"));
-		act.setSelectedIcon(new ImageIcon("C:\\Users\\SM020\\git\\auctionsystemnew1\\auctionnew\\act.JPG"));
+		act.setIcon(new ImageIcon("C:\\Users\\SM020\\git\\auctionsystemnew1\\auctionnew\\img\\act1.JPG"));
 		
 		JButton hotel = new JButton();
 		hotel.addActionListener(new ActionListener() {
@@ -140,7 +152,7 @@ public class ASHOME {
 		flight.setForeground(new Color(255, 255, 255));
 		flight.setBounds(180, 336, 90, 90);
 		frame.getContentPane().add(flight);
-		flight.setIcon(new ImageIcon("C:\\Users\\SM020\\git\\auctionsystemnew1\\auctionnew\\flight1.JPG"));
+		flight.setIcon(new ImageIcon("C:\\Users\\SM020\\git\\auctionsystemnew1\\auctionnew\\img\\flight1.JPG"));
 		flight.setSelectedIcon(new ImageIcon("D:\\flight1.JPG"));
 		
 		JButton ticket = new JButton("");
@@ -148,8 +160,7 @@ public class ASHOME {
 			public void actionPerformed(ActionEvent arg0) {
 			}
 		});
-		ticket.setIcon(new ImageIcon("C:\\Users\\SM020\\git\\auctionsystemnew1\\auctionnew\\ticket1.JPG"));
-		ticket.setSelectedIcon(new ImageIcon("C:\\Users\\SM020\\git\\auctionsystemnew1\\auctionnew\\ticket1.JPG"));
+		ticket.setIcon(new ImageIcon("C:\\Users\\SM020\\git\\auctionsystemnew1\\auctionnew\\img\\ticket1.JPG"));
 		ticket.setBounds(872, 336, 90, 90);
 		frame.getContentPane().add(ticket);
 		
@@ -174,6 +185,7 @@ public class ASHOME {
 		lblNewLabel_3.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
+				Hongkong hongkong = new Hongkong();
 			}
 		});
 		lblNewLabel_3.setFont(new Font("HY센스L", Font.PLAIN, 13));
@@ -193,8 +205,8 @@ public class ASHOME {
 		
 		JLabel label_2 = new JLabel("\uCE60\uB808? \uB9DE\uC744\uB808?");
 		label_2.addMouseListener(new MouseAdapter() {
-			@Override
 			public void mouseClicked(MouseEvent e) {
+			Chile chile = new Chile();
 			}
 		});
 		label_2.setFont(new Font("HY센스L", Font.PLAIN, 13));
@@ -210,6 +222,7 @@ public class ASHOME {
 		label_1.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
+			Bangkok bangkok =new Bangkok();
 			}
 		});
 		label_1.setFont(new Font("HY센스L", Font.PLAIN, 13));
@@ -217,17 +230,22 @@ public class ASHOME {
 		panel_3.add(label_1);
 		
 		JLabel lblNewLabel = new JLabel("New label");
-		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\SM020\\Desktop\\\uCEA1\uCC98333.JPG"));
+		lblNewLabel.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+			}
+		});
+		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\SM020\\git\\auctionsystemnew1\\auctionnew\\img\\캡처333.JPG"));
 		lblNewLabel.setBounds(896, 452, 255, 75);
 		frame.getContentPane().add(lblNewLabel);
 		
 		JLabel label_4 = new JLabel("");
-		label_4.setIcon(new ImageIcon("C:\\Users\\SM020\\Desktop\\\uCEA1\uCC982233232.JPG"));
+		label_4.setIcon(new ImageIcon("C:\\Users\\SM020\\git\\auctionsystemnew1\\auctionnew\\img\\호캉스.JPG"));
 		label_4.setBounds(896, 538, 255, 75);
 		frame.getContentPane().add(label_4);
 		
 		JLabel label_5 = new JLabel("");
-		label_5.setIcon(new ImageIcon("C:\\Users\\SM020\\Desktop\\\uD638\uCE89\uC2A4.JPG"));
+		label_5.setIcon(new ImageIcon("C:\\Users\\SM020\\git\\auctionsystemnew1\\auctionnew\\img\\캡처2233232.JPG"));
 		label_5.setBounds(896, 624, 255, 75);
 		frame.getContentPane().add(label_5);
 		
@@ -238,12 +256,18 @@ public class ASHOME {
 				Spain spain = new Spain();
 			}
 		});
-		lblNewLabel_5.setIcon(new ImageIcon("C:\\Users\\SM020\\Desktop\\\uC2A4\uD398\uC778.JPG"));
+		lblNewLabel_5.setIcon(new ImageIcon("C:\\Users\\SM020\\git\\auctionsystemnew1\\auctionnew\\img\\스페인.JPG"));
 		lblNewLabel_5.setBounds(204, 467, 190, 230);
 		frame.getContentPane().add(lblNewLabel_5);
 		
 		JLabel label_6 = new JLabel("New label");
-		label_6.setIcon(new ImageIcon("C:\\Users\\SM020\\Desktop\\\uB300\uB9CC.JPG"));
+		label_6.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				Taiwan taiwan = new Taiwan();
+			}
+		});
+		label_6.setIcon(new ImageIcon("C:\\Users\\SM020\\git\\auctionsystemnew1\\auctionnew\\img\\대만.JPG"));
 		label_6.setBounds(427, 467, 190, 230);
 		frame.getContentPane().add(label_6);
 		
@@ -254,7 +278,7 @@ public class ASHOME {
 				Danang danang =new Danang();
 			}
 		});
-		label_7.setIcon(new ImageIcon("C:\\Users\\SM020\\Desktop\\\uB2E4\uB0AD.JPG"));
+		label_7.setIcon(new ImageIcon("C:\\Users\\SM020\\git\\auctionsystemnew1\\auctionnew\\img\\다낭.JPG"));
 		label_7.setBounds(649, 467, 190, 230);
 		frame.getContentPane().add(label_7);
 		
