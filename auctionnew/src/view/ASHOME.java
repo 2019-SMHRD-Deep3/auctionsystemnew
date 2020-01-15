@@ -16,6 +16,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 
+
 public class ASHOME {
 
 	private JFrame frame;
@@ -63,7 +64,7 @@ public class ASHOME {
 		panel_1.setBounds(0, 0, 1163, 58);
 		panel_1.setBackground(new Color(255, 255, 255));
 		frame.getContentPane().add(panel_1);
-		panel_1.setLayout(null);//
+		panel_1.setLayout(null);
 		
 		
 		JLabel lblNewLabel_2 = new JLabel("");
