@@ -7,10 +7,12 @@ import java.awt.GridLayout;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
+import javax.swing.ButtonGroup;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
@@ -19,13 +21,19 @@ import java.awt.CardLayout;
 import java.awt.Color;
 import java.awt.FlowLayout;
 import java.awt.BorderLayout;
+import java.awt.SystemColor;
+import javax.swing.JRadioButton;
 
 public class ASJoin최종 {
 
 	private JFrame frame;
-	private JTextField textField;
+	private JTextField id;
 	private JPasswordField passwordField;
 	private JTextField textField_1;
+	private JTextField textField_3;
+	private JTextField textField_4;
+	private JRadioButton male;
+	private JRadioButton female;
 
 	/**
 	 * Launch the application.
@@ -55,86 +63,150 @@ public class ASJoin최종 {
 	 */
 	private void initialize() {
 		frame = new JFrame();
-		frame.setBounds(100, 100, 473, 658);
+		frame.getContentPane().setBackground(SystemColor.textHighlightText);
+		frame.setBounds(100, 100, 473, 675);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
-		JPanel panel_1 = new JPanel();
-		panel_1.setBounds(35, 102, 387, 38);
-		frame.getContentPane().add(panel_1);
-		panel_1.setLayout(new GridLayout(1, 0, 0, 0));
+		JPanel id_panel = new JPanel();
+		id_panel.setBackground(SystemColor.activeCaption);
+		id_panel.setBounds(62, 138, 340, 38);
+		frame.getContentPane().add(id_panel);
+		id_panel.setLayout(new GridLayout(1, 0, -60, 0));
 		
-		JLabel lblNewLabel = new JLabel("ID");
-		lblNewLabel.setFont(new Font("돋움체", Font.BOLD, 15));
-		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		panel_1.add(lblNewLabel);
+		JLabel lblNewLabel = new JLabel("            ID");
+		lblNewLabel.setBackground(SystemColor.activeCaption);
+		lblNewLabel.setFont(new Font("Bookman Old Style", Font.PLAIN, 17));
+		lblNewLabel.setHorizontalAlignment(SwingConstants.LEFT);
+		id_panel.add(lblNewLabel);
 		
-		textField = new JTextField();
-		panel_1.add(textField);
-		textField.setColumns(10);
+		id = new JTextField();
+		id_panel.add(id);
+		id.setColumns(10);
 		
-		JPanel panel = new JPanel(); 
-		panel.setBackground(Color.WHITE);
+		JPanel main_panel = new JPanel(); 
+		main_panel.setBackground(SystemColor.textHighlightText);
 		
 		
-		panel.setBounds(35, 10, 387, 82);
-		frame.getContentPane().add(panel);
-		panel.setLayout(null);
+		main_panel.setBounds(26, 26, 387, 82);
+		frame.getContentPane().add(main_panel);
+		main_panel.setLayout(null);
 		
 		JLabel 화면 = new JLabel("");
 		화면.setBounds(63, 5, 270, 72);
 		화면.setIcon(new ImageIcon("C:\\Users\\SM022\\Desktop\\\uC5FC\uB530 \uB85C\uACE01.png"));
-		panel.add(화면);
+		main_panel.add(화면);
 		
-		JPanel panel_2 = new JPanel();
-		panel_2.setBounds(35, 159, 387, 38);
-		frame.getContentPane().add(panel_2);
-		panel_2.setLayout(new GridLayout(1, 0, 0, 0));
+		JPanel pw_panel = new JPanel();
+		pw_panel.setBackground(SystemColor.activeCaption);
+		pw_panel.setBounds(62, 205, 340, 38);
+		frame.getContentPane().add(pw_panel);
+		pw_panel.setLayout(new GridLayout(1, 0, -60, 0));
 		
-		JLabel lblNewLabel_1 = new JLabel("Password");
-		lblNewLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel_1.setFont(new Font("돋움체", Font.BOLD, 15));
-		panel_2.add(lblNewLabel_1);
+		JLabel lblNewLabel_1 = new JLabel("      Password");
+		lblNewLabel_1.setHorizontalAlignment(SwingConstants.LEFT);
+		lblNewLabel_1.setFont(new Font("Bookman Old Style", Font.PLAIN, 17));
+		pw_panel.add(lblNewLabel_1);
 		
 		passwordField = new JPasswordField();
-		panel_2.add(passwordField);
+		pw_panel.add(passwordField);
 		
-		JPanel panel_3 = new JPanel();
-		panel_3.setBounds(35, 212, 387, 38);
-		frame.getContentPane().add(panel_3);
-		panel_3.setLayout(new GridLayout(1, 0, 0, 0));
+		JPanel name_panel = new JPanel();
+		name_panel.setBackground(SystemColor.activeCaption);
+		name_panel.setBounds(62, 271, 340, 38);
+		frame.getContentPane().add(name_panel);
+		name_panel.setLayout(new GridLayout(1, 0, -60, 0));
 		
-		JLabel lblNewLabel_3 = new JLabel("Name");
-		lblNewLabel_3.setFont(new Font("돋움체", Font.BOLD, 14));
-		panel_3.add(lblNewLabel_3);
+		JLabel lblNewLabel_3 = new JLabel("         Name");
+		lblNewLabel_3.setHorizontalAlignment(SwingConstants.LEFT);
+		lblNewLabel_3.setFont(new Font("Bookman Old Style", Font.PLAIN, 17));
+		name_panel.add(lblNewLabel_3);
 		
 		textField_1 = new JTextField();
-		panel_3.add(textField_1);
+		name_panel.add(textField_1);
 		textField_1.setColumns(10);
 		
-		JPanel panel_4 = new JPanel();
-		panel_4.setBounds(35, 271, 387, 38);
-		frame.getContentPane().add(panel_4);
-		
-		JPanel panel_5 = new JPanel();
-		panel_5.setBounds(35, 325, 387, 38);
-		frame.getContentPane().add(panel_5);
-		
-		JPanel panel_6 = new JPanel();
-		panel_6.setBounds(35, 379, 387, 38);
-		frame.getContentPane().add(panel_6);
-		
-		JPanel panel_7 = new JPanel();
-		panel_7.setBounds(35, 435, 387, 38);
-		frame.getContentPane().add(panel_7);
-		
-		JButton btnNewButton = new JButton("\uD68C\uC6D0\uAC00\uC785");
+		JButton btnNewButton = new JButton("Join");
+		btnNewButton.setFont(new Font("Bookman Old Style", Font.PLAIN, 16));
 		btnNewButton.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
+				JOptionPane.showMessageDialog(frame,
+					    "회원가입 성공");
+				
 			}
+			
 		});
-		btnNewButton.setBounds(118, 511, 213, 54);
+		btnNewButton.setBounds(124, 537, 213, 54);
 		frame.getContentPane().add(btnNewButton);
+		
+		JPanel email_panel = new JPanel();
+		email_panel.setBackground(SystemColor.activeCaption);
+		email_panel.setBounds(62, 400, 340, 38);
+		frame.getContentPane().add(email_panel);
+		email_panel.setLayout(new GridLayout(1, 0, -60, 0));
+		
+		JLabel lblEmail = new JLabel("        E-mail");
+		lblEmail.setHorizontalAlignment(SwingConstants.LEFT);
+		lblEmail.setFont(new Font("Bookman Old Style", Font.PLAIN, 17));
+		email_panel.add(lblEmail);
+		
+		textField_3 = new JTextField();
+		textField_3.setColumns(10);
+		email_panel.add(textField_3);
+		
+		JPanel birth_panel = new JPanel();
+		birth_panel.setBackground(SystemColor.activeCaption);
+		birth_panel.setBounds(62, 338, 340, 38);
+		frame.getContentPane().add(birth_panel);
+		birth_panel.setLayout(new GridLayout(1, 0, -60, 0));
+		
+		JLabel lblBirth = new JLabel("          Birth");
+		lblBirth.setHorizontalAlignment(SwingConstants.LEFT);
+		lblBirth.setFont(new Font("Bookman Old Style", Font.PLAIN, 17));
+		birth_panel.add(lblBirth);
+		
+		textField_4 = new JTextField();
+		textField_4.setColumns(10);
+		birth_panel.add(textField_4);
+		
+		JPanel sex_panel = new JPanel();
+		sex_panel.setBackground(SystemColor.activeCaption);
+		sex_panel.setBounds(62, 463, 340, 44);
+		frame.getContentPane().add(sex_panel);
+		sex_panel.setLayout(new GridLayout(1, 0, 30, 0));
+		
+		
+		JLabel lblNewLabel_2 = new JLabel("           Sex");
+		lblNewLabel_2.setBackground(SystemColor.activeCaption);
+		lblNewLabel_2.setFont(new Font("Bookman Old Style", Font.PLAIN, 16));
+		sex_panel.add(lblNewLabel_2);
+		
+	
+		
+		
+	
+		
+		JRadioButton male = new JRadioButton("male");
+		male.setFont(new Font("Bookman Old Style", Font.PLAIN, 15));
+		male.setSelected(true);
+		male.setBackground(SystemColor.activeCaption);
+		sex_panel.add(male);
+		
+		JRadioButton female = new JRadioButton("female");
+		female.setFont(new Font("Bookman Old Style", Font.PLAIN, 15));
+		female.setBackground(SystemColor.activeCaption);
+		sex_panel.add(female);
+		
+		int sex = 0;
+		if(male.isSelected()==true) {
+			sex = 1;
+		}else {
+			sex = 2;
+		}
+		
+		ButtonGroup group = new ButtonGroup();
+		group.add(male);
+		group.add(female);
 	}
 }
