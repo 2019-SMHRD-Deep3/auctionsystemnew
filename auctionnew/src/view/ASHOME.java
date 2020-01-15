@@ -59,7 +59,7 @@ public class ASHOME {
 		frame.setBounds(100, 100, 1179, 766);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
-		ImageIcon icon = new ImageIcon("C:\\Users\\User\\git\\gitRepository\\auctionnew\\auctionnew\\ddddd.JPG");
+		ImageIcon icon = new ImageIcon("C:\\Users\\SM022\\git\\auctionsystemnew2\\auctionnew\\img.png");
 		frame.getContentPane().setLayout(null);
 		
 		JPanel panel_1 = new JPanel();
@@ -87,7 +87,7 @@ public class ASHOME {
 			}
 		});
 
-		login.setIcon(new ImageIcon("D:\\\uB85C\uADF8\uC7781.png"));
+		login.setIcon(new ImageIcon("C:\\Users\\SM022\\git\\auctionsystemnew2\\auctionnew\\img"));
 		login.setBounds(920, 10, 85, 38);
 		panel_1.add(login);
 		
