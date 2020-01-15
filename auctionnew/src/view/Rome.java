@@ -31,7 +31,8 @@ public class Rome {
 	 */
 	private void initialize() {
 		frame = new JFrame();
-		frame.setBounds(100, 100, 834, 547);
+		frame.getContentPane().setBackground(Color.WHITE);
+		frame.setBounds(100, 100, 830, 550);
 		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
