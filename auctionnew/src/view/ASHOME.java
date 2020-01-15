@@ -221,17 +221,17 @@ public class ASHOME {
          public void mouseClicked(MouseEvent e) {
          }
       });
-      lblNewLabel.setIcon(new ImageIcon("C:\\Users\\SM020\\git\\auctionsystemnew1\\auctionnew\\img\\Ä¸Ã³333.JPG"));
+      lblNewLabel.setIcon(new ImageIcon("C:\\Users\\User\\git\\gitRepository\\auctionnew\\auctionnew\\img\\Ä¸Ã³333.JPG"));
       lblNewLabel.setBounds(896, 452, 255, 75);
       frame.getContentPane().add(lblNewLabel);
       
       JLabel label_4 = new JLabel("");
-      label_4.setIcon(new ImageIcon("C:\\Users\\SM020\\git\\auctionsystemnew1\\auctionnew\\img\\È£Ä²½º.JPG"));
+      label_4.setIcon(new ImageIcon("C:\\Users\\User\\git\\gitRepository\\auctionnew\\auctionnew\\img\\È£Ä²½º.JPG"));
       label_4.setBounds(896, 538, 255, 75);
       frame.getContentPane().add(label_4);
       
       JLabel label_5 = new JLabel("");
-      label_5.setIcon(new ImageIcon("C:\\Users\\SM020\\git\\auctionsystemnew1\\auctionnew\\img\\Ä¸Ã³2233232.JPG"));
+      label_5.setIcon(new ImageIcon("C:\\Users\\User\\git\\gitRepository\\auctionnew\\auctionnew\\img\\Ä¸Ã³2233232.JPG"));
       label_5.setBounds(896, 624, 255, 75);
       frame.getContentPane().add(label_5);
       
@@ -242,7 +242,7 @@ public class ASHOME {
             Spain spain = new Spain();
          }
       });
-      lblNewLabel_5.setIcon(new ImageIcon("C:\\Users\\SM020\\git\\auctionsystemnew1\\auctionnew\\img\\½ºÆäÀÎ.JPG"));
+      lblNewLabel_5.setIcon(new ImageIcon("C:\\Users\\User\\git\\gitRepository\\auctionnew\\auctionnew\\img\\½ºÆäÀÎ.JPG"));
       lblNewLabel_5.setBounds(204, 467, 190, 230);
       frame.getContentPane().add(lblNewLabel_5);
       
@@ -253,7 +253,7 @@ public class ASHOME {
             Taiwan taiwan = new Taiwan();
          }
       });
-      label_6.setIcon(new ImageIcon("C:\\Users\\SM020\\git\\auctionsystemnew1\\auctionnew\\img\\´ë¸¸.JPG"));
+      label_6.setIcon(new ImageIcon("C:\\Users\\User\\git\\gitRepository\\auctionnew\\auctionnew\\img\\´ë¸¸.JPG"));
       label_6.setBounds(427, 467, 190, 230);
       frame.getContentPane().add(label_6);
       
@@ -264,7 +264,7 @@ public class ASHOME {
             Danang danang =new Danang();
          }
       });
-      label_7.setIcon(new ImageIcon("C:\\Users\\SM020\\git\\auctionsystemnew1\\auctionnew\\img\\´Ù³¶.JPG"));
+      label_7.setIcon(new ImageIcon("C:\\Users\\User\\git\\gitRepository\\auctionnew\\auctionnew\\img\\´Ù³¶.JPG"));
       label_7.setBounds(649, 467, 190, 230);
       frame.getContentPane().add(label_7);
       
