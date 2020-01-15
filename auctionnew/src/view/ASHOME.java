@@ -18,6 +18,11 @@ import javax.swing.JPanel;
 import org.jdatepicker.impl.JDatePanelImpl;
 import org.jdatepicker.impl.JDatePickerImpl;
 import org.jdatepicker.impl.UtilDateModel;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import model.MemberDAO;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class ASHOME {
 
@@ -56,11 +61,9 @@ public class ASHOME {
 		frame.getContentPane().setBackground(new Color(255, 255, 255));
 		frame.setBounds(100, 100, 1179, 766);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		
+		String imgPath4 = this.getClass().getResource(".").getPath()+"..//..//img//ddddd.JPG";
+		ImageIcon icon = new ImageIcon(imgPath4);
 
-		ImageIcon icon = new ImageIcon("C:\\Users\\SM020\\Documents\\카카오톡 받은 파일\\ddddd.JPG");
-
-		
 		frame.getContentPane().setLayout(null);
 		
 		JPanel panel_1 = new JPanel();
@@ -70,38 +73,10 @@ public class ASHOME {
 		frame.getContentPane().add(panel_1);
 		panel_1.setLayout(null);
 		
-		JLabel join = new JLabel("");
-		join.addMouseListener(new MouseAdapter() {
-			@Override
-			public void mouseClicked(MouseEvent e) {
-			}
-		});
-		join.setIcon(new ImageIcon("C:\\Users\\SM020\\git\\auctionsystemnew1\\auctionnew\\123.JPG"));
-		join.setBounds(1066, 10, 85, 38);
-		panel_1.add(join);
-		
-		JLabel login = new JLabel("");
-		login.addMouseListener(new MouseAdapter() {
-			@Override
-			public void mouseClicked(MouseEvent arg0) {
-			ASlogin login = new ASlogin();
-				
-			}
-			
-			
-		});
-
-		login.setIcon(new ImageIcon("C:\\Users\\SM020\\git\\auctionsystemnew1\\auctionnew"));
-		login.setBounds(952, 10, 85, 38);
-
-
-		login.setIcon(new ImageIcon("C:\\Users\\SM022\\git\\auctionsystemnew2\\auctionnew\\img"));
-		login.setBounds(920, 10, 85, 38);
-
-		panel_1.add(login);
 		
 		JLabel lblNewLabel_2 = new JLabel("");
-		lblNewLabel_2.setIcon(new ImageIcon("C:\\Users\\SM020\\git\\auctionsystemnew1\\auctionnew\\img\\23.png"));
+		String imgPath5 = this.getClass().getResource(".").getPath()+"..//..//img//23.png";
+		lblNewLabel_2.setIcon(new ImageIcon(imgPath5));
 		lblNewLabel_2.setBounds(0, 0, 180, 70);
 		panel_1.add(lblNewLabel_2);
 		
@@ -131,7 +106,10 @@ public class ASHOME {
 		});
 		act.setBounds(630, 336, 90, 90);
 		frame.getContentPane().add(act);
-		act.setIcon(new ImageIcon("C:\\Users\\SM020\\git\\auctionsystemnew1\\auctionnew\\img\\act1.JPG"));
+
+		String imgPath = this.getClass().getResource(".").getPath()+"..//..//img//act.JPG";
+
+		act.setIcon(new ImageIcon(imgPath));
 		
 		JButton hotel = new JButton();
 		hotel.addActionListener(new ActionListener() {
@@ -140,29 +118,37 @@ public class ASHOME {
 		});
 		hotel.setBounds(400, 336, 90, 90);
 		frame.getContentPane().add(hotel);
-		hotel.setSelectedIcon(new ImageIcon("C:\\Users\\SM020\\git\\auctionsystemnew1\\auctionnew\\\uCEA1\uCC981.JPG"));
-		hotel.setIcon(new ImageIcon("D:\\\uCEA1\uCC981.JPG"));
+		String imgPath1 = this.getClass().getResource(".").getPath()+"..//..//img//캡처1.JPG";
+		
+		hotel.setIcon(new ImageIcon(imgPath1));
+
 		
 		JButton flight = new JButton("");
 		flight.addActionListener(new ActionListener() {
+
 			public void actionPerformed(ActionEvent e) {
 				flight fly = new flight();
+
 			}
 		});
 		flight.setForeground(new Color(255, 255, 255));
 		flight.setBounds(180, 336, 90, 90);
 		frame.getContentPane().add(flight);
-		flight.setIcon(new ImageIcon("C:\\Users\\SM020\\git\\auctionsystemnew1\\auctionnew\\img\\flight1.JPG"));
-		flight.setSelectedIcon(new ImageIcon("D:\\flight1.JPG"));
+
+		String imgPath2 = this.getClass().getResource(".").getPath()+"..//..//img//flight1.JPG";
+		flight.setIcon(new ImageIcon(imgPath2));
 		
 		JButton ticket = new JButton("");
 		ticket.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
+	   
+			public void actionPerformed(ActionEvent e) {
 			}
 		});
-		ticket.setIcon(new ImageIcon("C:\\Users\\SM020\\git\\auctionsystemnew1\\auctionnew\\img\\ticket1.JPG"));
 		ticket.setBounds(872, 336, 90, 90);
 		frame.getContentPane().add(ticket);
+		
+		 String imgPath3 = this.getClass().getResource(".").getPath()+"..//..//img//티켓.jpg";
+		   ticket.setSelectedIcon(new ImageIcon(imgPath3));
 		
 		JPanel panel_3 = new JPanel();
 		panel_3.setBackground(Color.WHITE);

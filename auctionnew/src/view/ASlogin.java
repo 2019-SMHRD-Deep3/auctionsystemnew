@@ -15,6 +15,7 @@ import javax.swing.SwingConstants;
 import java.awt.Font;
 import javax.swing.JPasswordField;
 import javax.swing.JButton;
+import java.awt.SystemColor;
 
 public class ASlogin {
 
@@ -29,6 +30,7 @@ public class ASlogin {
 	private JPasswordField passwordField;
 	private JButton confirm;
 	private JButton cancel;
+	private JLabel lblNewLabel;
 
 	/**
 	 * Launch the application.
@@ -49,13 +51,13 @@ public class ASlogin {
 		frame = new JFrame();
 		frame.getContentPane().setBackground(Color.WHITE);
 		frame.setBackground(Color.WHITE);
-		frame.setBounds(100, 100, 618, 650);
+		frame.setBounds(100, 100, 441, 386);
 		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		
 		
 
 		frame.getContentPane().setLayout(null);
-		ImageIcon icon = new ImageIcon("C:\\Users\\SM020\\git\\auctionsystemnew1\\auctionnew\\INTERBBAKK.JPG");
+		ImageIcon icon = new ImageIcon("C:\\Users\\SM022\\git\\auctionsystemnew2\\auctionnew\\img\\INTERBBAKK.JPG");
 		panel_1 = new JPanel() {
 			
 				protected void paintComponent(Graphics g) {
@@ -65,17 +67,24 @@ public class ASlogin {
 					super.paintComponent(g);
 				}
 		};
-		panel_1.setBounds(29, 38, 538, 169);
+		panel_1.setBackground(SystemColor.textHighlightText);
+		panel_1.setBounds(49, 45, 339, 75);
 
 		frame.getContentPane().add(panel_1);
 		
+		lblNewLabel = new JLabel("");
+		lblNewLabel.setFont(new Font("±¼¸²", Font.PLAIN, 12));
+		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\SM022\\git\\auctionsystemnew2\\auctionnew\\img\\1.png"));
+		panel_1.add(lblNewLabel);
+		
 		JPanel id_panel = new JPanel();
-		id_panel.setBounds(97, 270, 408, 50);
+		id_panel.setBackground(SystemColor.activeCaption);
+		id_panel.setBounds(49, 136, 339, 34);
 		frame.getContentPane().add(id_panel);
 		id_panel.setLayout(new GridLayout(0, 2, -50, 0));
 		
 		id = new JLabel("             ID");
-		id.setFont(new Font("Bookman Old Style", Font.PLAIN, 20));
+		id.setFont(new Font("Bookman Old Style", Font.PLAIN, 15));
 		id.setHorizontalAlignment(SwingConstants.LEFT);
 		id_panel.add(id);
 		
@@ -84,20 +93,21 @@ public class ASlogin {
 		ID_FIELD.setColumns(10);
 		
 		pw_pannel = new JPanel();
-		pw_pannel.setBounds(97, 364, 408, 50);
+		pw_pannel.setBackground(SystemColor.activeCaption);
+		pw_pannel.setBounds(48, 194, 340, 34);
 		frame.getContentPane().add(pw_pannel);
 		pw_pannel.setLayout(new GridLayout(0, 2, -50, 0));
 		
-		pw = new JLabel("    PASSWORDS");
+		pw = new JLabel("      Password");
 		pw.setHorizontalAlignment(SwingConstants.LEFT);
-		pw.setFont(new Font("Bookman Old Style", Font.PLAIN, 20));
+		pw.setFont(new Font("Bookman Old Style", Font.PLAIN, 17));
 		pw_pannel.add(pw);
 		
 		passwordField = new JPasswordField();
 		pw_pannel.add(passwordField);
 		
 		JPanel panel_2 = new JPanel();
-		panel_2.setBounds(159, 469, 259, 50);
+		panel_2.setBounds(85, 262, 259, 50);
 		frame.getContentPane().add(panel_2);
 		panel_2.setLayout(new GridLayout(0, 2, 0, 0));
 		
