@@ -55,7 +55,7 @@ public class ASlogin {
 		
 
 		frame.getContentPane().setLayout(null);
-		ImageIcon icon = new ImageIcon("C:\\Users\\User\\git\\gitRepository\\auctionnew\\auctionnew\\INTERBBAKK.PNG");
+		ImageIcon icon = new ImageIcon("C:\\Users\\SM020\\git\\auctionsystemnew1\\auctionnew\\INTERBBAKK.JPG");
 		panel_1 = new JPanel() {
 			
 				protected void paintComponent(Graphics g) {
