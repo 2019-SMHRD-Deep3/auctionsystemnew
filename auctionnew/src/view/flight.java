@@ -126,7 +126,7 @@ public class flight {
 		JDatePanelImpl datePanel = new JDatePanelImpl(model);
 		JDatePickerImpl datePicker = new JDatePickerImpl(datePanel);
 		datePicker.getJFormattedTextField().setBackground(Color.WHITE);
-		model.setDate(2020, 01, 20);
+		model.setDate(2020, 0, 20);
 		panel_1.add(datePicker);
 		
 		JPanel panel_2 = new JPanel();
