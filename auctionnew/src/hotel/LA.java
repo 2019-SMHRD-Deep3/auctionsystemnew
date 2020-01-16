@@ -122,8 +122,8 @@ public class LA {
 		label_2.setFont(new Font("맑은 고딕 Semilight", Font.BOLD, 20));
 		label_2.setBounds(201, 620, 691, 148);
 		frame.getContentPane().add(label_2);
-		String imgPath2 = this.getClass().getResource(".").getPath() + "..//..//img//미주//LA//1.jpg";
-		String imgPath3 = this.getClass().getResource(".").getPath() + "..//..//img//미주//LA//2.jpg";
+		String imgPath21 = this.getClass().getResource(".").getPath() + "..//..//img//미주//LA//1.jpg";
+		String imgPath31 = this.getClass().getResource(".").getPath() + "..//..//img//미주//LA//2.jpg";
 		String imgPath5 = this.getClass().getResource(".").getPath() + "..//..//img//미주//LA//4.jpg";
 		String imgPath6 = this.getClass().getResource(".").getPath() + "..//..//img//미주//LA//5.jpg";
 		String imgPath7 = this.getClass().getResource(".").getPath() + "..//..//img//미주//LA//6.jpg";

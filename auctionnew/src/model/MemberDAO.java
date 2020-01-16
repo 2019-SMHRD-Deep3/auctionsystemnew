@@ -69,7 +69,7 @@ public class MemberDAO {
 			psmt.setString(2, member.getPw());
 			rs = psmt.executeQuery();
 			
-			System.out.println(member.getId());
+			
 			
 			if(rs.next()) {
 				//해당 ID와 PW를 가진 사람이 존재
