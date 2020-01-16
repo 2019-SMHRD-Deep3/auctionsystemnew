@@ -160,7 +160,6 @@ public class ASlogin {
 		panel_2.add(confirm);
 		
 		cancel = new JButton("\uCDE8\uC18C");
-		panel_2.add(cancel);
 		
 		join = new JButton("\uD68C\uC6D0\uAC00\uC785");
 		join.addMouseListener(new MouseAdapter() {

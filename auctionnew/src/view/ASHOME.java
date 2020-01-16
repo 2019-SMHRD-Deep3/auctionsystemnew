@@ -1,6 +1,7 @@
 package view;
 
 import java.awt.Color;
+import java.awt.Desktop;
 import java.awt.EventQueue;
 import java.awt.Font;
 import java.awt.Graphics;
@@ -8,6 +9,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -47,10 +51,10 @@ public class ASHOME {
 	 */
 	private void initialize() {
 		frame = new JFrame();
-		frame.getContentPane().setBackground(new Color(255, 255, 255));
+		frame.getContentPane().setBackground(new Color(245, 245, 245));
 		frame.setBounds(100, 100, 1179, 766);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		String imgPath4 = this.getClass().getResource(".").getPath() + "..//..//img//ddddd.JPG";
+		String imgPath4 = this.getClass().getResource(".").getPath() + "..//..//img//0000.png";
 		ImageIcon icon = new ImageIcon(imgPath4);
 
 		frame.getContentPane().setLayout(null);
@@ -58,7 +62,7 @@ public class ASHOME {
 		JPanel panel_1 = new JPanel();
 		panel_1.setForeground(new Color(255, 255, 255));
 		panel_1.setBounds(0, 0, 1163, 58);
-		panel_1.setBackground(new Color(255, 255, 255));
+		panel_1.setBackground(new Color(245, 245, 245));
 		frame.getContentPane().add(panel_1);
 		panel_1.setLayout(null);
 
@@ -77,7 +81,8 @@ public class ASHOME {
 			}
 
 		};
-		panel.setBounds(10, 57, 1141, 279);
+		panel.setBackground(Color.WHITE);
+		panel.setBounds(10, 57, 1141, 243);
 		frame.getContentPane().add(panel);
 		panel.setLayout(null);
 
@@ -162,7 +167,7 @@ public class ASHOME {
 
 			public void actionPerformed(ActionEvent e) {
 				flight fly = new flight();
-
+				
 			}
 		});
 		flight.setBounds(180, 336, 90, 90);
@@ -175,7 +180,7 @@ public class ASHOME {
 		ticket.addActionListener(new ActionListener() {
 
 			public void actionPerformed(ActionEvent e) {
-				Ticket ticket = new Ticket();
+				Lotto ticket = new Lotto();
 			}
 		});
 		ticket.setBounds(872, 336, 90, 90);
@@ -185,7 +190,7 @@ public class ASHOME {
 		ticket.setIcon(new ImageIcon(imgPath3));
 
 		JPanel panel_3 = new JPanel();
-		panel_3.setBackground(Color.WHITE);
+		panel_3.setBackground(new Color(245, 245, 245));
 		panel_3.setBounds(10, 436, 180, 272);
 		frame.getContentPane().add(panel_3);
 		panel_3.setLayout(null);
@@ -253,6 +258,17 @@ public class ASHOME {
 		lblNewLabel.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
+				Desktop d = Desktop.getDesktop();
+				try {
+					d.browse(new URI(
+							"http://pf.kakao.com/_dbPlxb/chat"));
+				} catch (IOException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				} catch (URISyntaxException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
 			}
 		});
 		String imgPath6 = this.getClass().getResource(".").getPath() + "..//..//img//ĸó333.jpg";
@@ -261,12 +277,44 @@ public class ASHOME {
 		frame.getContentPane().add(lblNewLabel);
 
 		JLabel label_4 = new JLabel("");
+		label_4.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				Desktop d = Desktop.getDesktop();
+				try {
+					d.browse(new URI(
+							"https://slds2.tistory.com/1196"));
+				} catch (IOException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				} catch (URISyntaxException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+			}
+		});
 		String imgPath7 = this.getClass().getResource(".").getPath() + "..//..//img//ȣĲ��.jpg";
 		label_4.setIcon(new ImageIcon(imgPath7));
 		label_4.setBounds(896, 538, 255, 75);
 		frame.getContentPane().add(label_4);
 
 		JLabel label_5 = new JLabel("");
+		label_5.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				Desktop d = Desktop.getDesktop();
+				try {
+					d.browse(new URI(
+							"https://www.google.com/search?q=divorce&sxsrf=ACYBGNTWAvA4ACSo7SEYJVL5DWmFdU8GVA:1579145678082&source=lnms&tbm=isch&sa=X&ved=2ahUKEwiV-8KJmIfnAhWYA4gKHQPOBJcQ_AUoAXoECBAQAw&biw=1024&bih=936#imgrc=-0NPVFy2JxLOsM:"));
+				} catch (IOException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				} catch (URISyntaxException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+			}
+		});
 		String imgPath8 = this.getClass().getResource(".").getPath() + "..//..//img//ĸó2233232.jpg";
 		label_5.setIcon(new ImageIcon(imgPath8));
 		label_5.setBounds(896, 624, 255, 75);
