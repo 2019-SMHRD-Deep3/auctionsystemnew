@@ -4,12 +4,10 @@ import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 
-public class Hongkong {
+public class Ticket {
 
 	private JFrame frame;
-
-	
-	public Hongkong() {
+	public Ticket() {
 		initialize();
 		frame.setVisible(true);
 	}
@@ -19,8 +17,8 @@ public class Hongkong {
 	 */
 	private void initialize() {
 		frame = new JFrame();
-		frame.setBounds(100, 100, 830, 550);
-		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+		frame.setBounds(100, 100, 752, 353);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
 
 }
