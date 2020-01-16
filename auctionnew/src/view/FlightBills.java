@@ -4,10 +4,12 @@ import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 
-public class Ticket {
+public class FlightBills {
 
 	private JFrame frame;
-	public Ticket() {
+
+	
+	public FlightBills() {
 		initialize();
 		frame.setVisible(true);
 	}
@@ -17,8 +19,8 @@ public class Ticket {
 	 */
 	private void initialize() {
 		frame = new JFrame();
-		frame.setBounds(100, 100, 752, 353);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setBounds(100, 100, 1017, 620);
+		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 	}
 
 }

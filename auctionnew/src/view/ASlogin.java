@@ -28,7 +28,6 @@ public class ASlogin {
 	private JPanel pw_pannel;
 	private JLabel pw;
 	private JPasswordField passwordField;
-	private JButton confirm;
 	private JButton cancel;
 	private JLabel lblNewLabel;
 
@@ -51,7 +50,7 @@ public class ASlogin {
 		frame = new JFrame();
 		frame.getContentPane().setBackground(Color.WHITE);
 		frame.setBackground(Color.WHITE);
-		frame.setBounds(100, 100, 441, 386);
+		frame.setBounds(100, 100, 441, 413);
 		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		
 		
@@ -107,15 +106,15 @@ public class ASlogin {
 		pw_pannel.add(passwordField);
 		
 		JPanel panel_2 = new JPanel();
-		panel_2.setBounds(85, 262, 259, 50);
+		panel_2.setBounds(85, 291, 259, 50);
 		frame.getContentPane().add(panel_2);
 		panel_2.setLayout(new GridLayout(0, 2, 0, 0));
 		
-		confirm = new JButton("\uD655\uC778");
-		panel_2.add(confirm);
-		
-		cancel = new JButton("\uCDE8\uC18C");
+		cancel = new JButton("\uD655\uC778");
 		panel_2.add(cancel);
+		
+		JButton btnNewButton = new JButton("\uD68C\uC6D0\uAC00\uC785");
+		panel_2.add(btnNewButton);
 		
 		
 		
