@@ -25,6 +25,7 @@ public class flight {
 
 	private JFrame frame;
 	private DefaultComboBoxModel comboBoxModel;
+	private JComboBox comboBox_1;
 	
 	public flight() {
 		initialize();
@@ -81,13 +82,16 @@ public class flight {
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				FlightBills bills = new FlightBills();
+				String i = (String)comboBox.getSelectedItem();
+				
+			String i1 = (String)comboBox_1.getSelectedItem();
 			}
 		});
 		btnNewButton.setBackground(Color.WHITE);
 		btnNewButton.setBounds(626, 269, 97, 34);
 		panel.add(btnNewButton);
 		
-		JComboBox comboBox_1 = new JComboBox();
+		comboBox_1 = new JComboBox();
 		comboBox_1.setBackground(Color.WHITE);
 		comboBox_1.setModel(new DefaultComboBoxModel(new String[] {}));
 		comboBox_1.addItem("¿Œ√µ(ICN)");
@@ -126,7 +130,7 @@ public class flight {
 		JDatePanelImpl datePanel = new JDatePanelImpl(model);
 		JDatePickerImpl datePicker = new JDatePickerImpl(datePanel);
 		datePicker.getJFormattedTextField().setBackground(Color.WHITE);
-		model.setDate(2020, 01, 20);
+		//model.setDate(2020, 0, 20);
 		panel_1.add(datePicker);
 		
 		JPanel panel_2 = new JPanel();
