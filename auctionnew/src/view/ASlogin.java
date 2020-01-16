@@ -70,7 +70,7 @@ public class ASlogin {
 		frame = new JFrame();
 		frame.getContentPane().setBackground(Color.WHITE);
 		frame.setBackground(Color.WHITE);
-		frame.setBounds(100, 100, 669, 625);
+		frame.setBounds(100, 100, 494, 561);
 		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		ImageIcon icon = new ImageIcon("C:\\Users\\User\\git\\gitRepository\\auctionnew\\auctionnew\\img\\INTERBBAKK.PNG");
 		SpringLayout springLayout = new SpringLayout();
@@ -93,10 +93,8 @@ public class ASlogin {
 //		frame.getContentPane().add(panel_1);
 //		
 		JPanel id_panel = new JPanel();
-		springLayout.putConstraint(SpringLayout.NORTH, id_panel, 258, SpringLayout.NORTH, frame.getContentPane());
-		springLayout.putConstraint(SpringLayout.WEST, id_panel, 137, SpringLayout.WEST, frame.getContentPane());
-		springLayout.putConstraint(SpringLayout.SOUTH, id_panel, 292, SpringLayout.NORTH, frame.getContentPane());
-		springLayout.putConstraint(SpringLayout.EAST, id_panel, 476, SpringLayout.WEST, frame.getContentPane());
+		springLayout.putConstraint(SpringLayout.NORTH, id_panel, 221, SpringLayout.NORTH, frame.getContentPane());
+		springLayout.putConstraint(SpringLayout.EAST, id_panel, -63, SpringLayout.EAST, frame.getContentPane());
 		id_panel.setBackground(SystemColor.activeCaption);
 		frame.getContentPane().add(id_panel);
 		id_panel.setLayout(new GridLayout(0, 2, -50, 0));
@@ -111,10 +109,11 @@ public class ASlogin {
 		id.setColumns(10);
 		
 		pw_pannel = new JPanel();
-		springLayout.putConstraint(SpringLayout.NORTH, pw_pannel, 329, SpringLayout.NORTH, frame.getContentPane());
-		springLayout.putConstraint(SpringLayout.WEST, pw_pannel, 137, SpringLayout.WEST, frame.getContentPane());
-		springLayout.putConstraint(SpringLayout.SOUTH, pw_pannel, 363, SpringLayout.NORTH, frame.getContentPane());
-		springLayout.putConstraint(SpringLayout.EAST, pw_pannel, 477, SpringLayout.WEST, frame.getContentPane());
+		springLayout.putConstraint(SpringLayout.SOUTH, id_panel, -29, SpringLayout.NORTH, pw_pannel);
+		springLayout.putConstraint(SpringLayout.NORTH, pw_pannel, 288, SpringLayout.NORTH, frame.getContentPane());
+		springLayout.putConstraint(SpringLayout.WEST, id_panel, 0, SpringLayout.WEST, pw_pannel);
+		springLayout.putConstraint(SpringLayout.WEST, pw_pannel, 75, SpringLayout.WEST, frame.getContentPane());
+		springLayout.putConstraint(SpringLayout.EAST, pw_pannel, -63, SpringLayout.EAST, frame.getContentPane());
 		pw_pannel.setBackground(SystemColor.activeCaption);
 		frame.getContentPane().add(pw_pannel);
 		pw_pannel.setLayout(new GridLayout(0, 2, -50, 0));
@@ -128,12 +127,13 @@ public class ASlogin {
 		pw_pannel.add(pw);
 		
 		JPanel panel_2 = new JPanel();
-		springLayout.putConstraint(SpringLayout.NORTH, panel_2, 48, SpringLayout.SOUTH, pw_pannel);
-		springLayout.putConstraint(SpringLayout.WEST, panel_2, 0, SpringLayout.WEST, id_panel);
-		springLayout.putConstraint(SpringLayout.SOUTH, panel_2, 461, SpringLayout.NORTH, frame.getContentPane());
-		springLayout.putConstraint(SpringLayout.EAST, panel_2, 0, SpringLayout.EAST, id_panel);
+		springLayout.putConstraint(SpringLayout.WEST, panel_2, 92, SpringLayout.WEST, frame.getContentPane());
+		springLayout.putConstraint(SpringLayout.EAST, panel_2, -77, SpringLayout.EAST, frame.getContentPane());
+		springLayout.putConstraint(SpringLayout.SOUTH, pw_pannel, -61, SpringLayout.NORTH, panel_2);
+		springLayout.putConstraint(SpringLayout.NORTH, panel_2, 387, SpringLayout.NORTH, frame.getContentPane());
+		springLayout.putConstraint(SpringLayout.SOUTH, panel_2, -89, SpringLayout.SOUTH, frame.getContentPane());
 		frame.getContentPane().add(panel_2);
-		panel_2.setLayout(new GridLayout(0, 3, 0, 0));
+		panel_2.setLayout(new GridLayout(0, 2, 0, 0));
 		
 		confirm = new JButton("\uD655\uC778");
 		confirm.addMouseListener(new MouseAdapter() {
@@ -182,10 +182,10 @@ public class ASlogin {
 				
 			}
 		};
-		springLayout.putConstraint(SpringLayout.NORTH, panel_3, 30, SpringLayout.NORTH, frame.getContentPane());
-		springLayout.putConstraint(SpringLayout.WEST, panel_3, 29, SpringLayout.WEST, frame.getContentPane());
-		springLayout.putConstraint(SpringLayout.SOUTH, panel_3, 215, SpringLayout.NORTH, frame.getContentPane());
-		springLayout.putConstraint(SpringLayout.EAST, panel_3, 614, SpringLayout.WEST, frame.getContentPane());
+		springLayout.putConstraint(SpringLayout.NORTH, panel_3, 69, SpringLayout.NORTH, frame.getContentPane());
+		springLayout.putConstraint(SpringLayout.WEST, panel_3, 46, SpringLayout.WEST, frame.getContentPane());
+		springLayout.putConstraint(SpringLayout.SOUTH, panel_3, -62, SpringLayout.NORTH, id_panel);
+		springLayout.putConstraint(SpringLayout.EAST, panel_3, -37, SpringLayout.EAST, frame.getContentPane());
 		frame.getContentPane().add(panel_3);
 		
 		
