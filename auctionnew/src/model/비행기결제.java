@@ -5,7 +5,9 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JTextField;
 import javax.swing.JLabel;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JPanel;
 
 public class 비행기결제 {
 
@@ -105,8 +107,21 @@ public class 비행기결제 {
 		frame.getContentPane().add(textField_5);
 		
 		JButton button = new JButton("\uACB0\uC81C\uD558\uAE30");
-		button.setBounds(593, 402, 180, 51);
+		button.setBounds(590, 386, 180, 51);
 		frame.getContentPane().add(button);
+		
+		JPanel panel = new JPanel();
+		panel.setBounds(500, 60, 285, 100);
+		frame.getContentPane().add(panel);
+		panel.setLayout(null);
+		
+	
+		
+		JLabel lblNewLabel = new JLabel("");
+		lblNewLabel.setBounds(0, 0, 285, 100);
+		panel.add(lblNewLabel);
+		String imgPath3 = this.getClass().getResource(".").getPath() + "..//..//img//캡처.3333jpg";
+		lblNewLabel.setIcon(new ImageIcon(imgPath3));
 	}
 
 }
