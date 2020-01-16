@@ -67,17 +67,6 @@ public class ASHOME {
 		lblNewLabel_2.setIcon(new ImageIcon(imgPath5));
 		lblNewLabel_2.setBounds(0, 0, 180, 70);
 		panel_1.add(lblNewLabel_2);
-		
-		JButton join = new JButton("join");
-		
-		join.addMouseListener(new MouseAdapter() {
-			@Override
-			public void mouseClicked(MouseEvent arg0) {
-				ASJoin최종 join1 = new ASJoin최종(); 
-			}
-		});
-		join.setBounds(909, 0, 169, 58);
-		panel_1.add(join);
 
 		panel = new JPanel() {
 			protected void paintComponent(Graphics g) {
