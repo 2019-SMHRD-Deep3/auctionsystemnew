@@ -15,11 +15,20 @@ public class MemberManagementService {
 	}
 
 	public Member memberlogin(Member member) {
-		Member i = dao.selectone(member);
-		return i;
+		Member loginuser = dao.selectone(member);
+		return loginuser;
 	}
 
 	public ArrayList<Member> memberlookup(String id) {
 		return dao.selectAll(id);
+	}
+
+	public boolean idCheck(Member member) {
+		  Member ID = dao.idCheck(member);
+	      if (ID == null) {
+	         return true;
+	      } else {
+	         return false;
+	      }
 	}
 }

@@ -15,15 +15,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-
-import org.jdatepicker.impl.JDatePanelImpl;
-import org.jdatepicker.impl.JDatePickerImpl;
-import org.jdatepicker.impl.UtilDateModel;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
-import model.MemberDAO;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
+import model.Member;
 
 
 public class ASHOME {
@@ -31,30 +23,24 @@ public class ASHOME {
 	private JFrame frame;
 	private JPanel panel;
 	private ImageIcon icon;
+	private Member loginuser ;
 
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					ASHOME window = new ASHOME();
-					window.frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
+	
 
 	/**
 	 * Create the application.
 	 */
-	public ASHOME() {
+	public ASHOME(Member member ) {
+		this.loginuser = member;
 		initialize();
+		frame.setVisible(true);
 	}
 
+
+	
 
 	/**
 	 * Initialize the contents of the frame.
@@ -81,6 +67,17 @@ public class ASHOME {
 		lblNewLabel_2.setIcon(new ImageIcon(imgPath5));
 		lblNewLabel_2.setBounds(0, 0, 180, 70);
 		panel_1.add(lblNewLabel_2);
+		
+		JButton join = new JButton("join");
+		
+		join.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent arg0) {
+				ASJoin최종 join1 = new ASJoin최종(); 
+			}
+		});
+		join.setBounds(909, 0, 169, 58);
+		panel_1.add(join);
 
 		panel = new JPanel() {
 			protected void paintComponent(Graphics g) {

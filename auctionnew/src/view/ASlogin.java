@@ -1,21 +1,27 @@
 package view;
 
+import java.awt.Color;
 import java.awt.EventQueue;
+import java.awt.Font;
 import java.awt.Graphics;
+import java.awt.GridLayout;
+import java.awt.SystemColor;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 import javax.swing.ImageIcon;
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.SpringLayout;
-import java.awt.Color;
-import java.awt.GridLayout;
-import javax.swing.JLabel;
-import javax.swing.JTextField;
-import javax.swing.SwingConstants;
-import java.awt.Font;
-import javax.swing.JPasswordField;
 import javax.swing.JButton;
-import java.awt.SystemColor;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JPasswordField;
+import javax.swing.JTextField;
+import javax.swing.SpringLayout;
+import javax.swing.SwingConstants;
+
+import model.Member;
+import model.MemberManagementService;
 
 public class ASlogin {
 
@@ -23,25 +29,38 @@ public class ASlogin {
 	private ImageIcon icon;
 	JPanel panel;
 	JPanel panel_1 ;
-	private JLabel id;
-	private JTextField ID_FIELD;
+	private JLabel idfield;
+	private JTextField id;
 	private JPanel pw_pannel;
-	private JLabel pw;
-	private JPasswordField passwordField;
+	private JLabel pwfield;
+	private JPasswordField pw;
 	private JButton confirm;
 	private JButton cancel;
-	private JLabel lblNewLabel;
+	JPanel panel_3 = new JPanel();
+	private JButton join;
+	private MemberManagementService service = new MemberManagementService();
 
 	/**
 	 * Launch the application.
 	 */
-
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					ASlogin window = new ASlogin();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
 	/**
 	 * Create the application.
 	 */
 	public ASlogin() {
 		initialize();
-		frame.setVisible(true);
+		
 	}
 
 	/**
@@ -51,71 +70,124 @@ public class ASlogin {
 		frame = new JFrame();
 		frame.getContentPane().setBackground(Color.WHITE);
 		frame.setBackground(Color.WHITE);
-		frame.setBounds(100, 100, 441, 386);
+		frame.setBounds(100, 100, 669, 625);
 		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-		
-		
-
-		frame.getContentPane().setLayout(null);
-		ImageIcon icon = new ImageIcon("C:\\Users\\User\\git\\gitRepository\\auctionnew\\auctionnew\\img\\INTERBBAKK.JPG");
-		panel_1 = new JPanel() {
-			
-				protected void paintComponent(Graphics g) {
-					// TODO Auto-generated method stub
-					g.drawImage(icon.getImage(),0,0,panel_1.getWidth(),panel_1.getHeight(),null);
-					setOpaque(false);
-					super.paintComponent(g);
-				}
-		};
-		panel_1.setBackground(SystemColor.textHighlightText);
-		panel_1.setBounds(49, 45, 339, 75);
-
-		frame.getContentPane().add(panel_1);
-		
-		lblNewLabel = new JLabel("");
-		lblNewLabel.setFont(new Font("굴림", Font.PLAIN, 12));
-		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\User\\git\\gitRepository\\auctionnew\\auctionnew\\img\\1.png"));
-		panel_1.add(lblNewLabel);
-		
+		ImageIcon icon = new ImageIcon("C:\\Users\\User\\git\\gitRepository\\auctionnew\\auctionnew\\img\\INTERBBAKK.PNG");
+		SpringLayout springLayout = new SpringLayout();
+		frame.getContentPane().setLayout(springLayout);
+//		panel_1 = new JPanel() {
+//			
+//				protected void paintComponent(Graphics g) {
+//					// TODO Auto-generated method stub
+//					g.drawImage(icon.getImage(),0,0,panel_1.getWidth(),panel_1.getHeight(),null);
+//					setOpaque(false);
+//					super.paintComponent(g);
+//				}
+//		};
+//		springLayout.putConstraint(SpringLayout.NORTH, panel_1, 56, SpringLayout.NORTH, frame.getContentPane());
+//		springLayout.putConstraint(SpringLayout.WEST, panel_1, 46, SpringLayout.WEST, frame.getContentPane());
+//		springLayout.putConstraint(SpringLayout.SOUTH, panel_1, 191, SpringLayout.NORTH, frame.getContentPane());
+//		springLayout.putConstraint(SpringLayout.EAST, panel_1, 599, SpringLayout.WEST, frame.getContentPane());
+//		panel_1.setBackground(SystemColor.textHighlightText);
+//
+//		frame.getContentPane().add(panel_1);
+//		
 		JPanel id_panel = new JPanel();
+		springLayout.putConstraint(SpringLayout.NORTH, id_panel, 258, SpringLayout.NORTH, frame.getContentPane());
+		springLayout.putConstraint(SpringLayout.WEST, id_panel, 137, SpringLayout.WEST, frame.getContentPane());
+		springLayout.putConstraint(SpringLayout.SOUTH, id_panel, 292, SpringLayout.NORTH, frame.getContentPane());
+		springLayout.putConstraint(SpringLayout.EAST, id_panel, 476, SpringLayout.WEST, frame.getContentPane());
 		id_panel.setBackground(SystemColor.activeCaption);
-		id_panel.setBounds(49, 136, 339, 34);
 		frame.getContentPane().add(id_panel);
 		id_panel.setLayout(new GridLayout(0, 2, -50, 0));
 		
-		id = new JLabel("             ID");
-		id.setFont(new Font("Bookman Old Style", Font.PLAIN, 15));
-		id.setHorizontalAlignment(SwingConstants.LEFT);
-		id_panel.add(id);
+		idfield = new JLabel("             ID");
+		idfield.setFont(new Font("Bookman Old Style", Font.PLAIN, 15));
+		idfield.setHorizontalAlignment(SwingConstants.LEFT);
+		id_panel.add(idfield);
 		
-		ID_FIELD = new JTextField();
-		id_panel.add(ID_FIELD);
-		ID_FIELD.setColumns(10);
+		id = new JTextField();
+		id_panel.add(id);
+		id.setColumns(10);
 		
 		pw_pannel = new JPanel();
+		springLayout.putConstraint(SpringLayout.NORTH, pw_pannel, 329, SpringLayout.NORTH, frame.getContentPane());
+		springLayout.putConstraint(SpringLayout.WEST, pw_pannel, 137, SpringLayout.WEST, frame.getContentPane());
+		springLayout.putConstraint(SpringLayout.SOUTH, pw_pannel, 363, SpringLayout.NORTH, frame.getContentPane());
+		springLayout.putConstraint(SpringLayout.EAST, pw_pannel, 477, SpringLayout.WEST, frame.getContentPane());
 		pw_pannel.setBackground(SystemColor.activeCaption);
-		pw_pannel.setBounds(48, 194, 340, 34);
 		frame.getContentPane().add(pw_pannel);
 		pw_pannel.setLayout(new GridLayout(0, 2, -50, 0));
 		
-		pw = new JLabel("      Password");
-		pw.setHorizontalAlignment(SwingConstants.LEFT);
-		pw.setFont(new Font("Bookman Old Style", Font.PLAIN, 17));
+		pwfield = new JLabel("      Password");
+		pwfield.setHorizontalAlignment(SwingConstants.LEFT);
+		pwfield.setFont(new Font("Bookman Old Style", Font.PLAIN, 17));
+		pw_pannel.add(pwfield);
+		
+		pw = new JPasswordField();
 		pw_pannel.add(pw);
 		
-		passwordField = new JPasswordField();
-		pw_pannel.add(passwordField);
-		
 		JPanel panel_2 = new JPanel();
-		panel_2.setBounds(85, 262, 259, 50);
+		springLayout.putConstraint(SpringLayout.NORTH, panel_2, 48, SpringLayout.SOUTH, pw_pannel);
+		springLayout.putConstraint(SpringLayout.WEST, panel_2, 0, SpringLayout.WEST, id_panel);
+		springLayout.putConstraint(SpringLayout.SOUTH, panel_2, 461, SpringLayout.NORTH, frame.getContentPane());
+		springLayout.putConstraint(SpringLayout.EAST, panel_2, 0, SpringLayout.EAST, id_panel);
 		frame.getContentPane().add(panel_2);
-		panel_2.setLayout(new GridLayout(0, 2, 0, 0));
+		panel_2.setLayout(new GridLayout(0, 3, 0, 0));
 		
 		confirm = new JButton("\uD655\uC778");
+		confirm.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent arg0) {
+				//로그인 기능
+				//id, pw를 컴포넌트에서 가져오기
+				String infoid = id.getText();
+				String infopw = pw.getText();
+				// Member 객체 생성
+				Member member = new Member(infoid,infopw);
+				Member loginuser =service.memberlogin(member);
+				if(loginuser==null) {
+					JOptionPane.showMessageDialog(frame,
+						    "로그인에 실패 했습니다.");
+				}else {
+					JOptionPane.showMessageDialog(frame,
+						    "로그인에 성공 했습니다.");
+					ASHOME main = new ASHOME(loginuser);
+					frame.dispose();
+				}
+			}
+		});
 		panel_2.add(confirm);
 		
 		cancel = new JButton("\uCDE8\uC18C");
 		panel_2.add(cancel);
+		
+		join = new JButton("\uD68C\uC6D0\uAC00\uC785");
+		join.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				ASJoin최종 join1 = new ASJoin최종();
+			}
+		});
+		panel_2.add(join);
+		
+		panel_3 = new JPanel() {
+			@Override
+			protected void paintComponent(Graphics g) {
+				// TODO Auto-generated method stub
+				g.drawImage(icon.getImage(),0,0,panel_3.getWidth(),panel_3.getHeight(),null);
+				// 1이미지소스 2좌표값 좌상단 0.0
+				setOpaque(false);
+				//4,5jpanal 크기에 맞게 변경
+				super.paintComponent(g);
+				
+			}
+		};
+		springLayout.putConstraint(SpringLayout.NORTH, panel_3, 30, SpringLayout.NORTH, frame.getContentPane());
+		springLayout.putConstraint(SpringLayout.WEST, panel_3, 29, SpringLayout.WEST, frame.getContentPane());
+		springLayout.putConstraint(SpringLayout.SOUTH, panel_3, 215, SpringLayout.NORTH, frame.getContentPane());
+		springLayout.putConstraint(SpringLayout.EAST, panel_3, 614, SpringLayout.WEST, frame.getContentPane());
+		frame.getContentPane().add(panel_3);
 		
 		
 		
