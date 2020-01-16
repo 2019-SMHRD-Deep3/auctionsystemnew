@@ -57,7 +57,7 @@ public class ASlogin {
 		
 
 		frame.getContentPane().setLayout(null);
-		ImageIcon icon = new ImageIcon("C:\\Users\\SM022\\git\\auctionsystemnew2\\auctionnew\\img\\INTERBBAKK.JPG");
+		ImageIcon icon = new ImageIcon("C:\\Users\\User\\git\\gitRepository\\auctionnew\\auctionnew\\img\\INTERBBAKK.JPG");
 		panel_1 = new JPanel() {
 			
 				protected void paintComponent(Graphics g) {
@@ -74,7 +74,7 @@ public class ASlogin {
 		
 		lblNewLabel = new JLabel("");
 		lblNewLabel.setFont(new Font("±¼¸²", Font.PLAIN, 12));
-		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\SM022\\git\\auctionsystemnew2\\auctionnew\\img\\1.png"));
+		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\User\\git\\gitRepository\\auctionnew\\auctionnew\\img\\1.png"));
 		panel_1.add(lblNewLabel);
 		
 		JPanel id_panel = new JPanel();
