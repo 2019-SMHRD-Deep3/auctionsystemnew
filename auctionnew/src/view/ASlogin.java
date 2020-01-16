@@ -133,7 +133,7 @@ public class ASlogin {
 		springLayout.putConstraint(SpringLayout.SOUTH, panel_2, 461, SpringLayout.NORTH, frame.getContentPane());
 		springLayout.putConstraint(SpringLayout.EAST, panel_2, 0, SpringLayout.EAST, id_panel);
 		frame.getContentPane().add(panel_2);
-		panel_2.setLayout(new GridLayout(0, 3, 0, 0));
+		panel_2.setLayout(new GridLayout(0, 2, 0, 0));
 		
 		confirm = new JButton("\uD655\uC778");
 		confirm.addMouseListener(new MouseAdapter() {
