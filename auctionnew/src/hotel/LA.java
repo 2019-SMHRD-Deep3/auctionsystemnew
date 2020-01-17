@@ -1,41 +1,28 @@
 package hotel;
 
-import java.awt.EventQueue;
-
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.JLabel;
-import javax.swing.JScrollBar;
-
-import view.ASlogin;
-
-import javax.swing.JRadioButton;
-import javax.swing.ImageIcon;
-import javax.swing.JButton;
-import java.awt.Font;
 import java.awt.Color;
 import java.awt.Dimension;
+import java.awt.EventQueue;
+import java.awt.Font;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
 import javax.swing.JScrollPane;
-import javax.swing.JTextArea;
+import javax.swing.JTextPane;
+
+import model.∞·¡¶√¢;
 
 public class LA {
 	private JFrame frame;
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					LA window = new LA();
-					window.frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
 	
 	public LA() {
 		initialize();
+		frame.setVisible(true);
 	}
 
 	/**
@@ -44,86 +31,116 @@ public class LA {
 	private void initialize() {
 		frame = new JFrame();
 		frame.getContentPane().setBackground(Color.WHITE);
-		frame.setBounds(100, 100, 967,682);
 		frame.getContentPane().setLayout(null);
 		
-		JScrollPane scrollPane = new JScrollPane();
-		scrollPane.setBounds(189, 52, 750, 672);
-		frame.getContentPane().add(scrollPane);
-		
 		JPanel panel = new JPanel();
-		panel.setBackground(Color.WHITE);
-		panel.setPreferredSize(new Dimension(500,400));
-		scrollPane.setViewportView(panel);
+		panel.setBounds(156, 0, 738, 435);
+		frame.getContentPane().add(panel);
 		panel.setLayout(null);
 		
+		JScrollPane scrollPane = new JScrollPane();
+		scrollPane.setBounds(0, 0, 738, 415);
+		panel.add(scrollPane);
+		
+		JPanel panel_1 = new JPanel();
+		panel_1.setBackground(new Color(245, 245, 245));
+		scrollPane.setViewportView(panel_1);
+		frame.setBounds(100, 100, 910,460);
+		panel_1.setPreferredSize(new Dimension(680,600));
+		panel_1.setLayout(null);
+		
 		JLabel lblNewLabel_1 = new JLabel("New label");
-		String imgPath1 = this.getClass().getResource(".").getPath() + "..//..//img//πÃ¡÷//LA//1.jpg";
-		lblNewLabel_1.setIcon(new ImageIcon(imgPath1));
-		lblNewLabel_1.setBounds(12, 10, 170, 150);
-		panel.add(lblNewLabel_1);
+		String imgPath = this.getClass().getResource(".").getPath()+"..//..//img//πÃ¡÷//LA//1.jpg";
+	    
+	    JButton btnNewButton = new JButton("\uC608\uC57D\uD558\uAE30");
+	    btnNewButton.addMouseListener(new MouseAdapter() {
+	    	@Override
+	    	public void mouseClicked(MouseEvent arg0) {
+	    		∞·¡¶√¢ bill = new ∞·¡¶√¢();
+	    	}
+	    });
+	    btnNewButton.setFont(new Font("∏º¿∫ ∞ÌµÒ Semilight", Font.BOLD, 18));
+	    btnNewButton.setBackground(Color.WHITE);
+	    btnNewButton.setBounds(532, 54, 175, 89);
+	    panel_1.add(btnNewButton);
+	    
+	    JButton button = new JButton("\uC608\uC57D\uD558\uAE30");
+	    button.addMouseListener(new MouseAdapter() {
+	    	@Override
+	    	public void mouseClicked(MouseEvent e) {
+	    		∞·¡¶√¢ bill = new ∞·¡¶√¢();
+	    	}
+	    });
+	    button.setFont(new Font("∏º¿∫ ∞ÌµÒ Semilight", Font.BOLD, 18));
+	    button.setBackground(Color.WHITE);
+	    button.setBounds(532, 253, 175, 89);
+	    panel_1.add(button);
+	    
+	    JButton button_1 = new JButton("\uC608\uC57D\uD558\uAE30");
+	    button_1.addMouseListener(new MouseAdapter() {
+	    	@Override
+	    	public void mouseClicked(MouseEvent e) {
+	    		∞·¡¶√¢ bill = new ∞·¡¶√¢();
+	    	}
+	    });
+	    button_1.setFont(new Font("∏º¿∫ ∞ÌµÒ Semilight", Font.BOLD, 18));
+	    button_1.setBackground(Color.WHITE);
+	    button_1.setBounds(532, 447, 175, 89);
+	    panel_1.add(button_1);
+	    lblNewLabel_1.setIcon(new ImageIcon(imgPath));
+		lblNewLabel_1.setBounds(12, 10, 193, 182);
+		panel_1.add(lblNewLabel_1);
 		
-		JLabel lblNewLabel_4 = new JLabel("New label");
-		lblNewLabel_4.setBounds(12, 531, 170, 150);
-		panel.add(lblNewLabel_4);
-		
-		
-		JTextArea textArea_3 = new JTextArea();
-		textArea_3.setBounds(194, 532, 512, 150);
-		panel.add(textArea_3);
-		textArea_3.setFont(new Font("∏º¿∫ ∞ÌµÒ Semilight", Font.BOLD, 20));
-		textArea_3.setText("\uB354 \uB2C8\uAEBC \uBF40\uAEBC \uD638\uD154\r\n\r\nbreakfast included\r\nFree WIFI\r\nFree PARKING");
-		
-		JTextArea txtrJw = new JTextArea();
-		txtrJw.setFont(new Font("∏º¿∫ ∞ÌµÒ Semilight", Font.BOLD, 20));
-		txtrJw.setText("JW \uBA54\uB9AC\uC6B0\uD2B8 \uD638\uD154\r\n\r\nbreakfast included\r\nFree WIFI\r\nFree PARKING");
-		txtrJw.setBounds(194, 10, 512, 148);
-		panel.add(txtrJw);
+		JTextPane txtpnJwIn = new JTextPane();
+		txtpnJwIn.setFont(new Font("∏º¿∫ ∞ÌµÒ Semilight", Font.BOLD, 20));
+		txtpnJwIn.setText("JW \uBA54\uB9AC\uC5B4\uD2B8 in L.A\r\n\r\nBreakfast Included\r\nFree WiFi\r\nFree Airport Shuttle");
+		txtpnJwIn.setBounds(231, 10, 476, 182);
+		panel_1.add(txtpnJwIn);
 		
 		JLabel lblNewLabel = new JLabel("New label");
-		lblNewLabel.setBounds(12, 10, 691, 148);
-		panel.add(lblNewLabel);
+		lblNewLabel.setBounds(12, 10, 695, 182);
+		panel_1.add(lblNewLabel);
 		
 		JLabel lblNewLabel_2 = new JLabel("New label");
-		String imgPath2 = this.getClass().getResource(".").getPath() + "..//..//img//πÃ¡÷//LA//2.jpg";
-		lblNewLabel_2.setIcon(new ImageIcon(imgPath2));
-		lblNewLabel_2.setBounds(12, 197, 170, 150);
-		panel.add(lblNewLabel_2);
+		String imgPath1 = this.getClass().getResource(".").getPath()+"..//..//img//πÃ¡÷//LA//2.jpg";
+	    lblNewLabel_2.setIcon(new ImageIcon(imgPath1));
+		lblNewLabel_2.setBounds(12, 205, 193, 179);
+		panel_1.add(lblNewLabel_2);
 		
-		JTextArea textArea_1 = new JTextArea();
-		textArea_1.setText("\uAE38\uD2BC \uD640\uB9AC \uD638\uD154\r\n\r\nbreakfast included\r\nFree WIFI\r\nFree PARKING");
-		textArea_1.setFont(new Font("∏º¿∫ ∞ÌµÒ Semilight", Font.BOLD, 20));
-		textArea_1.setBounds(191, 198, 512, 148);
-		panel.add(textArea_1);
+		JTextPane txtpnTheGrandHotel = new JTextPane();
+		txtpnTheGrandHotel.setFont(new Font("∏º¿∫ ∞ÌµÒ Semilight", Font.BOLD, 20));
+		txtpnTheGrandHotel.setText("Embassy Suites by Hilton L.A(\uD790\uD2BC)\r\n\r\nBreakfast Included\r\nFree WiFi\r\nFree Airport Shuttle");
+		txtpnTheGrandHotel.setBounds(231, 202, 476, 182);
+		panel_1.add(txtpnTheGrandHotel);
 		
 		JLabel label = new JLabel("New label");
-		label.setBounds(12, 198, 691, 148);
-		panel.add(label);
+		label.setBounds(12, 202, 695, 182);
+		panel_1.add(label);
+		
+		JLabel lblNewLabel_4 = new JLabel("New label");
+		String imgPath2 = this.getClass().getResource(".").getPath()+"..//..//img//πÃ¡÷//LA//3.jpg";
+	    lblNewLabel_4.setIcon(new ImageIcon(imgPath2));
+		lblNewLabel_4.setBounds(12, 394, 193, 182);
+		panel_1.add(lblNewLabel_4);
+		
+		JTextPane txtpnInLa = new JTextPane();
+		txtpnInLa.setFont(new Font("∏º¿∫ ∞ÌµÒ Semilight", Font.BOLD, 20));
+		txtpnInLa.setText("\uC250\uB77C\uD1A4 in L.A\r\n\r\nBreakfast Included\r\nFree WiFi\r\nFree Airport Shuttle");
+		txtpnInLa.setBounds(231, 394, 476, 182);
+		panel_1.add(txtpnInLa);
 		
 		JLabel lblNewLabel_3 = new JLabel("New label");
-		lblNewLabel_3.setBounds(12, 373, 170, 150);
-		panel.add(lblNewLabel_3);
+		lblNewLabel_3.setBounds(12, 394, 695, 182);
+		panel_1.add(lblNewLabel_3);
 		
+		JLabel lblNewLabel_5 = new JLabel("New label");
+		lblNewLabel_5.setBounds(0, 10, 155, 194);
+		frame.getContentPane().add(lblNewLabel_5);
 		
-		JTextArea txtrBreakfastIncluded = new JTextArea();
-		txtrBreakfastIncluded.setBounds(194, 374, 512, 148);
-		panel.add(txtrBreakfastIncluded);
-		txtrBreakfastIncluded.setFont(new Font("∏º¿∫ ∞ÌµÒ Semilight", Font.BOLD, 20));
-		txtrBreakfastIncluded.setText("\uB354\uB108\uB9C8\uB4DC\r\n\r\nbreakfast included\r\nFree WIFI\r\nFree PARKING");
+		JLabel lblNewLabel_6 = new JLabel("New label");
+		lblNewLabel_6.setBounds(0, 229, 155, 182);
+		frame.getContentPane().add(lblNewLabel_6);
 		
-		JLabel lblX = new JLabel("x");
-		lblX.setBounds(12, 532, 691, 148);
-		panel.add(lblX);
-		lblX.setFont(new Font("∏º¿∫ ∞ÌµÒ Semilight", Font.BOLD, 20));
-		
-		JLabel lblBreakfastIncluded = new JLabel("");
-		lblBreakfastIncluded.setBounds(12, 374, 691, 148);
-		panel.add(lblBreakfastIncluded);
-		lblBreakfastIncluded.setFont(new Font("∏º¿∫ ∞ÌµÒ Semilight", Font.BOLD, 20));
-		String imgPath3 = this.getClass().getResource(".").getPath() + "..//..//img//πÃ¡÷//LA//3.jpg";
-		lblNewLabel_3.setIcon(new ImageIcon(imgPath3));
-		String imgPath4 = this.getClass().getResource(".").getPath() + "..//..//img//πÃ¡÷//LA//4.jpg";
-		lblNewLabel_4.setIcon(new ImageIcon(imgPath4));
 		
 //<<<<<<< HEAD
 //		JTextArea textArea_3 = new JTextArea();
