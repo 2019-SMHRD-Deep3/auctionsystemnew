@@ -20,27 +20,9 @@ public class 결제창 {
 	private JTextField textField_3;
 	private JTextField textField_4;
 
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					결제창 window = new 결제창();
-					window.frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
-
-	/**
-	 * Create the application.
-	 */
 	public 결제창() {
 		initialize();
+		frame.setVisible(true);
 	}
 
 	/**
@@ -49,7 +31,7 @@ public class 결제창 {
 	private void initialize() {
 		frame = new JFrame();
 		frame.setBounds(100, 100, 813, 515);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
 		JLabel lblNewLabel = new JLabel("\uCE74\uB4DC\uBC88\uD638           -\uC5C6\uC774 \uC22B\uC790\uB9CC");

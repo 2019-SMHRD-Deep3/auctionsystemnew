@@ -13,6 +13,9 @@ import javax.swing.SwingConstants;
 import net.sourceforge.jdatepicker.impl.JDatePanelImpl;
 import net.sourceforge.jdatepicker.impl.JDatePickerImpl;
 import net.sourceforge.jdatepicker.impl.UtilDateModel;
+import javax.swing.JButton;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 public class Hotel {
 
@@ -30,6 +33,19 @@ public class Hotel {
 		frame.setBounds(100, 100, 752, 353);
 		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
+		
+		JButton btnNewButton = new JButton("\uC870\uD68C\uD558\uAE30");
+		btnNewButton.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent arg0) {
+				
+				
+			}
+		});
+		btnNewButton.setBackground(Color.WHITE);
+		btnNewButton.setFont(new Font("±¼¸²", Font.BOLD, 15));
+		btnNewButton.setBounds(543, 249, 181, 55);
+		frame.getContentPane().add(btnNewButton);
 		
 		JComboBox comboBox = new JComboBox();
 		comboBox.setBounds(41, 77, 187, 33);
