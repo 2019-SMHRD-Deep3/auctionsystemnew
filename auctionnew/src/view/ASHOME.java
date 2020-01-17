@@ -166,7 +166,7 @@ public class ASHOME {
 		flight.addActionListener(new ActionListener() {
 
 			public void actionPerformed(ActionEvent e) {
-				flight fly = new flight();
+				flight fly = new flight(loginuser);
 				
 			}
 		});

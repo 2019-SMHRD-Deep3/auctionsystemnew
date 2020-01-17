@@ -12,6 +12,7 @@ import javax.swing.JPanel;
 public class 비행기결제 {
 
 	private JFrame frame;
+	private Member loginuser;
 	private JTextField textField;
 	private JTextField textField_1;
 	private JTextField textField_2;
@@ -22,24 +23,15 @@ public class 비행기결제 {
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					비행기결제 window = new 비행기결제();
-					window.frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
+	
 
 	/**
 	 * Create the application.
 	 */
-	public 비행기결제() {
+	public 비행기결제(Member member) {
+		this.loginuser = member;
 		initialize();
+		frame.setVisible(true);
 	}
 
 	/**

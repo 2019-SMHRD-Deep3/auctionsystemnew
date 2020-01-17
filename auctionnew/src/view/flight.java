@@ -4,6 +4,7 @@ import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Date;
 
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.ImageIcon;
@@ -14,6 +15,8 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 
+import model.Member;
+import model.MemberManagementService;
 import model.비행기결제;
 import net.sourceforge.jdatepicker.impl.JDatePanelImpl;
 import net.sourceforge.jdatepicker.impl.JDatePickerImpl;
@@ -22,10 +25,16 @@ import net.sourceforge.jdatepicker.impl.UtilDateModel;
 public class flight {
 
 	private JFrame frame;
+	private Member loginuser;
 	private DefaultComboBoxModel comboBoxModel;
 	private JComboBox comboBox_1;
-	
-	public flight() {
+	private JDatePickerImpl datePicker;
+	private JDatePickerImpl datePicker1;
+	private Date value;
+	private Date value2;
+	MemberManagementService service = new MemberManagementService(); 
+	public flight(Member member) {
+		this.loginuser = member;
 		initialize();
 		frame.setVisible(true);
 		
@@ -79,10 +88,15 @@ public class flight {
 		JButton btnNewButton = new JButton("\uACB0\uC81C");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				비행기결제 bills = new 비행기결제();
+				
 				String i = (String)comboBox.getSelectedItem();
 				
 			String i1 = (String)comboBox_1.getSelectedItem();
+			
+			비행기결제 bills = new 비행기결제(loginuser);
+				
+		
+				
 			}
 		});
 		btnNewButton.setBackground(Color.WHITE);
@@ -126,7 +140,7 @@ public class flight {
 		// 달력
 		UtilDateModel model = new UtilDateModel();
 		JDatePanelImpl datePanel = new JDatePanelImpl(model);
-		JDatePickerImpl datePicker = new JDatePickerImpl(datePanel);
+		 datePicker = new JDatePickerImpl(datePanel);
 		datePicker.getJFormattedTextField().setBackground(Color.WHITE);
 		panel_1.add(datePicker);
 		
@@ -139,7 +153,7 @@ public class flight {
 		
 		UtilDateModel model1 = new UtilDateModel();
 		JDatePanelImpl datePanel1 = new JDatePanelImpl(model1);
-		JDatePickerImpl datePicker1 = new JDatePickerImpl(datePanel1);
+		datePicker1 = new JDatePickerImpl(datePanel1);
 		datePicker1.getJFormattedTextField().setBackground(Color.WHITE);
 		panel_2.add(datePicker1);
 		
@@ -157,4 +171,5 @@ public class flight {
 		
 		
 	}
+	
 }

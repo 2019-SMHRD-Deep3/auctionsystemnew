@@ -1,10 +1,11 @@
 package model;
 
 import java.util.ArrayList;
+import java.util.Date;
 
 public class MemberManagementService {
 	private MemberDAO dao = new MemberDAO();
-
+	private ReservationDAO rdao = new ReservationDAO();
 	public boolean memberJoin(Member member) {
 		int rows = dao.insert(member);
 		if (rows == 0) {
@@ -13,6 +14,22 @@ public class MemberManagementService {
 			return true;
 		}
 	}
+//	public boolean depDate(Resevation member) {
+//		int rows = rdao.getdepDate(member);
+//		if (rows == 0) {
+//			return false;
+//		} else {
+//			return true;
+//		}
+//	}
+//	public boolean airDate(Resevation member) {
+//		int rows = rdao.getariDate(member);
+//		if (rows == 0) {
+//			return false;
+//		} else {
+//			return true;
+//		}
+//	}
 
 	public Member memberlogin(Member member) {
 		Member loginuser = dao.selectone(member);
@@ -31,4 +48,5 @@ public class MemberManagementService {
 	         return false;
 	      }
 	}
+	
 }

@@ -6,6 +6,9 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Date;
+
+import net.sourceforge.jdatepicker.impl.JDatePickerImpl;
 
 public class MemberDAO {
 	private String url = "jdbc:oracle:thin:@localhost:1521:xe"; // 데이터베이스 주소
@@ -13,7 +16,10 @@ public class MemberDAO {
 	private String password = "hr";
 	private Connection conn = null;
 	private PreparedStatement psmt = null; // 4번
+	private JDatePickerImpl datePicker;
 	ResultSet rs = null;
+	
+	
 	public int insert(Member member) {
 		int rows = 0;
 		try { // try catch 예외처리
@@ -207,4 +213,5 @@ public class MemberDAO {
 	      
 	      return ID;
 	   }
+	   
 }
