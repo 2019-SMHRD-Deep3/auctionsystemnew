@@ -1,15 +1,22 @@
 package hotel;
 
+import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.EventQueue;
+import java.awt.Font;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 import javax.swing.ImageIcon;
+import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
-import javax.swing.JLabel;
 import javax.swing.JTextPane;
-import java.awt.Font;
+
+import model.∞·¡¶√¢;
+import view.flightsearch;
 
 public class Paris {
 
@@ -43,17 +50,18 @@ public class Paris {
 	 */
 	private void initialize() {
 		frame = new JFrame();
-		frame.setBounds(100, 100, 891, 496);
+		frame.getContentPane().setBackground(Color.WHITE);
+		frame.setBounds(100, 100, 894, 458);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
 		JPanel panel = new JPanel();
-		panel.setBounds(156, 45, 707, 417);
+		panel.setBounds(156, 45, 719, 370);
 		frame.getContentPane().add(panel);
 		panel.setLayout(null);
 		
 		JScrollPane scrollPane = new JScrollPane();
-		scrollPane.setBounds(0, 0, 707, 417);
+		scrollPane.setBounds(0, 0, 719, 370);
 		panel.add(scrollPane);
 		
 		JPanel panel_1 = new JPanel();
@@ -63,15 +71,64 @@ public class Paris {
 		
 		JLabel label_3 = new JLabel("");
 		String imgPath1 = this.getClass().getResource(".").getPath()+"..//..//img//¿Ø∑¥//∆ƒ∏Æ//1.jpg";
+	    
+	    JButton btnNewButton = new JButton("\uC608\uC57D\uD558\uAE30");
+	    btnNewButton.addMouseListener(new MouseAdapter() {
+	    	@Override
+	    	public void mouseClicked(MouseEvent arg0) {
+	    		∞·¡¶√¢ bill = new ∞·¡¶√¢();
+	    		
+	    	}
+	    });
+	    btnNewButton.setFont(new Font("∏º¿∫ ∞ÌµÒ Semilight", Font.BOLD, 15));
+	    btnNewButton.setBackground(Color.WHITE);
+	    btnNewButton.setBounds(522, 49, 137, 48);
+	    panel_1.add(btnNewButton);
+	    
+	    JButton button = new JButton("\uC608\uC57D\uD558\uAE30");
+	    button.addMouseListener(new MouseAdapter() {
+	    	@Override
+	    	public void mouseClicked(MouseEvent e) {
+	    		∞·¡¶√¢ bill = new ∞·¡¶√¢();
+	    	}
+	    });
+	    button.setFont(new Font("∏º¿∫ ∞ÌµÒ Semilight", Font.BOLD, 15));
+	    button.setBackground(Color.WHITE);
+	    button.setBounds(524, 184, 137, 48);
+	    panel_1.add(button);
+	    
+	    JButton button_1 = new JButton("\uC608\uC57D\uD558\uAE30");
+	    button_1.addMouseListener(new MouseAdapter() {
+	    	@Override
+	    	public void mouseClicked(MouseEvent e) {
+	    		∞·¡¶√¢ bill = new ∞·¡¶√¢();
+	    	}
+	    });
+	    button_1.setFont(new Font("∏º¿∫ ∞ÌµÒ Semilight", Font.BOLD, 15));
+	    button_1.setBackground(Color.WHITE);
+	    button_1.setBounds(524, 314, 137, 48);
+	    panel_1.add(button_1);
+	    
+	    JButton button_2 = new JButton("\uC608\uC57D\uD558\uAE30");
+	    button_2.addMouseListener(new MouseAdapter() {
+	    	@Override
+	    	public void mouseClicked(MouseEvent e) {
+	    		∞·¡¶√¢ bill = new ∞·¡¶√¢();
+	    	}
+	    });
+	    button_2.setFont(new Font("∏º¿∫ ∞ÌµÒ Semilight", Font.BOLD, 15));
+	    button_2.setBackground(Color.WHITE);
+	    button_2.setBounds(524, 449, 137, 48);
+	    panel_1.add(button_2);
 	    label_3.setIcon(new ImageIcon(imgPath1));
 		label_3.setBounds(12, 10, 152, 127);
 		panel_1.add(label_3);
 		
 		JTextPane txtpnIn = new JTextPane();
-		txtpnIn.setFont(new Font("∏º¿∫ ∞ÌµÒ Semilight", Font.BOLD, 16));
-		txtpnIn.setText("\uB77C \uD2B8\uB808\uBAA8\uC77C in Paris\r\n\r\nBreakfast Included\r\nFree WiFi\r\nFree Airport Shuttle");
 		txtpnIn.setBounds(187, 10, 489, 127);
 		panel_1.add(txtpnIn);
+		txtpnIn.setFont(new Font("∏º¿∫ ∞ÌµÒ Semilight", Font.BOLD, 16));
+		txtpnIn.setText("\uB77C \uD2B8\uB808\uBAA8\uC77C in Paris\r\n\r\nBreakfast Included\r\nFree WiFi\r\nFree Airport Shuttle");
 		
 		JLabel lblNewLabel = new JLabel("New label");
 		lblNewLabel.setBounds(12, 10, 584, 127);
@@ -124,5 +181,31 @@ public class Paris {
 		JLabel label_2 = new JLabel("New label");
 		label_2.setBounds(12, 421, 584, 127);
 		panel_1.add(label_2);
+		
+		JLabel label_7 = new JLabel("");
+		label_7.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				flightsearch search = new flightsearch();
+			}
+		});
+		String imgPath5 = this.getClass().getResource(".").getPath()+"..//..//img//ø°∆Á≈∏øˆ.jpg";
+	    
+	    JTextPane txtpnSameDayTo = new JTextPane();
+	    txtpnSameDayTo.setForeground(Color.BLACK);
+	    txtpnSameDayTo.setFont(new Font("SansSerif", Font.BOLD, 16));
+	    txtpnSameDayTo.setOpaque(false);
+	    txtpnSameDayTo.setText("    Same day\r\n    to go PARIS");
+	    txtpnSameDayTo.setBounds(0, 181, 144, 48);
+	    frame.getContentPane().add(txtpnSameDayTo);
+	    label_7.setIcon(new ImageIcon(imgPath5));
+		label_7.setBounds(0, 46, 144, 183);
+		frame.getContentPane().add(label_7);
+		
+		JLabel label_8 = new JLabel("New label");
+		String imgPath6 = this.getClass().getResource(".").getPath()+"..//..//img//";
+	    label_8.setIcon(new ImageIcon(imgPath6));
+		label_8.setBounds(0, 239, 144, 183);
+		frame.getContentPane().add(label_8);
 	}
 }

@@ -1,6 +1,7 @@
 package hotel;
 
 import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.EventQueue;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
@@ -17,6 +18,7 @@ import model.∞·¡¶√¢;
 import javax.swing.JScrollBar;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.Font;
 
 public class Newyork {
 
@@ -47,124 +49,108 @@ public class Newyork {
 		frame.getContentPane().setLayout(null);
 		
 		JPanel panel = new JPanel();
-		panel.setBounds(153, 86, 738, 428);
+		panel.setBounds(144, 43, 730, 367);
 		frame.getContentPane().add(panel);
 		panel.setLayout(null);
 		
 		JScrollPane scrollPane = new JScrollPane();
-		scrollPane.setBounds(0, 0, 738, 406);
-		
-		
+		scrollPane.setBounds(0, 0, 724, 367);
 		panel.add(scrollPane);
 		
 		JPanel panel_1 = new JPanel();
 		scrollPane.setViewportView(panel_1);
+		panel_1.setPreferredSize(new Dimension(580,600));
 		panel_1.setLayout(null);
 		
-		JLabel label_3 = new JLabel("");
-		String imgPath1 = this.getClass().getResource(".").getPath()+"..//..//img//πÃ¡÷//¥∫øÂ//1.jpg";
-	    
-	    JButton button_2 = new JButton("\uC608\uC57D\uC870\uD68C");
-	    button_2.addActionListener(new ActionListener() {
-	    	public void actionPerformed(ActionEvent arg0) {
-	    	}
-	    });
-	    button_2.addMouseListener(new MouseAdapter() {
-	    	@Override
-	    	public void mouseClicked(MouseEvent arg0) {
-	    		∞·¡¶√¢ bill = new ∞·¡¶√¢();
-	    	}
-	    });
-	    button_2.setBounds(546, 41, 178, 80);
-	    panel_1.add(button_2);
-	    
-	    JButton button_1 = new JButton("\uC608\uC57D\uC870\uD68C");
-	    button_1.addMouseListener(new MouseAdapter() {
-	    	@Override
-	    	public void mouseClicked(MouseEvent e) {
-	    		∞·¡¶√¢ bill = new ∞·¡¶√¢();
-	    	}
-	    });
-	    button_1.setBounds(546, 193, 178, 80);
-	    panel_1.add(button_1);
-	    
-	    JButton button = new JButton("\uC608\uC57D\uC870\uD68C");
-	    button.addMouseListener(new MouseAdapter() {
-	    	@Override
-	    	public void mouseClicked(MouseEvent e) {
-	    		∞·¡¶√¢ bill = new ∞·¡¶√¢();
-	    	}
-	    });
-	    button.setBounds(546, 341, 178, 80);
-	    panel_1.add(button);
-	    
-	    JButton btnNewButton = new JButton("\uC608\uC57D\uC870\uD68C");
-	    btnNewButton.addMouseListener(new MouseAdapter() {
-	    	@Override
-	    	public void mouseClicked(MouseEvent e) {
-	    		∞·¡¶√¢ bill = new ∞·¡¶√¢();
-	    	}
-	    });
-	    btnNewButton.setBounds(546, 496, 178, 80);
-	    panel_1.add(btnNewButton);
-	    label_3.setIcon(new ImageIcon(imgPath1));
-		label_3.setBounds(12, 10, 154, 142);
-		panel_1.add(label_3);
+		JButton btnNewButton = new JButton("\uC608\uC57D\uD558\uAE30");
+		btnNewButton.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+			}
+		});
+		btnNewButton.setFont(new Font("∏º¿∫ ∞ÌµÒ Semilight", Font.BOLD, 15));
+		btnNewButton.setBounds(528, 41, 137, 48);
+		panel_1.add(btnNewButton);
+		
+		JButton button_2 = new JButton("\uC608\uC57D\uD558\uAE30");
+		button_2.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+			}
+		});
+		button_2.setFont(new Font("∏º¿∫ ∞ÌµÒ Semilight", Font.BOLD, 15));
+		button_2.setBounds(528, 459, 137, 48);
+		panel_1.add(button_2);
+		
+		JButton button_1 = new JButton("\uC608\uC57D\uD558\uAE30");
+		button_1.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+			}
+		});
+		button_1.setFont(new Font("∏º¿∫ ∞ÌµÒ Semilight", Font.BOLD, 15));
+		button_1.setBounds(528, 322, 137, 48);
+		panel_1.add(button_1);
+		
+		JButton button = new JButton("\uC608\uC57D\uD558\uAE30");
+		button.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+			}
+		});
+		button.setFont(new Font("∏º¿∫ ∞ÌµÒ Semilight", Font.BOLD, 15));
+		button.setBounds(528, 185, 137, 48);
+		panel_1.add(button);
 		
 		JTextPane txtpnIn = new JTextPane();
-		txtpnIn.setText("\uB354 \uB9C8\uD06C in NYC\r\n\r\nBreakfast Included\r\nFree WiFi\r\nFree Airport Shuttle");
-		txtpnIn.setBounds(178, 10, 546, 142);
+		txtpnIn.setFont(new Font("∏º¿∫ ∞ÌµÒ Semilight", Font.BOLD, 16));
+		txtpnIn.setBounds(204, 10, 489, 127);
 		panel_1.add(txtpnIn);
-		
-		JLabel lblNewLabel = new JLabel("New label");
-		lblNewLabel.setBounds(12, 10, 712, 142);
-		panel_1.add(lblNewLabel);
-		
-		JLabel label_4 = new JLabel("");
-		String imgPath2 = this.getClass().getResource(".").getPath()+"..//..//img//πÃ¡÷//¥∫øÂ//2.jpg";
-	    label_4.setIcon(new ImageIcon(imgPath2));
-		label_4.setBounds(12, 162, 154, 142);
-		panel_1.add(label_4);
-		
-		JTextPane textPane_1 = new JTextPane();
-		textPane_1.setText("\uB354 \uB85D\uC2DC \uD2B8\uB77C\uC774\uBCA0\uCE74 in NYC\r\n\r\nBreakfast Included\r\nFree WiFi\r\nFree Airport Shuttle");
-		textPane_1.setBounds(178, 162, 546, 142);
-		panel_1.add(textPane_1);
-		
-		JLabel label = new JLabel("New label");
-		label.setBounds(12, 162, 712, 142);
-		panel_1.add(label);
-		
-		JLabel label_5 = new JLabel("");
-		String imgPath3 = this.getClass().getResource(".").getPath()+"..//..//img//πÃ¡÷//¥∫øÂ//3.jpg";
-	    label_5.setIcon(new ImageIcon(imgPath3));
-		label_5.setBounds(12, 314, 154, 142);
-		panel_1.add(label_5);
+		txtpnIn.setText("\uB354 \uB9C8\uD06C in NYC\r\n\r\nBreakfast Included\r\nFree WiFi\r\nFree Airport Shuttle");
 		
 		JTextPane txtpnIn_1 = new JTextPane();
-		txtpnIn_1.setText("\uB86F\uB370 \uD3A0\uB9AC\uC2A4 in NYC\n\r\n\r\nBreakfast Included\r\nFree WiFi\r\nFree Airport Shuttle");
-		txtpnIn_1.setBounds(178, 314, 546, 142);
+		txtpnIn_1.setFont(new Font("∏º¿∫ ∞ÌµÒ Semilight", Font.BOLD, 16));
+		txtpnIn_1.setBounds(204, 147, 489, 127);
 		panel_1.add(txtpnIn_1);
+		txtpnIn_1.setText("\uB86F\uB370 \uD3A0\uB9AC\uC2A4 in NYC\r\n\r\nBreakfast Included\r\nFree WiFi\r\nFree Airport Shuttle");
 		
-		JLabel label_1 = new JLabel("New label");
-		label_1.setBounds(12, 314, 712, 142);
-		panel_1.add(label_1);
-		
-		JLabel label_6 = new JLabel("");
-		String imgPath4 = this.getClass().getResource(".").getPath()+"..//..//img//πÃ¡÷//¥∫øÂ//4.jpg";
-	    label_6.setIcon(new ImageIcon(imgPath4));
-		label_6.setBounds(12, 466, 154, 142);
-		panel_1.add(label_6);
+		JTextPane textPane_1 = new JTextPane();
+		textPane_1.setFont(new Font("∏º¿∫ ∞ÌµÒ Semilight", Font.BOLD, 16));
+		textPane_1.setBounds(204, 284, 489, 127);
+		panel_1.add(textPane_1);
+		textPane_1.setText("\uB354 \uB85D\uC2DC \uD2B8\uB77C\uC774\uBCA0\uCE74 in NYC\r\n\r\nBreakfast Included\r\nFree WiFi\r\nFree Airport Shuttle");
 		
 		JTextPane txtpnIn_2 = new JTextPane();
+		txtpnIn_2.setFont(new Font("∏º¿∫ ∞ÌµÒ Semilight", Font.BOLD, 16));
 		txtpnIn_2.setText("\uD2B8\uB7FC\uD504 \uCEE8\uD2F0\uB128\uD0C8 in NYC\r\n\r\nBreakfast Included\r\nFree WiFi\r\nFree Airport Shuttle");
-		txtpnIn_2.setBounds(178, 466, 546, 142);
+		txtpnIn_2.setBounds(204, 421, 489, 127);
 		panel_1.add(txtpnIn_2);
 		
+		JLabel lblNewLabel = new JLabel("New label");
+		String imgPath1 = this.getClass().getResource(".").getPath()+"..//..//img//πÃ¡÷//¥∫øÂ//1.jpg";
+		lblNewLabel.setIcon(new ImageIcon(imgPath1));
+		lblNewLabel.setBounds(25, 10, 152, 127);
+		panel_1.add(lblNewLabel);
+		
+		JLabel label = new JLabel("New label");
+		String imgPath2 = this.getClass().getResource(".").getPath()+"..//..//img//πÃ¡÷//¥∫øÂ//2.jpg";
+		label.setIcon(new ImageIcon(imgPath2));
+		label.setBounds(25, 147, 152, 127);
+		panel_1.add(label);
+		
+		JLabel label_1 = new JLabel("New label");
+		String imgPath3 = this.getClass().getResource(".").getPath()+"..//..//img//πÃ¡÷//¥∫øÂ//3.jpg";
+		label_1.setIcon(new ImageIcon(imgPath3));
+		label_1.setBounds(25, 284, 152, 127);
+		panel_1.add(label_1);
+		
 		JLabel label_2 = new JLabel("New label");
-		label_2.setBounds(12, 466, 712, 142);
+		String imgPath4 = this.getClass().getResource(".").getPath()+"..//..//img//πÃ¡÷//¥∫øÂ//4.jpg";
+		label_2.setIcon(new ImageIcon(imgPath4));
+		label_2.setBounds(25, 421, 152, 127);
 		panel_1.add(label_2);
-		frame.setBounds(100, 100, 907, 525);
+		
+		frame.setBounds(100, 100, 890, 459);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
 }
