@@ -1,25 +1,23 @@
 package view;
 
 import java.awt.Color;
+import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.DefaultComboBoxModel;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.SwingConstants;
 
+import model.비행기결제;
 import net.sourceforge.jdatepicker.impl.JDatePanelImpl;
 import net.sourceforge.jdatepicker.impl.JDatePickerImpl;
 import net.sourceforge.jdatepicker.impl.UtilDateModel;
-
-import java.awt.Label;
-import java.util.Properties;
-import java.awt.Font;
-import javax.swing.JLabel;
-import javax.swing.SwingConstants;
-import javax.swing.ImageIcon;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
 
 public class flight {
 
@@ -81,7 +79,7 @@ public class flight {
 		JButton btnNewButton = new JButton("\uACB0\uC81C");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				FlightBills bills = new FlightBills();
+				비행기결제 bills = new 비행기결제();
 				String i = (String)comboBox.getSelectedItem();
 				
 			String i1 = (String)comboBox_1.getSelectedItem();
