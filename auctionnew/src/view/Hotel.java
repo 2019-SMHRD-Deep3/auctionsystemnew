@@ -1,6 +1,7 @@
 package view;
 
 import java.awt.Color;
+import java.awt.EventQueue;
 import java.awt.Font;
 
 import javax.swing.ImageIcon;
@@ -21,10 +22,21 @@ public class Hotel {
 
 	private JFrame frame;
 
-	
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Hotel window = new Hotel();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
 	public Hotel() {
 		initialize();
-		frame.setVisible(true);
+	//	frame.setVisible(true);
 	}
 
 	private void initialize() {

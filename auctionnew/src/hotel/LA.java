@@ -114,7 +114,7 @@ public class LA {
 		panel_1.add(txtpnTheGrandHotel);
 		
 		JLabel label = new JLabel("New label");
-		label.setBounds(12, 202, 695, 182);
+		label.setBounds(12, 202, 695, 169);
 		panel_1.add(label);
 		
 		JLabel lblNewLabel_4 = new JLabel("New label");

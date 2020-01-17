@@ -95,11 +95,6 @@ public class ∞·¡¶√¢ {
 		btnNewButton.setBounds(579, 395, 180, 51);
 		frame.getContentPane().add(btnNewButton);
 		
-		JPanel panel = new JPanel();
-		panel.setOpaque(false);
-		panel.setBounds(500, 61, 285, 100);
-		frame.getContentPane().add(panel);
-		
 		JLabel lblNewLabel_6 = new JLabel("");
 		lblNewLabel_6.setBounds(500, 60, 285, 100);
 		frame.getContentPane().add(lblNewLabel_6);

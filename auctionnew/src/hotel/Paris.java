@@ -199,7 +199,7 @@ public class Paris {
 	    txtpnSameDayTo.setBounds(0, 181, 144, 48);
 	    frame.getContentPane().add(txtpnSameDayTo);
 	    label_7.setIcon(new ImageIcon(imgPath5));
-		label_7.setBounds(0, 46, 144, 183);
+		label_7.setBounds(0, 45, 144, 183);
 		frame.getContentPane().add(label_7);
 		
 		JLabel label_8 = new JLabel("New label");
