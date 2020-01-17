@@ -42,6 +42,7 @@ public class Hotel {
 			public void mouseClicked(MouseEvent arg0) {
 				
 				
+				
 			}
 		});
 		btnNewButton.setBackground(Color.WHITE);
