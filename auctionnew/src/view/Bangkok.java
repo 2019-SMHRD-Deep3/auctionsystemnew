@@ -60,14 +60,14 @@ public class Bangkok {
 		frame.getContentPane().add(btnNewButton);
 
 		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel
-				.setIcon(new ImageIcon("C:\\Users\\SM020\\git\\auctionsystemnew1\\auctionnew\\img\\\uBC29\uCF552.JPG"));
+		String imgPath5 = this.getClass().getResource(".").getPath()+"..//..//img//¹æÄÛ2.jpg";
+	       lblNewLabel.setIcon(new ImageIcon(imgPath5));
 		lblNewLabel.setBounds(12, 10, 310, 320);
 		frame.getContentPane().add(lblNewLabel);
 
 		JLabel lblNewLabel_1 = new JLabel("");
-		lblNewLabel_1
-				.setIcon(new ImageIcon("C:\\Users\\SM020\\git\\auctionsystemnew1\\auctionnew\\img\\\uBC29\uCF55.JPG"));
+		String imgPath6 = this.getClass().getResource(".").getPath()+"..//..//img//¹æÄÛ.jpg";
+	       lblNewLabel_1.setIcon(new ImageIcon(imgPath6));
 		lblNewLabel_1.setBounds(363, 10, 310, 320);
 		frame.getContentPane().add(lblNewLabel_1);
 

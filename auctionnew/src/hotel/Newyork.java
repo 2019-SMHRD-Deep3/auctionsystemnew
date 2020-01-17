@@ -2,7 +2,7 @@ package hotel;
 
 import java.awt.Color;
 import java.awt.Dimension;
-import java.awt.EventQueue;
+import java.awt.Font;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
@@ -14,30 +14,16 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextPane;
 
-import model.∞·¡¶√¢;
-import javax.swing.JScrollBar;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
-import java.awt.Font;
+import model.Member;
 
 public class Newyork {
 
 	private JFrame frame;
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					Newyork window = new Newyork();
-					window.frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
-	
-	public Newyork() {
+	private Member loginuser;
+	public Newyork(Member m) {
+		this.loginuser = m;
 		initialize();
+		frame.setVisible(true);
 	}
 
 	/**
@@ -151,6 +137,6 @@ public class Newyork {
 		panel_1.add(label_2);
 		
 		frame.setBounds(100, 100, 890, 459);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 	}
 }

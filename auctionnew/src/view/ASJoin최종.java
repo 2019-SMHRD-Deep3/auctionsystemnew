@@ -233,7 +233,7 @@ public class ASJoin최종 {
 							sex=2;
 						}
 						// 멤버 객체를 생성
-						Member member = new Member(infoid,infopw,infoname,infobirth,infoemail,sex);
+						Member member = new Member(infoid,infopw,infoname,infoemail,infobirth,sex);
 						//컨트롤러한테 회원가입 요청 
 						boolean result = service.memberJoin(member);
 						if(result) {

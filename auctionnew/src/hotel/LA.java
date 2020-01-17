@@ -2,7 +2,6 @@ package hotel;
 
 import java.awt.Color;
 import java.awt.Dimension;
-import java.awt.EventQueue;
 import java.awt.Font;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
@@ -15,15 +14,19 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextPane;
 
+import model.Member;
 import model.∞·¡¶√¢;
 
 public class LA {
 	private JFrame frame;
-	
-	public LA() {
+	private Member loginuser;
+	public LA(Member member) {
+		this.loginuser = member;
 		initialize();
 		frame.setVisible(true);
 	}
+
+	
 
 	/**
 	 * Initialize the contents of the frame.

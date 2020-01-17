@@ -38,7 +38,9 @@ public class Chile {
 		frame.getContentPane().setLayout(null);
 		
 		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\SM020\\git\\auctionsystemnew1\\auctionnew\\img\\\uC0B0\uD2F0\uC544\uACE0 \uBAA8\uB370\uB098 \uAD81\uC804.JPG"));
+		//lblNewLabel.setIcon(new ImageIcon("C:\\Users\\SM020\\git\\auctionsystemnew1\\auctionnew\\img\\\uC0B0\uD2F0\uC544\uACE0 \uBAA8\uB370\uB098 \uAD81\uC804.JPG"));
+		String imgPath5 = this.getClass().getResource(".").getPath()+"..//..//img//산티아고 모데나 궁전.jpg";
+	       lblNewLabel.setIcon(new ImageIcon(imgPath5));
 		lblNewLabel.setBounds(0, 0, 600, 370);
 		frame.getContentPane().add(lblNewLabel);
 		

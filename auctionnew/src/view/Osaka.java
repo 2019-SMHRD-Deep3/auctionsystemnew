@@ -42,7 +42,9 @@ public class Osaka {
 		frame.getContentPane().add(lblNewLabel_1);
 		
 		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\SM020\\git\\auctionsystemnew1\\auctionnew\\img\\\uC624\uC0AC\uCE74.JPG"));
+		//lblNewLabel.setIcon(new ImageIcon("C:\\Users\\SM020\\git\\auctionsystemnew1\\auctionnew\\img\\\uC624\uC0AC\uCE74.JPG"));
+		String imgPath5 = this.getClass().getResource(".").getPath()+"..//..//img//¿À»çÄ«.jpg";
+	       lblNewLabel.setIcon(new ImageIcon(imgPath5));
 		lblNewLabel.setBounds(12, 10, 463, 324);
 		frame.getContentPane().add(lblNewLabel);
 		

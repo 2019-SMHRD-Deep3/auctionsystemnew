@@ -39,7 +39,9 @@ public class Hongkong {
 		frame.getContentPane().setLayout(null);
 		
 		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\SM020\\git\\auctionsystemnew1\\auctionnew\\img\\\uD64D\uCF69.JPG"));
+		//lblNewLabel.setIcon(new ImageIcon("C:\\Users\\SM020\\git\\auctionsystemnew1\\auctionnew\\img\\\uD64D\uCF69.JPG"));
+		String imgPath5 = this.getClass().getResource(".").getPath()+"..//..//img//È«Äá.jpg";
+		lblNewLabel.setIcon(new ImageIcon(imgPath5));
 		lblNewLabel.setBounds(0, 0, 500, 500);
 		frame.getContentPane().add(lblNewLabel);
 		

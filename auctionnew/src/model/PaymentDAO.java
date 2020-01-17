@@ -24,7 +24,8 @@ public class PaymentDAO {
 			Class.forName("oracle.jdbc.driver.OracleDriver");// jdbc같은경우 회사마다 이름이 다르다.
 			conn = DriverManager.getConnection(url, user, password); // 3번의 과정 마우스 우클릭후 add catch
 			// connection 인터페이스구조
-			String sql = "insert into ASPAYMENT values(?,?,?,?,seq.nextval,?,(select RESERVE_NUM from asreserve where as_productid= ?))";
+			// PAY_NUM_SEQ
+			String sql = "insert into ASPAYMENT values()";
 			psmt = conn.prepareStatement(sql); // 4번의 과정 sql문을 객체를 만들어 준비하는과정 sql을 리턴시킴
 			psmt.setString(1, pay.getCardown());
 			psmt.setString(2, pay.getCardnum());
