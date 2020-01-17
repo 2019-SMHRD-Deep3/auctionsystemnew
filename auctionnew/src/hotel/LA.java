@@ -142,5 +142,25 @@ public class LA {
 		frame.getContentPane().add(lblNewLabel_6);
 		
 		
+//<<<<<<< HEAD
+//		JTextArea textArea_3 = new JTextArea();
+//		textArea_3.setBounds(384, 618, 512, 150);
+//		frame.getContentPane().add(textArea_3);
+//		
+//		JLabel label_2 = new JLabel("\uB354 \uB2C8\uAEBC \uBF40\uAEBC \uD638\uD154\r\n\r\nbreakfast included\r\nFree WIFI\r\nFree PARKING");
+//		label_2.setFont(new Font("맑은 고딕 Semilight", Font.BOLD, 20));
+//		label_2.setBounds(201, 620, 691, 148);
+//		frame.getContentPane().add(label_2);
+//		String imgPath21 = this.getClass().getResource(".").getPath() + "..//..//img//미주//LA//1.jpg";
+//		String imgPath31 = this.getClass().getResource(".").getPath() + "..//..//img//미주//LA//2.jpg";
+//		String imgPath5 = this.getClass().getResource(".").getPath() + "..//..//img//미주//LA//4.jpg";
+//		String imgPath6 = this.getClass().getResource(".").getPath() + "..//..//img//미주//LA//5.jpg";
+//		String imgPath7 = this.getClass().getResource(".").getPath() + "..//..//img//미주//LA//6.jpg";
+//		String imgPath8 = this.getClass().getResource(".").getPath() + "..//..//img//미주//LA//7.jpg";
+//		String imgPath9 = this.getClass().getResource(".").getPath() + "..//..//img//미주//LA//8.jpg";
+//		String imgPath10 = this.getClass().getResource(".").getPath() + "..//..//img//미주//LA//9.jpg";
+//		String imgPath11 = this.getClass().getResource(".").getPath() + "..//..//img//미주//LA//10.jpg";
+//=======
+//>>>>>>> branch 'master' of https://github.com/khornejp/auctionsystemnew.git
 	}
 }
