@@ -1,6 +1,6 @@
 package model;
 
-public class Resevation {
+public class Reservation {
 	private int resnum;
 	private int proid;
 	private String asdepdate;

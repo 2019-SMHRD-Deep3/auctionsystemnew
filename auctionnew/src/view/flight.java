@@ -165,7 +165,9 @@ public class flight {
 		panel.add(lblNewLabel);
 		
 		JLabel lblNewLabel_1 = new JLabel("New label");
-		lblNewLabel_1.setIcon(new ImageIcon("C:\\Users\\SM020\\git\\auctionsystemnew1\\auctionnew\\img\\\uACF5\uD56D.JPG"));
+		//lblNewLabel_1.setIcon(new ImageIcon("C:\\Users\\SM020\\git\\auctionsystemnew1\\auctionnew\\img\\\uACF5\uD56D.JPG"));
+		String imgPath5 = this.getClass().getResource(".").getPath()+"..//..//img//°øÇ×.jpg";
+		lblNewLabel_1.setIcon(new ImageIcon(imgPath5));
 		lblNewLabel_1.setBounds(0, 0, 735, 313);
 		panel.add(lblNewLabel_1);
 		

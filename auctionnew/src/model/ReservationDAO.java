@@ -19,7 +19,7 @@ public class ReservationDAO {
 	private Member member;
 	//private MemberManagementService service = new MemberManagementService();
 	ResultSet rs = null;
-	public int getflightDate(Date value, Date value2) {
+	public int getflightDate(Date value, Date value2, Member m) {
 			//Reservation rev = new Resrvation();
 		   
 		   int rows = 0;

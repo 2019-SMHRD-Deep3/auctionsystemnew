@@ -2,20 +2,35 @@ package model;
 
 public class Payment {
 	private int paynum;
-	private int cardnum;
+	private String cardnum;
 	private String cardown;
 	private String expire;
 	private String id;
 	private int resnum;
+	private String passport;
 	
 	
-	public Payment(int paynum, int cardnum, String cardown, String expire, String id, int resnum) {
+	public String getPassport() {
+		return passport;
+	}
+	public void setPassport(String passport) {
+		this.passport = passport;
+	}
+	
+	public Payment(String cardnum, String cardown, String expire, String passport) {
+		this.cardnum = cardnum;
+		this.cardown = cardown;
+		this.expire = expire;
+		this.passport = passport;
+	}
+	public Payment(int paynum, String cardnum, String cardown, String expire, String id, int resnum,String passport) {
 		this.paynum = paynum;
 		this.cardnum = cardnum;
 		this.cardown = cardown;
 		this.expire = expire;
 		this.id = id;
 		this.resnum = resnum;
+		this.passport = passport;
 	}
 	public int getPaynum() {
 		return paynum;
@@ -23,10 +38,10 @@ public class Payment {
 	public void setPaynum(int paynum) {
 		this.paynum = paynum;
 	}
-	public int getCardnum() {
+	public String getCardnum() {
 		return cardnum;
 	}
-	public void setCardnum(int cardnum) {
+	public void setCardnum(String cardnum) {
 		this.cardnum = cardnum;
 	}
 	public String getCardown() {

@@ -6,8 +6,17 @@ import java.util.Date;
 public class MemberManagementService {
 	private MemberDAO dao = new MemberDAO();
 	private ReservationDAO rdao = new ReservationDAO();
+	private PaymentDAO pdao = new PaymentDAO();
 	public boolean memberJoin(Member member) {
 		int rows = dao.insert(member);
+		if (rows == 0) {
+			return false;
+		} else {
+			return true;
+		}
+	}
+	public boolean payJoin(Payment pay) {
+		int rows = pdao.payInfoinsert(pay);
 		if (rows == 0) {
 			return false;
 		} else {

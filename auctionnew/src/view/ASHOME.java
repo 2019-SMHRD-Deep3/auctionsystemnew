@@ -95,7 +95,7 @@ public class ASHOME {
 		JButton act = new JButton("");
 		act.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				Act act = new Act();
+				Act act = new Act(loginuser);
 			}
 		});
 		act.setBounds(630, 336, 90, 90);
@@ -153,7 +153,7 @@ public class ASHOME {
 		hotel.addActionListener(new ActionListener() {
 			
 			public void actionPerformed(ActionEvent e) {
-				Hotel hotel = new Hotel();
+				Hotel hotel = new Hotel(loginuser);
 			}
 		});
 		hotel.setBounds(400, 336, 90, 90);

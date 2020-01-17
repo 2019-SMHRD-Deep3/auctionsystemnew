@@ -1,19 +1,22 @@
 package view;
 
-import java.awt.EventQueue;
+import java.awt.Color;
+import java.awt.Font;
 
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.ImageIcon;
-import java.awt.Font;
-import java.awt.Color;
 import javax.swing.SwingConstants;
+
+import model.Member;
 
 public class Act {
 
 	private JFrame frame;
+	private Member loginuser;
 
-	public Act() {
+	public Act(Member member) {
+		this.loginuser = member;
 		initialize();
 		frame.setVisible(true);
 	}

@@ -1,25 +1,27 @@
 package model;
 
-import java.awt.EventQueue;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
-import javax.swing.JFrame;
-import javax.swing.JTextField;
-import javax.swing.JLabel;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.JTextField;
 
 public class 비행기결제 {
 
 	private JFrame frame;
 	private Member loginuser;
-	private JTextField textField;
-	private JTextField textField_1;
-	private JTextField textField_2;
-	private JTextField textField_3;
-	private JTextField textField_4;
-	private JTextField textField_5;
-
+	private JTextField name;
+	private JTextField cardnum;
+	private JTextField expire;
+	private JTextField email;
+	private JTextField phone;
+	private JTextField passport;
+	private MemberManagementService service = new MemberManagementService();
 	/**
 	 * Launch the application.
 	 */
@@ -40,24 +42,24 @@ public class 비행기결제 {
 	private void initialize() {
 		frame = new JFrame();
 		frame.setBounds(100, 100, 813, 515);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
-		textField = new JTextField();
-		textField.setColumns(10);
-		textField.setBounds(12, 207, 149, 35);
-		frame.getContentPane().add(textField);
+		name = new JTextField();
+		name.setColumns(10);
+		name.setBounds(12, 207, 149, 35);
+		frame.getContentPane().add(name);
 		
-		textField_1 = new JTextField();
-		textField_1.setColumns(10);
-		textField_1.setBounds(179, 207, 345, 35);
-		frame.getContentPane().add(textField_1);
+		cardnum = new JTextField();
+		cardnum.setColumns(10);
+		cardnum.setBounds(179, 207, 345, 35);
+		frame.getContentPane().add(cardnum);
 		
-		textField_2 = new JTextField();
-		textField_2.setText("");
-		textField_2.setColumns(10);
-		textField_2.setBounds(536, 207, 162, 35);
-		frame.getContentPane().add(textField_2);
+		expire = new JTextField();
+		expire.setText("");
+		expire.setColumns(10);
+		expire.setBounds(536, 207, 162, 35);
+		frame.getContentPane().add(expire);
 		
 		JLabel label = new JLabel("\uC774\uB984");
 		label.setBounds(12, 171, 83, 25);
@@ -75,30 +77,53 @@ public class 비행기결제 {
 		label_3.setBounds(12, 249, 96, 25);
 		frame.getContentPane().add(label_3);
 		
-		textField_3 = new JTextField();
-		textField_3.setColumns(10);
-		textField_3.setBounds(12, 284, 345, 35);
-		frame.getContentPane().add(textField_3);
+		email = new JTextField();
+		email.setColumns(10);
+		email.setBounds(12, 284, 345, 35);
+		frame.getContentPane().add(email);
 		
 		JLabel label_4 = new JLabel("\uC804\uD654\uBC88\uD638           -\uC5C6\uC774 \uC22B\uC790\uB9CC\r\n");
 		label_4.setBounds(371, 249, 187, 25);
 		frame.getContentPane().add(label_4);
 		
-		textField_4 = new JTextField();
-		textField_4.setColumns(10);
-		textField_4.setBounds(369, 284, 290, 35);
-		frame.getContentPane().add(textField_4);
+		phone = new JTextField();
+		phone.setColumns(10);
+		phone.setBounds(369, 284, 290, 35);
+		frame.getContentPane().add(phone);
 		
 		JLabel label_5 = new JLabel("\uC5EC\uAD8C\uBC88\uD638");
 		label_5.setBounds(12, 330, 96, 35);
 		frame.getContentPane().add(label_5);
 		
-		textField_5 = new JTextField();
-		textField_5.setColumns(10);
-		textField_5.setBounds(12, 375, 345, 35);
-		frame.getContentPane().add(textField_5);
+		passport = new JTextField();
+		passport.setColumns(10);
+		passport.setBounds(12, 375, 345, 35);
+		frame.getContentPane().add(passport);
 		
 		JButton button = new JButton("\uACB0\uC81C\uD558\uAE30");
+		button.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				String infoname = name.getText(); 
+				String infocardnum = cardnum.getText();
+				String infoexpire = expire.getText();
+				String infopass = passport.getText();
+				//String infoemail = email.getText();
+				
+				// 멤버 객체를 생성
+				Payment member = new Payment(infoname,infocardnum,infoexpire,infopass);
+				//컨트롤러한테 회원가입 요청 
+				boolean result = service.payJoin(member);
+				if(result) {
+					JOptionPane.showMessageDialog(frame,
+						    "결제에 성공 했습니다.");
+					frame.dispose();
+				} else {
+					JOptionPane.showMessageDialog(frame,
+						    "결제에 실패 했습니다.");
+				}
+			}
+		});
 		button.setBounds(590, 386, 180, 51);
 		frame.getContentPane().add(button);
 		
