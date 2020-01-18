@@ -150,7 +150,7 @@ public class ACTIVITYj {
 		
 		JTextPane txtpnIn = new JTextPane();
 		txtpnIn.setFont(new Font("¸¼Àº °íµñ Semilight", Font.BOLD, 16));
-		txtpnIn.setText("\uC720\uB2C8\uBC84\uC15C \uC2A4\uD29C\uB514\uC624 in Japan\r\n\r\n\uC138\uACC4 \uCD5C\uB300 \uC2A4\uD29C\uB514\uC624\uB97C \uC77C\uBCF8\uC5D0\uC11C?\r\n\uD560\uB9AC\uC6C3 \uC601\uD654\uB97C \uAC00\uAE4C\uC6B4 \uC77C\uBCF8\uC5D0\uC11C \uB290\uB084\uC218 \uC788\uB2E4?\r\nWORLD UNIVERSAL STUDIO IN JAPAN");
+		txtpnIn.setText("\uC720\uB2C8\uBC84\uC15C \uC2A4\uD29C\uB514\uC624 in Japan\r\n\r\n\uC138\uACC4 \uCD5C\uB300 \uC2A4\uD29C\uB514\uC624\uB97C \uC77C\uBCF8\uC5D0\uC11C?\r\n\uD560\uB9AC\uC6C3 \uC601\uD654\uB97C \uAC00\uAE4C\uC6B4 \uC77C\uBCF8\uC5D0\uC11C \uB290\uB084\uC218 \uC788\uB2E4?\r\nWORLD UNIVERSAL STUDIO IN JAPAN ");
 		txtpnIn.setBounds(201, 147, 489, 127);
 		panel_1.add(txtpnIn);
 		

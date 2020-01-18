@@ -131,7 +131,7 @@ public class ACTIVITYp {
 		
 		JTextPane textPane_1 = new JTextPane();
 		textPane_1.setFont(new Font("¸¼Àº °íµñ Semilight", Font.BOLD, 16));
-		textPane_1.setText("\uB8E8\uBE0C\uB974 \uBC15\uBB3C\uAD00\r\n\r\n\uC138\uACC4 3\uB300 \uBC15\uBB3C\uAD00\r\n\uD30C\uB9AC\uC5D0 \uC654\uB2E4\uBA74 \uAF2D \uAC00\uBD10\uC57C\uD560 \uACF3!\r\n\uC911\uC138 \uC720\uB7FD \uBB38\uD654\uB97C \uD55C\uB208\uC5D0 \uBCF4\uAE30\r\n");
+		textPane_1.setText("\uB8E8\uBE0C\uB974 \uBC15\uBB3C\uAD00\r\n\r\n\uC138\uACC4 3\uB300 \uBC15\uBB3C\uAD00\r\n\uD30C\uB9AC\uC5D0 \uC654\uB2E4\uBA74 \uAF2D \uAC00\uBD10\uC57C\uD560 \uACF3!\r\n\uC911\uC138 \uC720\uB7FD \uBB38\uD654\uB97C \uD55C\uB208\uC5D0 \uBCF4\uAE30\r\n ");
 		textPane_1.setBounds(201, 147, 489, 127);
 		panel_1.add(textPane_1);
 		
