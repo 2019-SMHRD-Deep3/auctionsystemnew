@@ -16,6 +16,9 @@ import java.awt.event.MouseEvent;
 import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.awt.SystemColor;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class Osaka {
 
@@ -32,29 +35,35 @@ public class Osaka {
 	 */
 	private void initialize() {
 		frame = new JFrame();
-		frame.getContentPane().setBackground(Color.WHITE);
+		frame.getContentPane().setBackground(new Color(255, 255, 255));
 		frame.setBounds(100, 100, 830, 550);
 		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
 		JLabel lblNewLabel_1 = new JLabel("\uCD9C\uCC98 : \uB0B4\uC77C\uD22C\uC5B4");
-		lblNewLabel_1.setBounds(691, 393, 111, 23);
+		lblNewLabel_1.setFont(new Font("ÇÑÄÄ ÄðÀçÁî M", Font.PLAIN, 20));
+		lblNewLabel_1.setBounds(677, 478, 125, 23);
 		frame.getContentPane().add(lblNewLabel_1);
 		
 		JLabel lblNewLabel = new JLabel("");
 		//lblNewLabel.setIcon(new ImageIcon("C:\\Users\\SM020\\git\\auctionsystemnew1\\auctionnew\\img\\\uC624\uC0AC\uCE74.JPG"));
 		String imgPath5 = this.getClass().getResource(".").getPath()+"..//..//img//¿À»çÄ«.jpg";
 	       lblNewLabel.setIcon(new ImageIcon(imgPath5));
-		lblNewLabel.setBounds(12, 10, 463, 324);
+		lblNewLabel.setBounds(167, 32, 474, 295);
 		frame.getContentPane().add(lblNewLabel);
 		
 		JTextPane textPane = new JTextPane();
-		textPane.setFont(new Font("ÈÞ¸ÕÆíÁöÃ¼", Font.BOLD, 23));
-		textPane.setText("\uC557!!!! \uC774\uC2DC\uAD6D\uC5D0 \uC624\uC0AC\uCE74\uB97C??\r\n\r\n\uCD08\uBC25\uC774 \uBA39\uACE0\uC2F6\uC5C8\uC2B5\uB2C8\uB2E4.\r\n\r\n\uACC4\uB780 \uC0CC\uB4DC\uC704\uCE58\uB3C4 \uBA39\uACE0\uC2F6\uC5C8\uC2B5\uB2C8\uB2E4.\r\n\r\n\uB77C\uBA58\uC774 \uBA39\uACE0\uC2F6\uC5C8\uC2B5\uB2C8\uB2E4.\r\n\r\n\uADF8\uB798\uC11C \uAC14\uC2B5\uB2C8\uB2E4.\r\n\r\n\uC8C4\uC1A1\uD569\uB2C8\uB2E4.");
-		textPane.setBounds(495, 10, 307, 324);
+		textPane.setBackground(new Color(255, 255, 255));
+		textPane.setFont(new Font("ÇÑÄÄ ÄðÀçÁî M", Font.PLAIN, 26));
+		textPane.setText("\uC557!! \uC774\uC2DC\uAD6D\uC5D0 \uC624\uC0AC\uCE74\uB97C???\r\n\uCD08\uBC25\uC774 \uBA39\uACE0\uC2F6\uC5C8\uC2B5\uB2C8\uB2E4.\r\n\uACC4\uB780 \uC0CC\uB4DC\uC704\uCE58\uB3C4 \uBA39\uACE0\uC2F6\uC5C8\uC2B5\uB2C8\uB2E4.\r\n\uB77C\uBA58\uC774 \uBA39\uACE0\uC2F6\uC5C8\uC2B5\uB2C8\uB2E4.\r\n\uADF8\uB798\uC11C \uAC14\uC2B5\uB2C8\uB2E4.\r\n\uC8C4\uC1A1\uD569\uB2C8\uB2E4.");
+		textPane.setBounds(231, 348, 298, 138);
 		frame.getContentPane().add(textPane);
 		
 		JButton btnNewButton = new JButton("\uC624\uC0AC\uCE74 \uCD5C\uC800\uAC00 \uAC80\uC0C9");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+			}
+		});
 		btnNewButton.setBackground(Color.WHITE);
 		btnNewButton.addMouseListener(new MouseAdapter() {
 			@Override
@@ -72,8 +81,8 @@ public class Osaka {
 				}
 			}
 		});
-		btnNewButton.setFont(new Font("¸¼Àº °íµñ Semilight", Font.BOLD, 17));
-		btnNewButton.setBounds(536, 415, 266, 86);
+		btnNewButton.setFont(new Font("ÇÑÄÄ ÄðÀçÁî M", Font.BOLD, 24));
+		btnNewButton.setBounds(581, 409, 206, 67);
 		frame.getContentPane().add(btnNewButton);
 	}
 

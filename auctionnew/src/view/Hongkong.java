@@ -17,6 +17,7 @@ import java.awt.event.MouseEvent;
 import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.awt.SystemColor;
 
 public class Hongkong {
 
@@ -33,7 +34,7 @@ public class Hongkong {
 	 */
 	private void initialize() {
 		frame = new JFrame();
-		frame.getContentPane().setBackground(Color.WHITE);
+		frame.getContentPane().setBackground(new Color(255, 255, 255));
 		frame.setBounds(100, 100, 830, 550);
 		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
@@ -42,13 +43,14 @@ public class Hongkong {
 		//lblNewLabel.setIcon(new ImageIcon("C:\\Users\\SM020\\git\\auctionsystemnew1\\auctionnew\\img\\\uD64D\uCF69.JPG"));
 		String imgPath5 = this.getClass().getResource(".").getPath()+"..//..//img//È«Äá.jpg";
 		lblNewLabel.setIcon(new ImageIcon(imgPath5));
-		lblNewLabel.setBounds(0, 0, 500, 500);
+		lblNewLabel.setBounds(150, 35, 579, 306);
 		frame.getContentPane().add(lblNewLabel);
 		
 		JTextPane textPane = new JTextPane();
-		textPane.setFont(new Font("ÈÞ¸ÕÆíÁöÃ¼", Font.BOLD, 26));
-		textPane.setText("\uC624\uBE60 \uD64D\uCF69...... \uAC08\uB798?\r\n\r\n\uB098\uB3C4 \uAC00\uACE0 \uC2F6\uC740\uB370???\r\n\r\n\uD64D\uCF69 \uAC08\uB550 \uC778\uD130\uBE60\uB044\r\n\r\n\uBE60\uB044\uBE60\uB044~");
-		textPane.setBounds(512, 10, 290, 364);
+		textPane.setBackground(new Color(255, 255, 255));
+		textPane.setFont(new Font("ÇÑÄÄ ÄðÀçÁî M", Font.PLAIN, 26));
+		textPane.setText("\uC57C \uD64D\uCF69...... \uAC08\uB798?\r\n\uB098\uB3C4 \uAC00\uACE0 \uC2F6\uC740\uB370?\r\n\uD64D\uCF69 \uAC08\uB550 \uC778\uD130\uBE60\uB044\r\n\uBE60\uB044\uBE60\uB044~");
+		textPane.setBounds(290, 366, 227, 108);
 		frame.getContentPane().add(textPane);
 		
 		JButton btnNewButton = new JButton("\uD64D\uCF69 \uCD5C\uC800\uAC00 \uAC80\uC0C9");
@@ -68,13 +70,14 @@ public class Hongkong {
 				}
 			}
 		});
-		btnNewButton.setFont(new Font("¸¼Àº °íµñ Semilight", Font.BOLD, 17));
+		btnNewButton.setFont(new Font("ÇÑÄÄ ÄðÀçÁî M", Font.BOLD, 24));
 		btnNewButton.setBackground(Color.WHITE);
-		btnNewButton.setBounds(548, 402, 254, 99);
+		btnNewButton.setBounds(580, 400, 210, 74);
 		frame.getContentPane().add(btnNewButton);
 		
 		JLabel lblNewLabel_1 = new JLabel("\uCD9C\uCC98:\uC5EC\uD589\uBC15\uC0AC");
-		lblNewLabel_1.setBounds(692, 384, 110, 20);
+		lblNewLabel_1.setFont(new Font("ÇÑÄÄ ÄðÀçÁî M", Font.PLAIN, 20));
+		lblNewLabel_1.setBounds(704, 484, 110, 20);
 		frame.getContentPane().add(lblNewLabel_1);
 	}
 }
