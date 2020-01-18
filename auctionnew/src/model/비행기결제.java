@@ -8,7 +8,7 @@ import javax.swing.JLabel;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JPanel;
-import javax.swing.JRadioButton;
+
 
 public class 비행기결제 {
 
@@ -35,6 +35,7 @@ public class 비행기결제 {
 		frame.setVisible(true);
 	}
 
+	
 	/**
 	 * Initialize the contents of the frame.
 	 */

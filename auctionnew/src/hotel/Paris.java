@@ -16,7 +16,8 @@ import javax.swing.JScrollPane;
 import javax.swing.JTextPane;
 
 import model.결제창;
-import view.flightsearch;
+import model.비행기결제;
+import view.ACTIVITYp;
 
 public class Paris {
 
@@ -51,7 +52,7 @@ public class Paris {
 	private void initialize() {
 		frame = new JFrame();
 		frame.getContentPane().setBackground(Color.WHITE);
-		frame.setBounds(100, 100, 894, 458);
+		frame.setBounds(100, 100, 894, 460);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
@@ -65,6 +66,7 @@ public class Paris {
 		panel.add(scrollPane);
 		
 		JPanel panel_1 = new JPanel();
+		panel_1.setBackground(Color.LIGHT_GRAY);
 		scrollPane.setViewportView(panel_1);
 		panel_1.setPreferredSize(new Dimension(590,700));
 		panel_1.setLayout(null);
@@ -186,8 +188,8 @@ public class Paris {
 		label_7.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				flightsearch search = new flightsearch();
-			}
+				비행기결제 bills = new 비행기결제(null);
+						}
 		});
 		String imgPath5 = this.getClass().getResource(".").getPath()+"..//..//img//에펠타워.jpg";
 	    
@@ -196,16 +198,36 @@ public class Paris {
 	    txtpnSameDayTo.setFont(new Font("SansSerif", Font.BOLD, 16));
 	    txtpnSameDayTo.setOpaque(false);
 	    txtpnSameDayTo.setText("    Same day\r\n    to go PARIS");
-	    txtpnSameDayTo.setBounds(0, 181, 144, 48);
+	    txtpnSameDayTo.setBounds(0, 45, 144, 48);
 	    frame.getContentPane().add(txtpnSameDayTo);
 	    label_7.setIcon(new ImageIcon(imgPath5));
-		label_7.setBounds(0, 45, 144, 183);
+		label_7.setBounds(0, 46, 144, 183);
 		frame.getContentPane().add(label_7);
 		
 		JLabel label_8 = new JLabel("New label");
-		String imgPath6 = this.getClass().getResource(".").getPath()+"..//..//img//";
+		label_8.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				ACTIVITYp play = new ACTIVITYp();
+			}
+		});
+		String imgPath6 = this.getClass().getResource(".").getPath()+"..//..//img//파리액4.jpg";
+	    
+	    JTextPane txtpnSameDayPlay = new JTextPane();
+	    txtpnSameDayPlay.setText("    Same day\r\n    play in PARIS");
+	    txtpnSameDayPlay.setOpaque(false);
+	    txtpnSameDayPlay.setForeground(Color.BLACK);
+	    txtpnSameDayPlay.setFont(new Font("SansSerif", Font.BOLD, 16));
+	    txtpnSameDayPlay.setBounds(0, 239, 144, 48);
+	    frame.getContentPane().add(txtpnSameDayPlay);
 	    label_8.setIcon(new ImageIcon(imgPath6));
-		label_8.setBounds(0, 239, 144, 183);
+		label_8.setBounds(0, 239, 144, 170);
 		frame.getContentPane().add(label_8);
+		
+		JLabel label_9 = new JLabel("New label");
+		String imgPath7 = this.getClass().getResource(".").getPath()+"..//..//img//배너.png";
+		label_9.setIcon(new ImageIcon(imgPath7));
+		label_9.setBounds(0, 0, 180, 43);
+		frame.getContentPane().add(label_9);
 	}
 }

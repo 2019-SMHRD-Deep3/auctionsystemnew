@@ -33,6 +33,12 @@ public class flight {
 	private Date value;
 	private Date value2;
 	MemberManagementService service = new MemberManagementService(); 
+	
+	
+	
+	
+	
+	
 	public flight(Member member) {
 		this.loginuser = member;
 		initialize();
@@ -82,7 +88,7 @@ public class flight {
 		comboBox.addItem("사이판(SPN)");
 		
 		
-		comboBox.setBounds(22, 105, 242, 34);
+		comboBox.setBounds(118, 105, 242, 34);
 		panel.add(comboBox);
 		
 		JButton btnNewButton = new JButton("\uACB0\uC81C");
@@ -99,7 +105,17 @@ public class flight {
 				
 			}
 		});
+		
+		JComboBox comboBox_2 = new JComboBox();
+		comboBox_2.setBounds(12, 105, 94, 34);
+		panel.add(comboBox_2);
 		btnNewButton.setBackground(Color.WHITE);
+		comboBox_2.setModel(new DefaultComboBoxModel(new String[] {}));
+		comboBox_2.addItem("아시아나");
+		comboBox_2.addItem("대한항공");
+		comboBox_1.addItem("");
+		
+		
 		btnNewButton.setBounds(626, 269, 97, 34);
 		panel.add(btnNewButton);
 		
@@ -128,13 +144,13 @@ public class flight {
 		comboBox_1.addItem("괌(GUM)");
 		comboBox_1.addItem("시드니(SYD)");
 		comboBox_1.addItem("사이판(SPN)");
-		comboBox_1.setBounds(288, 105, 217, 34);
+		comboBox_1.setBounds(372, 105, 217, 34);
 		panel.add(comboBox_1);
 		
 		JPanel panel_1 = new JPanel();
 		panel_1.setOpaque(false);
 		panel_1.setBackground(Color.WHITE);
-		panel_1.setBounds(22, 149, 242, 154);
+		panel_1.setBounds(118, 149, 242, 154);
 		panel.add(panel_1);
 		
 		// 달력
@@ -148,7 +164,7 @@ public class flight {
 		panel_2.setOpaque(false);
 		panel_2.setBorder(null);
 		panel_2.setBackground(Color.WHITE);
-		panel_2.setBounds(263, 149, 242, 154);
+		panel_2.setBounds(372, 149, 242, 154);
 		panel.add(panel_2);
 		
 		UtilDateModel model1 = new UtilDateModel();

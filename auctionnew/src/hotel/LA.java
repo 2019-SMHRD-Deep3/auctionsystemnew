@@ -39,7 +39,7 @@ public class LA {
 		panel.setLayout(null);
 		
 		JScrollPane scrollPane = new JScrollPane();
-		scrollPane.setBounds(0, 0, 720, 370);
+		scrollPane.setBounds(0, -16, 724, 386);
 		panel.add(scrollPane);
 		
 		JPanel panel_1 = new JPanel();
@@ -134,12 +134,18 @@ public class LA {
 		panel_1.add(lblNewLabel_3);
 		
 		JLabel lblNewLabel_5 = new JLabel("New label");
-		lblNewLabel_5.setBounds(0, 10, 155, 194);
+		lblNewLabel_5.setBounds(0, 59, 155, 145);
 		frame.getContentPane().add(lblNewLabel_5);
 		
 		JLabel lblNewLabel_6 = new JLabel("New label");
 		lblNewLabel_6.setBounds(0, 229, 155, 182);
 		frame.getContentPane().add(lblNewLabel_6);
+		
+		JLabel label_1 = new JLabel("New label");
+		String imgPath5 = this.getClass().getResource(".").getPath()+"..//..//img//º£³Ê.jpg";
+	    label_1.setIcon(new ImageIcon(imgPath5));
+		label_1.setBounds(0, 0, 180, 43);
+		frame.getContentPane().add(label_1);
 		
 		
 //<<<<<<< HEAD

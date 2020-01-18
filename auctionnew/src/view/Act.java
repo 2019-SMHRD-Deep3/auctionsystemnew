@@ -62,6 +62,7 @@ public class Act {
 		comboBox.addItem("ªÁ¿Ã∆«");
 		
 		JPanel panel = new JPanel();
+		panel.setOpaque(false);
 		panel.setBackground(Color.WHITE);
 		panel.setBounds(22, 133, 268, 153);
 		frame.getContentPane().add(panel);
