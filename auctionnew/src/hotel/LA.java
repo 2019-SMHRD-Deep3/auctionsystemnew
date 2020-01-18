@@ -137,15 +137,15 @@ public class LA {
 		lblNewLabel_5.setBounds(0, 59, 155, 145);
 		frame.getContentPane().add(lblNewLabel_5);
 		
-		JLabel lblNewLabel_6 = new JLabel("New label");
-		lblNewLabel_6.setBounds(0, 229, 155, 182);
-		frame.getContentPane().add(lblNewLabel_6);
-		
 		JLabel label_1 = new JLabel("New label");
 		String imgPath5 = this.getClass().getResource(".").getPath()+"..//..//img//º£³Ê.jpg";
 	    label_1.setIcon(new ImageIcon(imgPath5));
 		label_1.setBounds(0, 0, 180, 43);
 		frame.getContentPane().add(label_1);
+		
+		JLabel label_2 = new JLabel("New label");
+		label_2.setBounds(0, 234, 144, 150);
+		frame.getContentPane().add(label_2);
 		
 		
 //<<<<<<< HEAD

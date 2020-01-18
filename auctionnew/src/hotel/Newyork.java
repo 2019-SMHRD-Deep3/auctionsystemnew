@@ -49,7 +49,7 @@ public class Newyork {
 		frame.getContentPane().setLayout(null);
 		
 		JPanel panel = new JPanel();
-		panel.setBounds(144, 43, 730, 367);
+		panel.setBounds(152, 43, 722, 367);
 		frame.getContentPane().add(panel);
 		panel.setLayout(null);
 		
@@ -150,20 +150,20 @@ public class Newyork {
 		label_2.setBounds(25, 421, 152, 127);
 		panel_1.add(label_2);
 		
-		JLabel label_3 = new JLabel("New label");
-		label_3.setBounds(0, 44, 144, 150);
-		frame.getContentPane().add(label_3);
-		
-		JLabel label_4 = new JLabel("New label");
-		label_4.setBounds(0, 217, 144, 194);
-		frame.getContentPane().add(label_4);
-		
 		JLabel label_5 = new JLabel("New label");
 		
 		String imgPath7 = this.getClass().getResource(".").getPath()+"..//..//img//¹è³Ê.png";
 		label_5.setIcon(new ImageIcon(imgPath7));
 		label_5.setBounds(0, 0, 180, 43);
 		frame.getContentPane().add(label_5);
+		
+		JLabel label_4 = new JLabel("New label");
+		label_4.setBounds(0, 230, 144, 150);
+		frame.getContentPane().add(label_4);
+		
+		JLabel label_3 = new JLabel("New label");
+		label_3.setBounds(0, 55, 144, 150);
+		frame.getContentPane().add(label_3);
 		
 		frame.setBounds(100, 100, 890, 459);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

@@ -98,7 +98,7 @@ public class ASHOME {
 				Act act = new Act();
 			}
 		});
-		act.setBounds(630, 336, 90, 90);
+		act.setBounds(749, 336, 90, 90);
 		frame.getContentPane().add(act);
 
 //<<<<<<< HEAD
@@ -156,7 +156,7 @@ public class ASHOME {
 				Hotel hotel = new Hotel();
 			}
 		});
-		hotel.setBounds(400, 336, 90, 90);
+		hotel.setBounds(493, 336, 90, 90);
 		frame.getContentPane().add(hotel);
 		
 		String imgPath1 = this.getClass().getResource(".").getPath() + "..//..//img//Ä¸Ã³1.JPG";
@@ -170,24 +170,14 @@ public class ASHOME {
 				
 			}
 		});
-		flight.setBounds(180, 336, 90, 90);
+		flight.setBounds(259, 336, 90, 90);
 		frame.getContentPane().add(flight);
 
 		String imgPath2 = this.getClass().getResource(".").getPath() + "..//..//img//flight1.JPG";
 		flight.setIcon(new ImageIcon(imgPath2));
 
-		JButton ticket = new JButton("");
-		ticket.addActionListener(new ActionListener() {
-
-			public void actionPerformed(ActionEvent e) {
-				Lotto ticket = new Lotto();
-			}
-		});
-		ticket.setBounds(872, 336, 90, 90);
-		frame.getContentPane().add(ticket);
-
-		String imgPath3 = this.getClass().getResource(".").getPath() + "..//..//img//Æ¼ÄÏ.jpg";
-		ticket.setIcon(new ImageIcon(imgPath3));
+		
+		
 
 		JPanel panel_3 = new JPanel();
 		panel_3.setBackground(new Color(245, 245, 245));
