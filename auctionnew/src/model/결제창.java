@@ -9,17 +9,10 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
-//<<<<<<< HEAD
-//import javax.swing.JTextPane;
-//import javax.swing.JRadioButton;
-//import java.awt.SystemColor;
-//import java.awt.Font;
-//=======
 import javax.swing.JTextField;
 
 import model.MemberManagementService.ServiceCompletion;
 import view.disact;
-//>>>>>>> branch 'master' of https://github.com/khornejp/auctionsystemnew
 
 public class ∞·¡¶√¢ {
 
