@@ -112,4 +112,8 @@ public class ProductDAO {
 //		return loginuser;
 //
 //	}
+	public int getProductid() {
+		
+		return 0;
+	}
 }

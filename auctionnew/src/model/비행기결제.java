@@ -22,6 +22,8 @@ public class 비행기결제 {
 	private JTextField email;
 	private JTextField phone;
 	private JTextField passport;
+	//private MemberManagementService loginuser;
+	Member member;
 	/**
 	 * Launch the application.
 	 */
@@ -31,7 +33,7 @@ public class 비행기결제 {
 	 * Create the application.
 	 */
 	public 비행기결제(Member member) {
-//		this.loginuser = member;
+		this.member = member;
 		initialize();
 		frame.setVisible(true);
 	}
