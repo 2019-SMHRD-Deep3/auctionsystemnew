@@ -12,7 +12,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 import model.MemberManagementService.ServiceCompletion;
-import view.Disact;
+import view.disact;
 
 public class 결제창2 {
 
@@ -129,7 +129,7 @@ public class 결제창2 {
 			@Override
 			public void completion(boolean isSuccessfully) {
 				if(isSuccessfully) {
-					new Disact(payment);
+					new disact(payment);
 				} else {
 					JOptionPane.showMessageDialog(frame, "결제에 실패 했습니다.");
 				}

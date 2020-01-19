@@ -33,8 +33,14 @@ public class flight {
 	private Date value;
 	private Date value2;
 	MemberManagementService service = new MemberManagementService(); 
-	public flight(Member member) {
-		this.loginuser = member;
+	
+	
+	
+	
+	
+	
+	public flight() {
+	//	this.loginuser = member;
 		initialize();
 		frame.setVisible(true);
 		
@@ -82,7 +88,7 @@ public class flight {
 		comboBox.addItem("사이판(SPN)");
 		
 		
-		comboBox.setBounds(22, 105, 242, 34);
+		comboBox.setBounds(128, 105, 242, 34);
 		panel.add(comboBox);
 		
 		JButton btnNewButton = new JButton("\uACB0\uC81C");
@@ -93,13 +99,23 @@ public class flight {
 				
 			String i1 = (String)comboBox_1.getSelectedItem();
 			
-			비행기결제 bills = new 비행기결제(loginuser);
+			비행기결제 bills = new 비행기결제();
 				
 		
 				
 			}
 		});
+		
+		JComboBox comboBox_2 = new JComboBox();
+		comboBox_2.setBounds(12, 105, 104, 34);
+		panel.add(comboBox_2);
 		btnNewButton.setBackground(Color.WHITE);
+		comboBox_2.setModel(new DefaultComboBoxModel(new String[] {}));
+		comboBox_2.addItem("아시아나");
+		comboBox_2.addItem("대한항공");
+		comboBox_1.addItem("");
+		
+		
 		btnNewButton.setBounds(626, 269, 97, 34);
 		panel.add(btnNewButton);
 		
@@ -128,13 +144,13 @@ public class flight {
 		comboBox_1.addItem("괌(GUM)");
 		comboBox_1.addItem("시드니(SYD)");
 		comboBox_1.addItem("사이판(SPN)");
-		comboBox_1.setBounds(288, 105, 217, 34);
+		comboBox_1.setBounds(397, 105, 217, 34);
 		panel.add(comboBox_1);
 		
 		JPanel panel_1 = new JPanel();
 		panel_1.setOpaque(false);
 		panel_1.setBackground(Color.WHITE);
-		panel_1.setBounds(22, 149, 242, 154);
+		panel_1.setBounds(128, 149, 242, 154);
 		panel.add(panel_1);
 		
 		// 달력
@@ -148,7 +164,7 @@ public class flight {
 		panel_2.setOpaque(false);
 		panel_2.setBorder(null);
 		panel_2.setBackground(Color.WHITE);
-		panel_2.setBounds(263, 149, 242, 154);
+		panel_2.setBounds(372, 149, 242, 154);
 		panel.add(panel_2);
 		
 		UtilDateModel model1 = new UtilDateModel();
@@ -165,9 +181,14 @@ public class flight {
 		panel.add(lblNewLabel);
 		
 		JLabel lblNewLabel_1 = new JLabel("New label");
+//<<<<<<< HEAD
+//		String imgPath1 = this.getClass().getResource(".").getPath()+"..//..//img//공항.jpg";
+//	    lblNewLabel_1.setIcon(new ImageIcon(imgPath1));
+//=======
 		//lblNewLabel_1.setIcon(new ImageIcon("C:\\Users\\SM020\\git\\auctionsystemnew1\\auctionnew\\img\\\uACF5\uD56D.JPG"));
 		String imgPath5 = this.getClass().getResource(".").getPath()+"..//..//img//공항.jpg";
 		lblNewLabel_1.setIcon(new ImageIcon(imgPath5));
+//>>>>>>> branch 'master' of https://github.com/khornejp/auctionsystemnew
 		lblNewLabel_1.setBounds(0, 0, 735, 313);
 		panel.add(lblNewLabel_1);
 		

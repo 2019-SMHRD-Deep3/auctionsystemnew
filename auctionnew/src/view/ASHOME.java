@@ -56,7 +56,7 @@ public class ASHOME {
 	 */
 	private void initialize() {
 		frame = new JFrame();
-		frame.getContentPane().setBackground(new Color(245, 245, 245));
+		frame.getContentPane().setBackground(Color.WHITE);
 		frame.setBounds(100, 100, 1179, 766);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		String imgPath4 = this.getClass().getResource(".").getPath() + "..//..//img//0000.png";
@@ -67,7 +67,7 @@ public class ASHOME {
 		JPanel panel_1 = new JPanel();
 		panel_1.setForeground(new Color(255, 255, 255));
 		panel_1.setBounds(0, 0, 1163, 58);
-		panel_1.setBackground(new Color(245, 245, 245));
+		panel_1.setBackground(Color.WHITE);
 		frame.getContentPane().add(panel_1);
 		panel_1.setLayout(null);
 
@@ -103,65 +103,20 @@ public class ASHOME {
 				Act act = new Act(loginuser);
 			}
 		});
-		act.setBounds(630, 336, 90, 90);
+		act.setBounds(749, 336, 90, 90);
 		frame.getContentPane().add(act);
 
-//<<<<<<< HEAD
-//      frame.getContentPane().setLayout(null);
-//      
-//      JPanel panel_1 = new JPanel();
-//      panel_1.setForeground(new Color(255, 255, 255));
-//      panel_1.setBounds(0, 20, 1163, 58);
-//      panel_1.setBackground(new Color(255, 255, 255));
-//      frame.getContentPane().add(panel_1);
-//      panel_1.setLayout(null);//
-//      
-//      
-//      JLabel lblNewLabel_2 = new JLabel("");
-//      String imgPath5 = this.getClass().getResource(".").getPath()+"..//..//img//23.png";
-//      lblNewLabel_2.setIcon(new ImageIcon(imgPath5));
-//      lblNewLabel_2.setBounds(0, 0, 180, 70);
-//      panel_1.add(lblNewLabel_2);
-//      
-//      panel = new JPanel(){
-//         protected void paintComponent(Graphics g) {
-//            g.drawImage(icon.getImage(), 0, 0, panel.getWidth(), panel.getHeight(), null);
-//               setOpaque(false);
-//               super.paintComponent(g);
-//         
-//         }
-//         
-//         };
-//      panel.setBounds(50, 58, 1141, 279);
-//      frame.getContentPane().add(panel);
-//      panel.setLayout(null);
-//      
-//      JPanel panel_2 = new JPanel();
-//      panel_2.setBounds(136, 245, 846, 129);
-//      panel.add(panel_2);
-//      panel_2.setBackground(new Color(255, 255, 255));
-//      panel_2.setLayout(null);
-//      
-//      JButton act = new JButton("");
-//      act.addActionListener(new ActionListener() {
-//         public void actionPerformed(ActionEvent e) {
-//         }
-//      });
-//      act.setBounds(630, 336, 90, 90);
-//      frame.getContentPane().add(act);
-//=======
-		String imgPath = this.getClass().getResource(".").getPath() + "..//..//img//act.JPG";
 
+		String imgPath = this.getClass().getResource(".").getPath() + "..//..//img//act.JPG";
 		act.setIcon(new ImageIcon(imgPath));
 
 		JButton hotel = new JButton();
 		hotel.addActionListener(new ActionListener() {
-			
 			public void actionPerformed(ActionEvent e) {
 				Hotel hotel = new Hotel(loginuser);
 			}
 		});
-		hotel.setBounds(400, 336, 90, 90);
+		hotel.setBounds(493, 336, 90, 90);
 		frame.getContentPane().add(hotel);
 		
 		String imgPath1 = this.getClass().getResource(".").getPath() + "..//..//img//Ä¸Ã³1.JPG";
@@ -171,31 +126,21 @@ public class ASHOME {
 		flight.addActionListener(new ActionListener() {
 
 			public void actionPerformed(ActionEvent e) {
-				flight fly = new flight(loginuser);
+				flight fly = new flight();
 				
 			}
 		});
-		flight.setBounds(180, 336, 90, 90);
+		flight.setBounds(259, 336, 90, 90);
 		frame.getContentPane().add(flight);
 
 		String imgPath2 = this.getClass().getResource(".").getPath() + "..//..//img//flight1.JPG";
 		flight.setIcon(new ImageIcon(imgPath2));
 
-		JButton ticket = new JButton("");
-		ticket.addActionListener(new ActionListener() {
-
-			public void actionPerformed(ActionEvent e) {
-				Lotto ticket = new Lotto();
-			}
-		});
-		ticket.setBounds(872, 336, 90, 90);
-		frame.getContentPane().add(ticket);
-
-		String imgPath3 = this.getClass().getResource(".").getPath() + "..//..//img//Æ¼ÄÏ.jpg";
-		ticket.setIcon(new ImageIcon(imgPath3));
+		
+		
 
 		JPanel panel_3 = new JPanel();
-		panel_3.setBackground(new Color(245, 245, 245));
+		panel_3.setBackground(Color.WHITE);
 		panel_3.setBounds(10, 436, 180, 272);
 		frame.getContentPane().add(panel_3);
 		panel_3.setLayout(null);

@@ -37,18 +37,18 @@ public class LA {
 		frame.getContentPane().setLayout(null);
 		
 		JPanel panel = new JPanel();
-		panel.setBounds(156, 60, 738, 371);
+		panel.setBounds(156, 44, 718, 387);
 		frame.getContentPane().add(panel);
 		panel.setLayout(null);
 		
 		JScrollPane scrollPane = new JScrollPane();
-		scrollPane.setBounds(0, 0, 720, 370);
+		scrollPane.setBounds(0, 0, 718, 387);
 		panel.add(scrollPane);
 		
 		JPanel panel_1 = new JPanel();
 		panel_1.setBackground(new Color(245, 245, 245));
 		scrollPane.setViewportView(panel_1);
-		frame.setBounds(100, 100, 890,465);
+		frame.setBounds(100, 100, 890,466);
 		panel_1.setPreferredSize(new Dimension(680,600));
 		panel_1.setLayout(null);
 		
@@ -117,7 +117,7 @@ public class LA {
 		panel_1.add(txtpnTheGrandHotel);
 		
 		JLabel label = new JLabel("New label");
-		label.setBounds(12, 202, 695, 182);
+		label.setBounds(12, 202, 695, 169);
 		panel_1.add(label);
 		
 		JLabel lblNewLabel_4 = new JLabel("New label");
@@ -136,13 +136,40 @@ public class LA {
 		lblNewLabel_3.setBounds(12, 394, 695, 182);
 		panel_1.add(lblNewLabel_3);
 		
-		JLabel lblNewLabel_5 = new JLabel("New label");
-		lblNewLabel_5.setBounds(0, 10, 155, 194);
-		frame.getContentPane().add(lblNewLabel_5);
+		JLabel label_1 = new JLabel("New label");
+		String imgPath5 = this.getClass().getResource(".").getPath()+"..//..//img//¹è³Ê.png";
+	    
+	    JTextPane txtpnSameDayTo_1 = new JTextPane();
+	    txtpnSameDayTo_1.setBackground(Color.WHITE);
+	    txtpnSameDayTo_1.setText("    Same day\r\n    to go LA");
+	    txtpnSameDayTo_1.setOpaque(false);
+	    txtpnSameDayTo_1.setForeground(Color.WHITE);
+	    txtpnSameDayTo_1.setFont(new Font("SansSerif", Font.BOLD, 16));
+	    txtpnSameDayTo_1.setBounds(10, 163, 134, 48);
+	    frame.getContentPane().add(txtpnSameDayTo_1);
+	    label_1.setIcon(new ImageIcon(imgPath5));
+		label_1.setBounds(0, 0, 180, 43);
+		frame.getContentPane().add(label_1);
 		
-		JLabel lblNewLabel_6 = new JLabel("New label");
-		lblNewLabel_6.setBounds(0, 229, 155, 182);
-		frame.getContentPane().add(lblNewLabel_6);
+		JLabel label_2 = new JLabel("New label");
+		String imgPath8 = this.getClass().getResource(".").getPath()+"..//..//img//la1.jpg";
+		
+		JTextPane txtpnSameDayTo = new JTextPane();
+		txtpnSameDayTo.setText("    Same day\r\n    to go LA");
+		txtpnSameDayTo.setOpaque(false);
+		txtpnSameDayTo.setForeground(Color.WHITE);
+		txtpnSameDayTo.setFont(new Font("SansSerif", Font.BOLD, 16));
+		txtpnSameDayTo.setBounds(10, 338, 134, 48);
+		frame.getContentPane().add(txtpnSameDayTo);
+		label_2.setIcon(new ImageIcon(imgPath8));
+		label_2.setBounds(10, 60, 132, 150);
+		frame.getContentPane().add(label_2);
+		
+		JLabel label_3 = new JLabel("New label");
+		String imgPath9 = this.getClass().getResource(".").getPath()+"..//..//img//la2.jpg";
+		label_3.setIcon(new ImageIcon(imgPath9));
+		label_3.setBounds(10, 236, 132, 150);
+		frame.getContentPane().add(label_3);
 		
 		
 //<<<<<<< HEAD
