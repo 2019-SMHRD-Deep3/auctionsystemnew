@@ -1,26 +1,52 @@
 package view;
 
 import java.awt.Color;
-import java.awt.EventQueue;
+//<<<<<<< HEAD
+//import java.awt.EventQueue;
+//=======
+//>>>>>>> branch 'master' of https://github.com/khornejp/auctionsystemnew
 import java.awt.Font;
 
 import javax.swing.ImageIcon;
+import javax.swing.JButton;
 import javax.swing.JComboBox;
+//<<<<<<< HEAD
+//import javax.swing.JComboBox;
+//=======
+//>>>>>>> branch 'master' of https://github.com/khornejp/auctionsystemnew
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+//<<<<<<< HEAD
+//import javax.swing.JPanel;
+//=======
+//>>>>>>> branch 'master' of https://github.com/khornejp/auctionsystemnew
 import javax.swing.SwingConstants;
 
+//<<<<<<< HEAD
+//import net.sourceforge.jdatepicker.impl.JDatePanelImpl;
+//import net.sourceforge.jdatepicker.impl.JDatePickerImpl;
+//import net.sourceforge.jdatepicker.impl.UtilDateModel;
+//import javax.swing.JButton;
+//=======
+import model.Member;
 import net.sourceforge.jdatepicker.impl.JDatePanelImpl;
 import net.sourceforge.jdatepicker.impl.JDatePickerImpl;
 import net.sourceforge.jdatepicker.impl.UtilDateModel;
-import javax.swing.JButton;
+//>>>>>>> branch 'master' of https://github.com/khornejp/auctionsystemnew
 
 public class Act {
 
 	private JFrame frame;
-	
-	public Act() {
+//<<<<<<< HEAD
+//	
+//	public Act() {
+//=======
+	private Member loginuser;
+
+	public Act(Member member) {
+		this.loginuser = member;
+//>>>>>>> branch 'master' of https://github.com/khornejp/auctionsystemnew
 		initialize();
 		frame.setVisible(true);
 	}

@@ -31,8 +31,8 @@ public class MemberDAO {
 			psmt.setString(1, member.getId());
 			psmt.setString(2, member.getPw());
 			psmt.setString(3, member.getName());
-			psmt.setString(4, member.getEmail());
-			psmt.setString(5, member.getBirth());
+			psmt.setString(4, member.getBirth());
+			psmt.setString(5, member.getEmail());
 			psmt.setInt(6, member.getSex());
 			rows = psmt.executeUpdate(); // 셀렉트를 제외한 문장은 업데이트 int에 리턴. 이걸 실행했을때 영향을 받은 로우가 리턴이됨.
 
@@ -86,7 +86,7 @@ public class MemberDAO {
 				String birth = rs.getString("AS_BIRTH");
 				int sex = rs.getInt("AS_SEX");
 				
-				loginuser = new Member(id,pw,name,email,birth,sex);
+				loginuser = new Member(id,pw,name,birth,email,sex);
 			}
 			
 			

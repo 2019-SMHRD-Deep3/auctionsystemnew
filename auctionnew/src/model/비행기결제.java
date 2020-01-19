@@ -1,57 +1,97 @@
 package model;
 
+//<<<<<<< HEAD
 import java.awt.Color;
 import java.awt.EventQueue;
 import java.awt.Font;
 import java.awt.SystemColor;
+import java.awt.event.ActionEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+//=======
+//import java.awt.event.ActionEvent;
+//>>>>>>> branch 'master' of https://github.com/khornejp/auctionsystemnew
 
+//<<<<<<< HEAD
 import javax.swing.ButtonGroup;
+//=======
+//import javax.swing.ImageIcon;
+//>>>>>>> branch 'master' of https://github.com/khornejp/auctionsystemnew
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+//<<<<<<< HEAD
 import javax.swing.JRadioButton;
 import javax.swing.JTextField;
 import javax.swing.JTextPane;
+//=======
+//import javax.swing.JOptionPane;
+//import javax.swing.JPanel;
+//import javax.swing.JTextField;
+//
+//import model.MemberManagementService.ServiceCompletion;
+//import view.Disact;
+//>>>>>>> branch 'master' of https://github.com/khornejp/auctionsystemnew
+
+import model.MemberManagementService.ServiceCompletion;
+import view.Disact;
 
 public class 비행기결제 {
 
 	private JFrame frame;
-	private Member loginuser;
-	private JTextField textField;
-	private JTextField textField_1;
-	private JTextField textField_2;
-	private JTextField textField_3;
-	private JTextField textField_4;
-	private JTextField textField_5;
+//<<<<<<< HEAD
+//	private Member loginuser;
+//	private JTextField textField;
+//	private JTextField textField_1;
+//	private JTextField textField_2;
+//	private JTextField textField_3;
+//	private JTextField textField_4;
+//	private JTextField textField_5;
 	private JLabel price;
 
+//=======
+	private JTextField name;
+	private JTextField cardnum;
+	private JTextField expire;
+	private JTextField email;
+	private JTextField phone;
+	private JTextField passport;
+//>>>>>>> branch 'master' of https://github.com/khornejp/auctionsystemnew
 	/**
 	 * Launch the application.
 	 */
 
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					비행기결제 window = new 비행기결제();
-					window.frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
+//	public static void main(String[] args) {
+//		EventQueue.invokeLater(new Runnable() {
+//			public void run() {
+//				try {
+//					비행기결제 window = new 비행기결제();
+//					window.frame.setVisible(true);
+//				} catch (Exception e) {
+//					e.printStackTrace();
+//				}
+//			}
+//		});
+//	}
 
 	/**
 	 * Create the application.
 	 */
+//<<<<<<< HEAD
+//	public 비행기결제() {
+//	//	this.loginuser = member;
+//=======
 	public 비행기결제() {
-	//	this.loginuser = member;
+//		this.loginuser = member;
+//>>>>>>> branch 'master' of https://github.com/khornejp/auctionsystemnew
 		initialize();
 		frame.setVisible(true);
 	}
+
+//	public 비행기결제() {
+//		// TODO Auto-generated constructor stub
+//	}
 
 	/**
 	 * Initialize the contents of the frame.
@@ -59,18 +99,39 @@ public class 비행기결제 {
 	private void initialize() {
 		frame = new JFrame();
 		frame.setBounds(100, 100, 813, 515);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
+//<<<<<<< HEAD
 		price = new JLabel();
 		price.setBounds(371, 356, 187, 60);
 		frame.getContentPane().add(price);
 		
-		textField = new JTextField();
-		textField.setColumns(10);
-		textField.setBounds(12, 207, 149, 35);
-		frame.getContentPane().add(textField);
+//		textField = new JTextField();
+//		textField.setColumns(10);
+//		textField.setBounds(12, 207, 149, 35);
+//		frame.getContentPane().add(textField);
+//=======
+		name = new JTextField();
+		name.setColumns(10);
+		name.setBounds(12, 207, 149, 35);
+		frame.getContentPane().add(name);
+//>>>>>>> branch 'master' of https://github.com/khornejp/auctionsystemnew
 		
+//<<<<<<< HEAD
+//=======
+		cardnum = new JTextField();
+		cardnum.setColumns(10);
+		cardnum.setBounds(179, 207, 345, 35);
+		frame.getContentPane().add(cardnum);
+		
+		expire = new JTextField();
+		expire.setText("");
+		expire.setColumns(10);
+		expire.setBounds(536, 207, 162, 35);
+		frame.getContentPane().add(expire);
+		
+//>>>>>>> branch 'master' of https://github.com/khornejp/auctionsystemnew
 		JLabel label = new JLabel("\uC774\uB984");
 		label.setBounds(12, 171, 83, 25);
 		frame.getContentPane().add(label);
@@ -79,55 +140,59 @@ public class 비행기결제 {
 		label_1.setBounds(179, 172, 187, 25);
 		frame.getContentPane().add(label_1);
 		
-		textField_1 = new JTextField();
-		textField_1.setColumns(10);
-		textField_1.setBounds(179, 207, 345, 35);
-		frame.getContentPane().add(textField_1);
+//		textField_1 = new JTextField();
+//		textField_1.setColumns(10);
+//		textField_1.setBounds(179, 207, 345, 35);
+//		frame.getContentPane().add(textField_1);
 		
 		JLabel label_2 = new JLabel("\uB9CC\uB8CC\uB0A0\uC9DC        ex)DD.MM.YY");
 		label_2.setBounds(537, 171, 180, 25);
 		frame.getContentPane().add(label_2);
-		
-		textField_2 = new JTextField();
-		textField_2.setText("");
-		textField_2.setColumns(10);
-		textField_2.setBounds(536, 207, 162, 35);
-		frame.getContentPane().add(textField_2);
+//		
+//		textField_2 = new JTextField();
+//		textField_2.setText("");
+//		textField_2.setColumns(10);
+//		textField_2.setBounds(536, 207, 162, 35);
+//		frame.getContentPane().add(textField_2);
 		
 		JLabel label_3 = new JLabel("\uC774\uBA54\uC77C \uC8FC\uC18C");
 		label_3.setBounds(12, 249, 96, 25);
 		frame.getContentPane().add(label_3);
 		
-		textField_3 = new JTextField();
-		textField_3.setColumns(10);
-		textField_3.setBounds(12, 284, 345, 35);
-		frame.getContentPane().add(textField_3);
+		email = new JTextField();
+		email.setColumns(10);
+		email.setBounds(12, 284, 345, 35);
+		frame.getContentPane().add(email);
 		
 		JLabel label_4 = new JLabel("\uC804\uD654\uBC88\uD638           -\uC5C6\uC774 \uC22B\uC790\uB9CC\r\n");
 		label_4.setBounds(371, 249, 187, 25);
 		frame.getContentPane().add(label_4);
 		
-		textField_4 = new JTextField();
-		textField_4.setColumns(10);
-		textField_4.setBounds(369, 284, 290, 35);
-		frame.getContentPane().add(textField_4);
+		phone = new JTextField();
+		phone.setColumns(10);
+		phone.setBounds(369, 284, 290, 35);
+		frame.getContentPane().add(phone);
 		
 		JLabel label_5 = new JLabel("\uC5EC\uAD8C\uBC88\uD638");
 		label_5.setBounds(12, 330, 96, 35);
 		frame.getContentPane().add(label_5);
 		
-		textField_5 = new JTextField();
-		textField_5.setColumns(10);
-		textField_5.setBounds(12, 375, 345, 35);
-		frame.getContentPane().add(textField_5);
+		passport = new JTextField();
+		passport.setColumns(10);
+		passport.setBounds(12, 375, 345, 35);
+		frame.getContentPane().add(passport);
 		
 		JButton button = new JButton("\uACB0\uC81C\uD558\uAE30");
+//<<<<<<< HEAD
 		button.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 			}
 		});
 		button.setBackground(Color.WHITE);
+//=======
+//		button.addActionListener(this::payButtonOnClick);
+//>>>>>>> branch 'master' of https://github.com/khornejp/auctionsystemnew
 		button.setBounds(590, 386, 180, 51);
 		frame.getContentPane().add(button);
 		
@@ -238,4 +303,37 @@ public class 비행기결제 {
 		frame.getContentPane().add(lblNewLabel_1);
 		String imgPath3 = this.getClass().getResource(".").getPath() + "..//..//img//캡처.3333jpg";
 	}
+//<<<<<<< HEAD
+//=======
+
+	private void payButtonOnClick(ActionEvent e) {
+		String infoname = name.getText(); 
+		Integer infocardnum = Integer.valueOf(cardnum.getText());
+		if (infocardnum == null) { infocardnum = -1; }
+		
+		String infoexpire = expire.getText();
+		String infopass = passport.getText();
+		
+		// 멤버 객체를 생성
+		Payment payment = new Payment(
+				infocardnum.intValue(), 
+				infoname,
+				infoexpire, 
+				infopass);
+		//컨트롤러한테 회원가입 요청 
+		
+		MemberManagementService service = new MemberManagementService();
+		service.payJoin(payment, new ServiceCompletion() {
+
+			@Override
+			public void completion(boolean isSuccessfully) {
+				if(isSuccessfully) {
+					new Disact(payment);
+				} else {
+					JOptionPane.showMessageDialog(frame, "결제에 실패 했습니다.");
+				}
+			}
+		});
+	}
+//>>>>>>> branch 'master' of https://github.com/khornejp/auctionsystemnew
 }

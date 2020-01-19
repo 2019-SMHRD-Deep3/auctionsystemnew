@@ -2,7 +2,6 @@ package view;
 
 import java.awt.Color;
 import java.awt.Desktop;
-import java.awt.EventQueue;
 import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.event.ActionEvent;
@@ -20,6 +19,12 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 import model.Member;
+import view.nation.Bangkok;
+import view.nation.Hongkong;
+import view.nation.Osaka;
+import view.nation.Rome;
+import view.nation.Spain;
+import view.nation.Taiwan;
 
 
 public class ASHOME {
@@ -95,7 +100,7 @@ public class ASHOME {
 		JButton act = new JButton("");
 		act.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				Act act = new Act();
+				Act act = new Act(loginuser);
 			}
 		});
 		act.setBounds(749, 336, 90, 90);
@@ -108,7 +113,7 @@ public class ASHOME {
 		JButton hotel = new JButton();
 		hotel.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				Hotel hotel = new Hotel();
+				Hotel hotel = new Hotel(loginuser);
 			}
 		});
 		hotel.setBounds(493, 336, 90, 90);

@@ -1,12 +1,8 @@
-package view;
-
-import java.awt.EventQueue;
+package view.nation;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.ImageIcon;
-import javax.swing.JButton;
-import java.awt.SystemColor;
 
 public class Spain {
 
@@ -32,7 +28,8 @@ public class Spain {
 		frame.getContentPane().add(lblNewLabel_1);
 		
 		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\SM020\\git\\auctionsystemnew1\\auctionnew\\img\\\uC2A4\uD398\uC7781.JPG"));
+		String imgPath5 = this.getClass().getResource(".").getPath()+"..//..//img//Ω∫∆‰¿Œ1.jpg";
+	       lblNewLabel.setIcon(new ImageIcon(imgPath5));
 		lblNewLabel.setBounds(0, 0, 978, 542);
 		frame.getContentPane().add(lblNewLabel);
 	}

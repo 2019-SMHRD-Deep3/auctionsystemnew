@@ -2,7 +2,10 @@ package hotel;
 
 import java.awt.Color;
 import java.awt.Dimension;
-import java.awt.EventQueue;
+//<<<<<<< HEAD
+//import java.awt.EventQueue;
+//=======
+//>>>>>>> branch 'master' of https://github.com/khornejp/auctionsystemnew
 import java.awt.Font;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
@@ -15,28 +18,41 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextPane;
 
+//<<<<<<< HEAD
+//import model.결제창;
+//import model.비행기결제;
+//=======
+import model.Member;
 import model.결제창;
 import model.비행기결제;
+//>>>>>>> branch 'master' of https://github.com/khornejp/auctionsystemnew
 
 public class Newyork {
 
 	private JFrame frame;
-
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					Newyork window = new Newyork();
-					window.frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
-
-	public Newyork() {
+//<<<<<<< HEAD
+//
+//	public static void main(String[] args) {
+//		EventQueue.invokeLater(new Runnable() {
+//			public void run() {
+//				try {
+//					Newyork window = new Newyork();
+//					window.frame.setVisible(true);
+//				} catch (Exception e) {
+//					e.printStackTrace();
+//				}
+//			}
+//		});
+//	}
+//
+//	public Newyork() {
+//=======
+	private Member loginuser;
+	public Newyork(Member m) {
+		this.loginuser = m;
+//>>>>>>> branch 'master' of https://github.com/khornejp/auctionsystemnew
 		initialize();
+		frame.setVisible(true);
 	}
 
 	/**
@@ -199,6 +215,6 @@ public class Newyork {
 		frame.getContentPane().add(label_3);
 
 		frame.setBounds(100, 100, 890, 459);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 	}
 }

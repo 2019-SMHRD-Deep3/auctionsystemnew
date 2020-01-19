@@ -1,10 +1,8 @@
 package view;
 
-import java.awt.EventQueue;
-
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.ImageIcon;
 
 public class Danang {
 
@@ -31,7 +29,9 @@ public class Danang {
 		frame.getContentPane().add(lblNewLabel_1);
 		
 		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\User\\git\\gitRepository\\auctionnew\\auctionnew\\img\\\uB2E4\uB0AD\uBC30\uACBD.JPG"));
+		//lblNewLabel.setIcon(new ImageIcon("C:\\Users\\User\\git\\gitRepository\\auctionnew\\auctionnew\\img\\\uB2E4\uB0AD\uBC30\uACBD.JPG"));
+		String imgPath5 = this.getClass().getResource(".").getPath()+"..//..//img//´Ù³¶¹è°æ.jpg";
+	       lblNewLabel.setIcon(new ImageIcon(imgPath5));
 		lblNewLabel.setBounds(0, 0, 834, 621);
 		frame.getContentPane().add(lblNewLabel);
 	}

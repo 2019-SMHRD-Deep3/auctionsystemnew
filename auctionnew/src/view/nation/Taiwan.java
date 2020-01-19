@@ -1,6 +1,4 @@
-package view;
-
-import java.awt.EventQueue;
+package view.nation;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -30,7 +28,8 @@ public class Taiwan {
 		frame.getContentPane().add(lblNewLabel_1);
 		
 		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\SM020\\git\\auctionsystemnew1\\auctionnew\\img\\\uB300\uB9CC1.JPG"));
+		String imgPath5 = this.getClass().getResource(".").getPath()+"..//..//img//´ë¸¸1.jpg";
+	       lblNewLabel.setIcon(new ImageIcon(imgPath5));
 		lblNewLabel.setBounds(0, 0, 800, 521);
 		frame.getContentPane().add(lblNewLabel);
 	}

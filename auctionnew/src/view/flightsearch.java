@@ -4,7 +4,6 @@ import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JScrollPane;
-import javax.swing.JPanel;
 
 public class flightsearch {
 
@@ -39,7 +38,7 @@ public class flightsearch {
 	private void initialize() {
 		frame = new JFrame();
 		frame.setBounds(100, 100, 927, 475);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
 		JScrollPane scrollPane = new JScrollPane();
