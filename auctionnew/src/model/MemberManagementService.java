@@ -31,7 +31,7 @@ public class MemberManagementService {
 		if (rows == 0) {
 			completion.completion(false);
 		} else {
-			completion.completion(false);
+			completion.completion(true);
 		}
 	}
 

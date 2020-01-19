@@ -113,7 +113,7 @@ public class flight {
 		comboBox_2.setModel(new DefaultComboBoxModel(new String[] {}));
 		comboBox_2.addItem("아시아나");
 		comboBox_2.addItem("대한항공");
-		comboBox_1.addItem("");
+		
 		
 		
 		btnNewButton.setBounds(626, 269, 97, 34);
