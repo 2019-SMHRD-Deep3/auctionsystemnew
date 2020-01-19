@@ -148,10 +148,10 @@ public class ASlogin {
 				Member loginuser =service.memberlogin(member);
 				if(loginuser==null) {
 					JOptionPane.showMessageDialog(frame,
-						    "로그인에 실패 했습니다.");
+						    "아이디 또는 비밀번호를 확인해주세요.");
 				}else {
 					JOptionPane.showMessageDialog(frame,
-						    "로그인에 성공 했습니다.");
+						    "감사합니다.");
 					ASHOME main = new ASHOME(loginuser);
 					frame.dispose();
 				}

@@ -22,21 +22,9 @@ public class Hotel {
 
 	private JFrame frame;
 
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					Hotel window = new Hotel();
-					window.frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
 	public Hotel() {
 		initialize();
-	//	frame.setVisible(true);
+		frame.setVisible(true);
 	}
 
 	private void initialize() {
@@ -50,7 +38,6 @@ public class Hotel {
 		btnNewButton.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
-				
 				
 			}
 		});
@@ -84,6 +71,10 @@ public class Hotel {
 		comboBox.addItem("괌");
 		comboBox.addItem("시드니");
 		comboBox.addItem("사이판");
+		
+		String i = (String)comboBox.getSelectedItem();
+		
+		
 		
 		JLabel lblNewLabel = new JLabel("\uCD5C\uC800\uAC00 \uD638\uD154\uC740 \uC778\uD130\uBE60\uB044");
 		lblNewLabel.setForeground(new Color(0, 0, 0));
@@ -119,7 +110,8 @@ public class Hotel {
 		panel_1.add(datePicker1);
 		
 		JLabel lblNewLabel_1 = new JLabel("");
-		lblNewLabel_1.setIcon(new ImageIcon("C:\\Users\\SM020\\git\\auctionsystemnew1\\auctionnew\\img\\\uB9C8\uB9AC\uB098\uBCA0\uC774\uC0CC\uC988.JPG"));
+		String imgPath1 = this.getClass().getResource(".").getPath()+"..//..//img//마리나베이샌즈.jpg";
+	    lblNewLabel_1.setIcon(new ImageIcon(imgPath1));
 		lblNewLabel_1.setBounds(0, 0, 736, 314);
 		frame.getContentPane().add(lblNewLabel_1);
 		

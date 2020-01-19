@@ -55,11 +55,13 @@ public class ACTIVITYj {
 		frame.getContentPane().setLayout(null);
 		
 		JPanel panel = new JPanel();
+		panel.setOpaque(false);
 		panel.setBounds(144, 43, 730, 378);
 		frame.getContentPane().add(panel);
 		panel.setLayout(null);
 		
 		JScrollPane scrollPane = new JScrollPane();
+		scrollPane.setOpaque(false);
 		scrollPane.setBounds(0, 0, 730, 378);
 		panel.add(scrollPane);
 		

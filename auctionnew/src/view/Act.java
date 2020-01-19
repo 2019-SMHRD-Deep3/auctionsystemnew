@@ -88,7 +88,8 @@ public class Act {
 		frame.getContentPane().add(lblNewLabel_1);
 		
 		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\SM020\\git\\auctionsystemnew1\\auctionnew\\img\\\uB099\uD558\uC0B0.jpg"));
+		String imgPath1 = this.getClass().getResource(".").getPath()+"..//..//img//³«ÇÏ»ê.jpg";
+	    lblNewLabel.setIcon(new ImageIcon(imgPath1));
 		lblNewLabel.setBounds(0, 0, 736, 314);
 		frame.getContentPane().add(lblNewLabel);
 	}

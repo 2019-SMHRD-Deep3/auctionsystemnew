@@ -52,17 +52,17 @@ public class Paris {
 	private void initialize() {
 		frame = new JFrame();
 		frame.getContentPane().setBackground(Color.WHITE);
-		frame.setBounds(100, 100, 894, 460);
+		frame.setBounds(100, 100, 894, 466);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
 		JPanel panel = new JPanel();
-		panel.setBounds(156, 45, 719, 370);
+		panel.setBounds(156, 45, 718, 382);
 		frame.getContentPane().add(panel);
 		panel.setLayout(null);
 		
 		JScrollPane scrollPane = new JScrollPane();
-		scrollPane.setBounds(0, 0, 719, 370);
+		scrollPane.setBounds(0, 0, 719, 382);
 		panel.add(scrollPane);
 		
 		JPanel panel_1 = new JPanel();
@@ -188,7 +188,7 @@ public class Paris {
 		label_7.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				비행기결제 bills = new 비행기결제(null);
+				비행기결제 bills = new 비행기결제();
 						}
 		});
 		String imgPath5 = this.getClass().getResource(".").getPath()+"..//..//img//에펠타워.jpg";
@@ -198,10 +198,10 @@ public class Paris {
 	    txtpnSameDayTo.setFont(new Font("SansSerif", Font.BOLD, 16));
 	    txtpnSameDayTo.setOpaque(false);
 	    txtpnSameDayTo.setText("    Same day\r\n    to go PARIS");
-	    txtpnSameDayTo.setBounds(0, 45, 144, 48);
+	    txtpnSameDayTo.setBounds(10, 45, 134, 48);
 	    frame.getContentPane().add(txtpnSameDayTo);
 	    label_7.setIcon(new ImageIcon(imgPath5));
-		label_7.setBounds(0, 46, 144, 183);
+		label_7.setBounds(10, 45, 134, 150);
 		frame.getContentPane().add(label_7);
 		
 		JLabel label_8 = new JLabel("New label");
@@ -218,10 +218,10 @@ public class Paris {
 	    txtpnSameDayPlay.setOpaque(false);
 	    txtpnSameDayPlay.setForeground(Color.BLACK);
 	    txtpnSameDayPlay.setFont(new Font("SansSerif", Font.BOLD, 16));
-	    txtpnSameDayPlay.setBounds(0, 239, 144, 48);
+	    txtpnSameDayPlay.setBounds(10, 239, 134, 48);
 	    frame.getContentPane().add(txtpnSameDayPlay);
 	    label_8.setIcon(new ImageIcon(imgPath6));
-		label_8.setBounds(0, 239, 144, 170);
+		label_8.setBounds(10, 237, 134, 150);
 		frame.getContentPane().add(label_8);
 		
 		JLabel label_9 = new JLabel("New label");

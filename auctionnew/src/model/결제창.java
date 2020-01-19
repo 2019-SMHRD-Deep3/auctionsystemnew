@@ -10,6 +10,10 @@ import javax.swing.JButton;
 import java.awt.Color;
 import javax.swing.SwingConstants;
 import javax.swing.JPanel;
+import javax.swing.JTextPane;
+import javax.swing.JRadioButton;
+import java.awt.SystemColor;
+import java.awt.Font;
 
 public class 결제창 {
 
@@ -92,12 +96,9 @@ public class 결제창 {
 		lblNewLabel_3.setIcon(new ImageIcon(imgPath3));
 		
 		JButton btnNewButton = new JButton("\uACB0\uC81C\uD558\uAE30");
+		btnNewButton.setBackground(Color.WHITE);
 		btnNewButton.setBounds(579, 395, 180, 51);
 		frame.getContentPane().add(btnNewButton);
-		
-		JLabel lblNewLabel_6 = new JLabel("");
-		lblNewLabel_6.setBounds(500, 60, 285, 100);
-		frame.getContentPane().add(lblNewLabel_6);
 		
 		
 		

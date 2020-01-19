@@ -39,8 +39,8 @@ public class flight {
 	
 	
 	
-	public flight(Member member) {
-		this.loginuser = member;
+	public flight() {
+	//	this.loginuser = member;
 		initialize();
 		frame.setVisible(true);
 		
@@ -88,7 +88,7 @@ public class flight {
 		comboBox.addItem("사이판(SPN)");
 		
 		
-		comboBox.setBounds(118, 105, 242, 34);
+		comboBox.setBounds(128, 105, 242, 34);
 		panel.add(comboBox);
 		
 		JButton btnNewButton = new JButton("\uACB0\uC81C");
@@ -99,7 +99,7 @@ public class flight {
 				
 			String i1 = (String)comboBox_1.getSelectedItem();
 			
-			비행기결제 bills = new 비행기결제(loginuser);
+			비행기결제 bills = new 비행기결제();
 				
 		
 				
@@ -107,7 +107,7 @@ public class flight {
 		});
 		
 		JComboBox comboBox_2 = new JComboBox();
-		comboBox_2.setBounds(12, 105, 94, 34);
+		comboBox_2.setBounds(12, 105, 104, 34);
 		panel.add(comboBox_2);
 		btnNewButton.setBackground(Color.WHITE);
 		comboBox_2.setModel(new DefaultComboBoxModel(new String[] {}));
@@ -144,13 +144,13 @@ public class flight {
 		comboBox_1.addItem("괌(GUM)");
 		comboBox_1.addItem("시드니(SYD)");
 		comboBox_1.addItem("사이판(SPN)");
-		comboBox_1.setBounds(372, 105, 217, 34);
+		comboBox_1.setBounds(397, 105, 217, 34);
 		panel.add(comboBox_1);
 		
 		JPanel panel_1 = new JPanel();
 		panel_1.setOpaque(false);
 		panel_1.setBackground(Color.WHITE);
-		panel_1.setBounds(118, 149, 242, 154);
+		panel_1.setBounds(128, 149, 242, 154);
 		panel.add(panel_1);
 		
 		// 달력
@@ -181,7 +181,8 @@ public class flight {
 		panel.add(lblNewLabel);
 		
 		JLabel lblNewLabel_1 = new JLabel("New label");
-		lblNewLabel_1.setIcon(new ImageIcon("C:\\Users\\SM020\\git\\auctionsystemnew1\\auctionnew\\img\\\uACF5\uD56D.JPG"));
+		String imgPath1 = this.getClass().getResource(".").getPath()+"..//..//img//공항.jpg";
+	    lblNewLabel_1.setIcon(new ImageIcon(imgPath1));
 		lblNewLabel_1.setBounds(0, 0, 735, 313);
 		panel.add(lblNewLabel_1);
 		
