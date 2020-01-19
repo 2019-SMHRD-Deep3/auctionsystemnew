@@ -1,10 +1,8 @@
 package view;
 
-import java.awt.EventQueue;
-
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.ImageIcon;
 
 public class Danang {
 

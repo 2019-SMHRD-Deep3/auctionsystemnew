@@ -2,7 +2,6 @@ package view;
 
 import java.awt.Color;
 import java.awt.Desktop;
-import java.awt.EventQueue;
 import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.event.ActionEvent;
@@ -20,6 +19,12 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 import model.Member;
+import view.nation.Bangkok;
+import view.nation.Hongkong;
+import view.nation.Osaka;
+import view.nation.Rome;
+import view.nation.Spain;
+import view.nation.Taiwan;
 
 
 public class ASHOME {

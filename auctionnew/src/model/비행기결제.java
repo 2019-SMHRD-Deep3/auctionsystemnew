@@ -1,7 +1,6 @@
 package model;
 
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
+import java.awt.event.ActionEvent;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -11,17 +10,18 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
+import model.MemberManagementService.ServiceCompletion;
+import view.Disact;
+
 public class 비행기결제 {
 
 	private JFrame frame;
-	private Member loginuser;
 	private JTextField name;
 	private JTextField cardnum;
 	private JTextField expire;
 	private JTextField email;
 	private JTextField phone;
 	private JTextField passport;
-	private MemberManagementService service = new MemberManagementService();
 	/**
 	 * Launch the application.
 	 */
@@ -31,7 +31,7 @@ public class 비행기결제 {
 	 * Create the application.
 	 */
 	public 비행기결제(Member member) {
-		this.loginuser = member;
+//		this.loginuser = member;
 		initialize();
 		frame.setVisible(true);
 	}
@@ -101,29 +101,7 @@ public class 비행기결제 {
 		frame.getContentPane().add(passport);
 		
 		JButton button = new JButton("\uACB0\uC81C\uD558\uAE30");
-		button.addMouseListener(new MouseAdapter() {
-			@Override
-			public void mouseClicked(MouseEvent e) {
-				String infoname = name.getText(); 
-				String infocardnum = cardnum.getText();
-				String infoexpire = expire.getText();
-				String infopass = passport.getText();
-				//String infoemail = email.getText();
-				
-				// 멤버 객체를 생성
-				Payment member = new Payment(infoname,infocardnum,infoexpire,infopass);
-				//컨트롤러한테 회원가입 요청 
-				boolean result = service.payJoin(member);
-				if(result) {
-					JOptionPane.showMessageDialog(frame,
-						    "결제에 성공 했습니다.");
-					frame.dispose();
-				} else {
-					JOptionPane.showMessageDialog(frame,
-						    "결제에 실패 했습니다.");
-				}
-			}
-		});
+		button.addActionListener(this::payButtonOnClick);
 		button.setBounds(590, 386, 180, 51);
 		frame.getContentPane().add(button);
 		
@@ -141,4 +119,33 @@ public class 비행기결제 {
 		lblNewLabel.setIcon(new ImageIcon(imgPath3));
 	}
 
+	private void payButtonOnClick(ActionEvent e) {
+		String infoname = name.getText(); 
+		Integer infocardnum = Integer.valueOf(cardnum.getText());
+		if (infocardnum == null) { infocardnum = -1; }
+		
+		String infoexpire = expire.getText();
+		String infopass = passport.getText();
+		
+		// 멤버 객체를 생성
+		Payment payment = new Payment(
+				infocardnum.intValue(), 
+				infoname,
+				infoexpire, 
+				infopass);
+		//컨트롤러한테 회원가입 요청 
+		
+		MemberManagementService service = new MemberManagementService();
+		service.payJoin(payment, new ServiceCompletion() {
+
+			@Override
+			public void completion(boolean isSuccessfully) {
+				if(isSuccessfully) {
+					new Disact(payment);
+				} else {
+					JOptionPane.showMessageDialog(frame, "결제에 실패 했습니다.");
+				}
+			}
+		});
+	}
 }

@@ -1,4 +1,4 @@
-package view;
+package view.nation;
 
 import java.awt.Color;
 import java.awt.Desktop;
@@ -14,7 +14,6 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextPane;
-import java.awt.SystemColor;
 
 public class Rome {
 

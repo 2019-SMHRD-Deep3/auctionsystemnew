@@ -1,11 +1,8 @@
-package view;
-
-import java.awt.EventQueue;
+package view.nation;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.ImageIcon;
-import javax.swing.JTextField;
 import java.awt.Font;
 import javax.swing.JTextPane;
 import java.awt.Color;
@@ -17,7 +14,6 @@ import java.awt.event.MouseEvent;
 import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
-import java.awt.SystemColor;
 
 public class Hongkong {
 

@@ -1,6 +1,4 @@
-package view;
-
-import java.awt.EventQueue;
+package view.nation;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
