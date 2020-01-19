@@ -204,7 +204,7 @@ public class Paris {
 		label_8.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				ACTIVITYp play = new ACTIVITYp();
+				
 			}
 		});
 		String imgPath6 = this.getClass().getResource(".").getPath()+"..//..//img//ÆÄ¸®¾×4.jpg";

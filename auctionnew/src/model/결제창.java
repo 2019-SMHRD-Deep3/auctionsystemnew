@@ -44,6 +44,10 @@ public class 결제창 {
 		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
+		JLabel price = new JLabel("");
+		price.setBounds(365, 381, 180, 65);
+		frame.getContentPane().add(price);
+		
 		JLabel lblNewLabel = new JLabel("\uCE74\uB4DC\uBC88\uD638           -\uC5C6\uC774 \uC22B\uC790\uB9CC");
 		lblNewLabel.setBackground(Color.WHITE);
 		lblNewLabel.setBounds(179, 172, 187, 25);
@@ -115,6 +119,10 @@ public class 결제창 {
 		JLabel lblNewLabel_6 = new JLabel("");
 		lblNewLabel_6.setBounds(500, 60, 285, 100);
 		frame.getContentPane().add(lblNewLabel_6);
+		
+		JLabel lblNewLabel_7 = new JLabel("\uACB0\uC81C\uAE08\uC561\r\n");
+		lblNewLabel_7.setBounds(365, 346, 140, 35);
+		frame.getContentPane().add(lblNewLabel_7);
 	}
 	
 	private void payButtonOnClick(ActionEvent e) {

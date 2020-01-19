@@ -1,39 +1,24 @@
 package view;
 
 import java.awt.Color;
-//<<<<<<< HEAD
-//import java.awt.EventQueue;
-//=======
-//>>>>>>> branch 'master' of https://github.com/khornejp/auctionsystemnew
 import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
-//<<<<<<< HEAD
-//import javax.swing.JComboBox;
-//=======
-//>>>>>>> branch 'master' of https://github.com/khornejp/auctionsystemnew
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-//<<<<<<< HEAD
-//import javax.swing.JPanel;
-//=======
-//>>>>>>> branch 'master' of https://github.com/khornejp/auctionsystemnew
 import javax.swing.SwingConstants;
 
-//<<<<<<< HEAD
-//import net.sourceforge.jdatepicker.impl.JDatePanelImpl;
-//import net.sourceforge.jdatepicker.impl.JDatePickerImpl;
-//import net.sourceforge.jdatepicker.impl.UtilDateModel;
-//import javax.swing.JButton;
-//=======
 import model.Member;
 import net.sourceforge.jdatepicker.impl.JDatePanelImpl;
 import net.sourceforge.jdatepicker.impl.JDatePickerImpl;
 import net.sourceforge.jdatepicker.impl.UtilDateModel;
-//>>>>>>> branch 'master' of https://github.com/khornejp/auctionsystemnew
 
 public class Act {
 
@@ -77,6 +62,7 @@ public class Act {
 		comboBox.addItem("¹Ù¸£¼¿·Î³ª");
 		comboBox.addItem("´Ù³¶");
 		comboBox.addItem("¹æÄÛ");
+		comboBox.addItem("¿À»çÄ«");
 		comboBox.addItem("È«Äá");
 		comboBox.addItem("Å¸ÀÌº£ÀÌ");
 		comboBox.addItem("¼¼ºÎ");
@@ -101,6 +87,24 @@ public class Act {
 		panel.add(datePicker);
 		
 		JButton btnNewButton = new JButton("\uC870\uD68C\uD558\uAE30");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+			}
+		});
+		btnNewButton.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				
+				String la = (String)comboBox.getSelectedItem();
+				if(la=="L.A") {
+					ACTIVITYl la1 = new ACTIVITYl(loginuser);
+				}else if (la == "ÆÄ¸®") {
+					ACTIVITYp paris1 = new ACTIVITYp(loginuser);
+				}else if (la == "¿À»çÄ«") {
+					ACTIVITYj osaka1 = new ACTIVITYj(loginuser);
+				}
+			}
+		});
 		btnNewButton.setBounds(324, 133, 155, 49);
 		frame.getContentPane().add(btnNewButton);
 		

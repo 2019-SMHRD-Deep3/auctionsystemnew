@@ -41,7 +41,7 @@ public class Hotel {
 	private void initialize() {
 		frame = new JFrame();
 		frame.getContentPane().setBackground(Color.WHITE);
-		frame.setBounds(100, 100, 752, 353);
+		frame.setBounds(100, 100, 752, 335);
 		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
@@ -111,7 +111,7 @@ public class Hotel {
 		});
 		btnNewButton.setBackground(Color.WHITE);
 		btnNewButton.setFont(new Font("±¼¸²", Font.BOLD, 15));
-		btnNewButton.setBounds(543, 249, 181, 55);
+		btnNewButton.setBounds(549, 241, 181, 55);
 		frame.getContentPane().add(btnNewButton);
 //>>>>>>> branch 'master' of https://github.com/khornejp/auctionsystemnew
 		JLabel lblNewLabel = new JLabel("\uCD5C\uC800\uAC00 \uD638\uD154\uC740 \uC778\uD130\uBE60\uB044");
@@ -122,7 +122,6 @@ public class Hotel {
 		frame.getContentPane().add(lblNewLabel);
 		
 		JPanel panel = new JPanel();
-		panel.setOpaque(false);
 		panel.setBackground(Color.WHITE);
 		panel.setBounds(41, 120, 230, 145);
 		frame.getContentPane().add(panel);
@@ -136,7 +135,6 @@ public class Hotel {
 		
 		JPanel panel_1 = new JPanel();
 		panel_1.setBackground(Color.WHITE);
-		panel_1.setOpaque(false);
 		panel_1.setBounds(307, 120, 230, 145);
 		frame.getContentPane().add(panel_1);
 		

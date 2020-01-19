@@ -10,6 +10,7 @@ import javax.swing.JScrollPane;
 import javax.swing.JLabel;
 import javax.swing.JTextPane;
 
+import model.Member;
 import model.∞·¡¶√¢;
 
 import javax.swing.JButton;
@@ -26,24 +27,13 @@ public class ACTIVITYl {
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					ACTIVITYl window = new ACTIVITYl();
-					window.frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
 
 	/**
 	 * Create the application.
 	 */
-	public ACTIVITYl() {
+	public ACTIVITYl(Member member) {
 		initialize();
+		frame.setVisible(true);
 	}
 
 	/**
@@ -53,7 +43,7 @@ public class ACTIVITYl {
 		frame = new JFrame();
 		frame.getContentPane().setBackground(Color.WHITE);
 		frame.setBounds(100, 100, 892, 460);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
 		JPanel panel = new JPanel();

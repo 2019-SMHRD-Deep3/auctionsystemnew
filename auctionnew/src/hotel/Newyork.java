@@ -81,6 +81,7 @@ public class Newyork {
 		btnNewButton.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
+				∞·¡¶√¢ bill = new ∞·¡¶√¢();
 			}
 		});
 		btnNewButton.setFont(new Font("∏º¿∫ ∞ÌµÒ Semilight", Font.BOLD, 15));
@@ -91,6 +92,7 @@ public class Newyork {
 		button_2.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
+				∞·¡¶√¢ bill = new ∞·¡¶√¢();
 			}
 		});
 		button_2.setFont(new Font("∏º¿∫ ∞ÌµÒ Semilight", Font.BOLD, 15));
@@ -101,6 +103,7 @@ public class Newyork {
 		button_1.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
+				∞·¡¶√¢ bill = new ∞·¡¶√¢();
 			}
 		});
 		button_1.setFont(new Font("∏º¿∫ ∞ÌµÒ Semilight", Font.BOLD, 15));
@@ -111,6 +114,7 @@ public class Newyork {
 		button.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
+				∞·¡¶√¢ bill = new ∞·¡¶√¢();
 			}
 		});
 		button.setFont(new Font("∏º¿∫ ∞ÌµÒ Semilight", Font.BOLD, 15));

@@ -10,6 +10,7 @@ import javax.swing.DefaultComboBoxModel;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
+import javax.swing.JComponent;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -17,10 +18,13 @@ import javax.swing.SwingConstants;
 
 import model.Member;
 import model.MemberManagementService;
+import model.결제창대;
 import model.비행기결제;
 import net.sourceforge.jdatepicker.impl.JDatePanelImpl;
 import net.sourceforge.jdatepicker.impl.JDatePickerImpl;
 import net.sourceforge.jdatepicker.impl.UtilDateModel;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 public class flight {
 
@@ -32,7 +36,8 @@ public class flight {
 	private JDatePickerImpl datePicker1;
 	private Date value;
 	private Date value2;
-	MemberManagementService service = new MemberManagementService(); 
+	MemberManagementService service = new MemberManagementService();
+	private JComponent btnNewButton; 
 	
 	
 	
@@ -63,7 +68,7 @@ public class flight {
 		
 		JComboBox comboBox = new JComboBox();
 		comboBox.setBackground(Color.WHITE);
-		comboBox.setModel(new DefaultComboBoxModel(new String[] {}));
+		comboBox.setModel(new DefaultComboBoxModel(new String[] {"\uC778\uCC9C(ICN)", "L.A(LAX)", "\uBC34\uCFE0\uBC84(YVR)", "\uC0CC\uD504\uB780\uC2DC\uC2A4\uCF54(SFO)", "\uB274\uC695(JFK)", "\uD558\uC640\uC774(KAO)", "\uD30C\uB9AC(PAR)", "\uB7F0\uB358(LOM)", "\uC624\uC0AC\uCE74(KIX)", "\uB85C\uB9C8(ROM)", "\uD504\uB77C\uD558(PRG)", "\uBC14\uB974\uC140\uB85C\uB098(BCN)", "\uB2E4\uB0AD(DAN)", "\uBC29\uCF55(BOK)", "\uD64D\uCF69(HOK)", "\uD0C0\uC774\uBCA0\uC774(TPE)", "\uC138\uBD80(CEB)", "\uD558\uB178\uC774(HAN)", "\uC2F1\uAC00\uD3EC\uB974(SGI)", "\uCF54\uD2B8\uB2C8\uD0A4\uB098\uBC1C\uB8E8(BKI)", "\uAD0C(GUM)", "\uC2DC\uB4DC\uB2C8(SYD)", "\uC0AC\uC774\uD310(SPN)"}));
 		comboBox.addItem("인천(ICN)");
 		comboBox.addItem("L.A(LAX)");
 		comboBox.addItem("밴쿠버(YVR)");
@@ -90,38 +95,32 @@ public class flight {
 		
 		comboBox.setBounds(128, 105, 242, 34);
 		panel.add(comboBox);
-		
-		JButton btnNewButton = new JButton("\uACB0\uC81C");
-		btnNewButton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				
-				String i = (String)comboBox.getSelectedItem();
-				
-			String i1 = (String)comboBox_1.getSelectedItem();
-			
-			비행기결제 bills = new 비행기결제();
-				
-		
-				
-			}
-		});
-		
 		JComboBox comboBox_2 = new JComboBox();
 		comboBox_2.setBounds(12, 105, 104, 34);
 		panel.add(comboBox_2);
-		btnNewButton.setBackground(Color.WHITE);
+		
 		comboBox_2.setModel(new DefaultComboBoxModel(new String[] {}));
 		comboBox_2.addItem("아시아나");
 		comboBox_2.addItem("대한항공");
-		comboBox_1.addItem("");
-		
-		
+		JButton btnNewButton = new JButton("\uACB0\uC81C");
+		btnNewButton.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				String i1 = (String)comboBox_2.getSelectedItem();
+				if(i1=="아시아나") {
+		            	비행기결제 bills = new 비행기결제();
+		            }else if (i1 == "대한항공") {
+		            	결제창대 bills = new 결제창대();
+		            }
+			}
+		});
+		btnNewButton.setBackground(Color.WHITE);
 		btnNewButton.setBounds(626, 269, 97, 34);
 		panel.add(btnNewButton);
 		
 		comboBox_1 = new JComboBox();
 		comboBox_1.setBackground(Color.WHITE);
-		comboBox_1.setModel(new DefaultComboBoxModel(new String[] {}));
+		comboBox_1.setModel(new DefaultComboBoxModel(new String[] {"\uC778\uCC9C(ICN)", "L.A(LAX)", "\uBC34\uCFE0\uBC84(YVR)", "\uC0CC\uD504\uB780\uC2DC\uC2A4\uCF54(SFO)", "\uB274\uC695(JFK)", "\uD558\uC640\uC774(KAO)", "\uD30C\uB9AC(PAR)", "\uB7F0\uB358(LOM)", "\uB85C\uB9C8(ROM)", "\uC624\uC0AC\uCE74(KIX)", "\uD504\uB77C\uD558(PRG)", "\uBC14\uB974\uC140\uB85C\uB098(BCN)", "\uB2E4\uB0AD(DAN)", "\uBC29\uCF55(BOK)", "\uD64D\uCF69(HOK)", "\uD0C0\uC774\uBCA0\uC774(TPE)", "\uC138\uBD80(CEB)", "\uD558\uB178\uC774(HAN)", "\uC2F1\uAC00\uD3EC\uB974(SGI)", "\uCF54\uD2B8\uB2C8\uD0A4\uB098\uBC1C\uB8E8(BKI)", "\uAD0C(GUM)", "\uC2DC\uB4DC\uB2C8(SYD)", "\uC0AC\uC774\uD310(SPN)"}));
 		comboBox_1.addItem("인천(ICN)");
 		comboBox_1.addItem("L.A(LAX)");
 		comboBox_1.addItem("밴쿠버(YVR)");
@@ -191,6 +190,7 @@ public class flight {
 //>>>>>>> branch 'master' of https://github.com/khornejp/auctionsystemnew
 		lblNewLabel_1.setBounds(0, 0, 735, 313);
 		panel.add(lblNewLabel_1);
+		
 		
 		
 	}

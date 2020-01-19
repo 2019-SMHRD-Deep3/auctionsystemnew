@@ -14,6 +14,7 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextPane;
 
+import model.Member;
 import model.∞·¡¶√¢;
 
 public class ACTIVITYp {
@@ -21,9 +22,9 @@ public class ACTIVITYp {
 	private JFrame frame;
 
 	
-	public ACTIVITYp() {
+	public ACTIVITYp(Member member) {
 		initialize();
-//		frame.setVisible(true);
+		frame.setVisible(true);
 	}
 
 	/**
@@ -33,7 +34,7 @@ public class ACTIVITYp {
 		frame = new JFrame();
 		frame.getContentPane().setBackground(Color.WHITE);
 		frame.setBounds(100, 100, 892, 459);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
 		JPanel panel = new JPanel();
@@ -131,7 +132,7 @@ public class ACTIVITYp {
 		
 		JTextPane textPane_1 = new JTextPane();
 		textPane_1.setFont(new Font("∏º¿∫ ∞ÌµÒ Semilight", Font.BOLD, 16));
-		textPane_1.setText("\uB8E8\uBE0C\uB974 \uBC15\uBB3C\uAD00\r\n\r\n\uC138\uACC4 3\uB300 \uBC15\uBB3C\uAD00\r\n\uD30C\uB9AC\uC5D0 \uC654\uB2E4\uBA74 \uAF2D \uAC00\uBD10\uC57C\uD560 \uACF3!\r\n\uC911\uC138 \uC720\uB7FD \uBB38\uD654\uB97C \uD55C\uB208\uC5D0 \uBCF4\uAE30\r\n ");
+		textPane_1.setText("\uB8E8\uBE0C\uB974 \uBC15\uBB3C\uAD00\r\n\r\n\uC138\uACC4 3\uB300 \uBC15\uBB3C\uAD00\r\n\uD30C\uB9AC\uC5D0 \uC654\uB2E4\uBA74 \uAF2D \uAC00\uBD10\uC57C\uD560 \uACF3!\r\n\uC911\uC138 \uC720\uB7FD \uBB38\uD654\uB97C \uD55C\uB208\uC5D0 \uBCF4\uAE30\r\n");
 		textPane_1.setBounds(201, 147, 489, 127);
 		panel_1.add(textPane_1);
 		
@@ -161,7 +162,7 @@ public class ACTIVITYp {
 		
 		JLabel lblNewLabel_1 = new JLabel("New label");
 		String imgPath7 = this.getClass().getResource(".").getPath()+"..//..//img//πË≥ .png";
-		lblNewLabel_1.setIcon(new ImageIcon(imgPath7));
+		 lblNewLabel_1.setIcon(new ImageIcon(imgPath7));
 		lblNewLabel_1.setBounds(0, 0, 180, 43);
 		frame.getContentPane().add(lblNewLabel_1);
 	}
