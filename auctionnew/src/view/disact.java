@@ -1,14 +1,15 @@
 package view;
 
+import java.awt.Color;
 import java.awt.EventQueue;
+import java.awt.Font;
 
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.JTextPane;
-import java.awt.Font;
-import java.awt.Color;
 import javax.swing.SwingConstants;
+
+import model.Payment;
 
 public class disact {
 
@@ -17,24 +18,25 @@ public class disact {
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					disact window = new disact();
-					window.frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
+//	public static void main(String[] args) {
+//		EventQueue.invokeLater(new Runnable() {
+//			public void run() {
+//				try {
+//					disact window = new disact();
+//					window.frame.setVisible(true);
+//				} catch (Exception e) {
+//					e.printStackTrace();
+//				}
+//			}
+//		});
+//	}
 
 	/**
 	 * Create the application.
 	 */
-	public disact() {
+	public disact(Payment payment) {
 		initialize();
+		frame.setVisible(true);
 	}
 
 	/**

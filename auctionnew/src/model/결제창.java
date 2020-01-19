@@ -9,17 +9,10 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
-//<<<<<<< HEAD
-//import javax.swing.JTextPane;
-//import javax.swing.JRadioButton;
-//import java.awt.SystemColor;
-//import java.awt.Font;
-//=======
 import javax.swing.JTextField;
 
 import model.MemberManagementService.ServiceCompletion;
-import view.Disact;
-//>>>>>>> branch 'master' of https://github.com/khornejp/auctionsystemnew
+import view.disact;
 
 public class 결제창 {
 
@@ -145,7 +138,7 @@ public class 결제창 {
 			@Override
 			public void completion(boolean isSuccessfully) {
 				if(isSuccessfully) {
-					new Disact(payment);
+					new disact(payment);
 				} else {
 					JOptionPane.showMessageDialog(frame, "결제에 실패 했습니다.");
 				}
