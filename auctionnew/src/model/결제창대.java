@@ -49,7 +49,8 @@ public class 결제창대 {
 		frame.getContentPane().setLayout(null);
 
 		price = new JLabel();
-		price.setBounds(371, 356, 187, 60);
+		price.setFont(new Font("맑은 고딕 Semilight", Font.BOLD, 15));
+		price.setBounds(371, 356, 187, 51);
 		frame.getContentPane().add(price);
 
 		textField = new JTextField();
@@ -108,6 +109,11 @@ public class 결제창대 {
 		frame.getContentPane().add(textField_5);
 
 		JButton button = new JButton("\uACB0\uC81C\uD558\uAE30");
+		button.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+			}
+		});
 		button.setBackground(Color.WHITE);
 		button.setBounds(582, 382, 180, 51);
 		frame.getContentPane().add(button);

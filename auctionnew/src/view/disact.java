@@ -50,7 +50,7 @@ public class disact {
 		frame.getContentPane().setLayout(null);
 		
 		JLabel label = new JLabel("\uACB0\uC81C\uAC00 \uC644\uB8CC\uB418\uC5C8\uC2B5\uB2C8\uB2E4.");
-		label.setFont(new Font("¸¼Àº °íµñ Semilight", Font.BOLD, 30));
+		label.setFont(new Font("¸¼Àº °íµñ", Font.PLAIN, 30));
 		label.setHorizontalAlignment(SwingConstants.CENTER);
 		label.setBounds(12, 23, 690, 48);
 		frame.getContentPane().add(label);
